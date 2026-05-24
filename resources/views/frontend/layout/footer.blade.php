@@ -156,7 +156,7 @@
     </div>
 
 
-    <div class="row s-footer__bottom">
+    <div class="row s-footer__bottom"> 
 
         <div class="column xl-6 lg-12">
 
