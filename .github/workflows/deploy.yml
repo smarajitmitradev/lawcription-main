@@ -1,4 +1,4 @@
-name: Deploy Laravel to Hostinger
+name: Deploy Lawcription Main Website
 
 on:
   push:
@@ -10,66 +10,42 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-    - name: Checkout Repository
-      uses: actions/checkout@v4
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
 
-    - name: Setup SSH
-      run: |
+      - name: Deploy Main Website
+        env:
+          BRANCH_NAME: ${{ github.ref_name }}
+        run: |
 
-        mkdir -p ~/.ssh
+          ssh -i ~/.ssh/id_rsa \
+          -o StrictHostKeyChecking=no \
+          -p ${{ secrets.PORT }} \
+          ${{ secrets.USER }}@${{ secrets.HOST }} << EOF
 
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+            cd ~/public_html
 
-        chmod 600 ~/.ssh/id_rsa
+            git pull origin main
 
-        ssh-keyscan -H -p 65002 145.79.209.205 >> ~/.ssh/known_hosts
+            composer install --no-dev --optimize-autoloader
 
-    - name: Test SSH Connection
-      run: |
+            php artisan migrate --force
 
-        ssh -i ~/.ssh/id_rsa -p 65002 \
-        -o StrictHostKeyChecking=no \
-        u230221157@145.79.209.205 "echo SSH SUCCESS"
+            php artisan optimize:clear
 
-    - name: Deploy Files
-      run: |
+            php artisan config:cache
 
-        rsync -avzr \
-        --exclude '.git' \
-        --exclude '.github' \
-        --exclude '.env' \
-        --exclude 'node_modules' \
-        --exclude 'vendor' \
-        --exclude 'medico-legal-admin' \
-        -e "ssh -i ~/.ssh/id_rsa -p 65002 -o StrictHostKeyChecking=no" \
-        ./ \
-        u230221157@145.79.209.205:~/public_html/
+            php artisan route:cache
 
-    - name: Run Laravel Commands
-      run: |
+            php artisan view:cache
 
-        ssh -i ~/.ssh/id_rsa -p 65002 \
-        -o StrictHostKeyChecking=no \
-        u230221157@145.79.209.205 << 'EOF'
+            chmod -R 775 storage
+            chmod -R 775 bootstrap/cache
 
-        cd ~/public_html
-
-        php -v
-
-        composer install --no-dev --optimize-autoloader
-
-        php artisan optimize:clear
-
-        php artisan config:cache
-
-        php artisan route:cache
-
-        php artisan view:cache
-
-        chmod -R 775 storage
-        chmod -R 775 bootstrap/cache
-
-        echo "DEPLOY SUCCESS"
-
-        EOF
+          EOF
