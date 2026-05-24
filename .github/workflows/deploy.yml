@@ -20,8 +20,6 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
 
       - name: Deploy Main Website
-        env:
-          BRANCH_NAME: ${{ github.ref_name }}
         run: |
 
           ssh -i ~/.ssh/id_rsa \
@@ -29,7 +27,7 @@ jobs:
           -p ${{ secrets.PORT }} \
           ${{ secrets.USER }}@${{ secrets.HOST }} << EOF
 
-            cd ~/public_html
+            cd ~/domains/lawcription.in/public_html
 
             git pull origin main
 
@@ -49,4 +47,3 @@ jobs:
             chmod -R 775 bootstrap/cache
 
           EOF
-
