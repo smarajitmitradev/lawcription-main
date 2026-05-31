@@ -1,10 +1,10 @@
-<footer id="footer" class="container s-footer">
+<footer id="footer" class="container s-footer !pb-8">
 
-    <div class="row s-footer__top row-x-center">
+    <div class="row s-footer__top row-x-center !mb-8">
 
-        <div class="column xl-6 lg-8 md-10 footer-block footer-newsletter">
+        <div class="column xl-6 lg-8 md-10 footer-block footer-newsletter !rounded-lg !px-6 !py-6 !text-left md:!text-center !shadow-lg !shadow-black/10">
 
-            <h5>
+            <h5 class="!mb-4 !text-base !font-semibold !leading-snug">
                 Subscribe to our mailing list for
                 updates, news, and exclusive offers.
             </h5>
@@ -13,11 +13,11 @@
 
                 <form id="mc-form" class="mc-form">
 
-                    <div class="mc-input-wrap">
+                    <div class="mc-input-wrap !mb-2 !min-h-12">
 
-                        <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Your Email Address" required>
+                        <input class="!h-12 !text-sm" type="email" name="EMAIL" id="mce-EMAIL" placeholder="Your Email Address" required>
 
-                        <input type="submit" name="subscribe" value="Subscribe" class="btn btn--primary">
+                        <input type="submit" name="subscribe" value="Subscribe" class="btn btn--primary !h-12 !rounded-full !text-xs !font-bold !uppercase !tracking-wide">
 
                     </div>
 
@@ -32,23 +32,23 @@
     </div>
 
 
-    <div class="row s-footer__main">
+    <div class="row s-footer__main !items-start !gap-y-8">
 
-        <div class="column xl-3 lg-12 footer-block s-footer__main-start">
+        <div class="column xl-3 lg-12 footer-block s-footer__main-start !mb-0">
 
-            <div class="s-footer__logo">
+            <div class="s-footer__logo !my-0 !mb-4">
 
                 <a class="logo" href="{{ route('home') }}">
 
-                    <img src="{{ asset('frontend/images/logo.svg') }}" alt="Homepage">
+                    <img class="!w-32" src="{{ asset('frontend/images/logo.svg') }}" alt="Homepage">
 
                 </a>
 
             </div>
 
-            <ul class="s-footer__social social-list">
+            <ul class="s-footer__social social-list !gap-3">
                 <li>
-                    <a href="#0">
+                    <a class="!inline-flex !h-9 !w-9 !items-center !justify-center !rounded-full !bg-white/10 hover:!bg-white/20" href="#0">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
                             <path d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325,1.42-3.592,3.5-3.592 c0.699-0.002,1.399,0.034,2.095,0.107v2.42h-1.435c-1.128,0-1.348,0.538-1.348,1.325v1.735h2.697l-0.35,2.725h-2.348V21H20 c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z"></path>
                         </svg>
@@ -56,7 +56,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#0">
+                    <a class="!inline-flex !h-9 !w-9 !items-center !justify-center !rounded-full !bg-white/10 hover:!bg-white/20" href="#0">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
                             <path d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"></path>
                         </svg>
@@ -64,7 +64,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#0">
+                    <a class="!inline-flex !h-9 !w-9 !items-center !justify-center !rounded-full !bg-white/10 hover:!bg-white/20" href="#0">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
                             <path d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624 C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003 c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z"></path>
                             <circle cx="16.806" cy="7.207" r="1.078"></circle>
@@ -74,7 +74,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#0">
+                    <a class="!inline-flex !h-9 !w-9 !items-center !justify-center !rounded-full !bg-white/10 hover:!bg-white/20" href="#0">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
                             <path d="M8.31 10.28a2.5 2.5 0 1 0 2.5 2.49 2.5 2.5 0 0 0-2.5-2.49zm0 3.8a1.31 1.31 0 1 1 0-2.61 1.31 1.31 0 1 1 0 2.61zm7.38-3.8a2.5 2.5 0 1 0 2.5 2.49 2.5 2.5 0 0 0-2.5-2.49zM17 12.77a1.31 1.31 0 1 1-1.31-1.3 1.31 1.31 0 0 1 1.31 1.3z"></path>
                             <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm7.38 10.77a3.69 3.69 0 0 1-6.2 2.71L12 16.77l-1.18-1.29a3.69 3.69 0 1 1-5-5.44l-1.2-1.3H7.3a8.33 8.33 0 0 1 9.41 0h2.67l-1.2 1.31a3.71 3.71 0 0 1 1.2 2.72z"></path>
@@ -88,11 +88,11 @@
         </div>
 
 
-        <div class="column xl-9 lg-12 s-footer__main-end grid-cols grid-cols--wrap">
+        <div class="column xl-9 lg-12 s-footer__main-end grid-cols grid-cols--wrap !gap-y-6">
 
             <div class="grid-cols__column footer-block">
 
-                <h6>Location</h6>
+                <h6 class="!mb-3 !text-xs !font-bold !uppercase !tracking-wider">Location</h6>
 
                 <p>
                     456 Elm Street, Los Angeles <br>
@@ -103,7 +103,7 @@
 
             <div class="grid-cols__column footer-block">
 
-                <h6>Contacts</h6>
+                <h6 class="!mb-3 !text-xs !font-bold !uppercase !tracking-wider">Contacts</h6>
 
                 <ul class="link-list">
                     <li>
@@ -123,7 +123,7 @@
 
             <div class="grid-cols__column footer-block">
 
-                <h6>Opening Hours</h6>
+                <h6 class="!mb-3 !text-xs !font-bold !uppercase !tracking-wider">Opening Hours</h6>
 
                 <ul class="opening-hours">
 
@@ -156,11 +156,11 @@
     </div>
 
 
-    <div class="row s-footer__bottom"> 
+    <div class="row s-footer__bottom !mt-8 !pt-5"> 
 
         <div class="column xl-6 lg-12">
 
-            <p class="ss-copyright">
+            <p class="ss-copyright !text-xs">
                 <span>© Lounge {{ date('Y') }}</span>
                 <span>Design by <a href="https://styleshout.com/">StyleShout</a></span>
 

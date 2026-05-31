@@ -2,6 +2,13 @@
 
 @section('title', 'Home')
 
+<style>
+    html {
+        font-size : var(--base-size);
+        box-sizing: border-box;
+    }
+</style>
+
 @section('content')
 
 <!-- # intro -->

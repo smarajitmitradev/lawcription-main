@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\SubscriptionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,5 @@ use App\Http\Controllers\Frontend\HomeController;
 // });
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/subscription', [SubscriptionController::class, 'index'])
+        ->name('subscription.index');
