@@ -39,7 +39,7 @@
             <div class="header-contact !right-5 flex items-center gap-3">
 
                 <!-- Subscribe Button -->
-                <a href="#subscription" class="subscribe-btn">
+                <a href="{{route('subscription.index')}}" class="subscribe-btn">
                     ✨ Subscribe
                 </a>
 
