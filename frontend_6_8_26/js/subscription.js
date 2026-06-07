@@ -1,4 +1,3 @@
-
 const prices = {
   monthly: {
     n1:'1 Month',  p1:'₹499', s1:null,      b1:'Billed monthly',
