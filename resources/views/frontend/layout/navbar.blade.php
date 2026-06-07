@@ -77,7 +77,7 @@
 
                         @auth
                         @if(Auth::user()->img)
-                        <img src="{{ Storage::url(Auth::user()->img) }}" alt="{{ Auth::user()->full_name }}" class="w-full h-full object-cover rounded-full" style="margin: auto;">
+                        <img src="{{ Auth::user()->img ? asset('storage/' . Auth::user()->img) : 'https://ui-avatars.com/api/?name='.urlencode(Auth::user()->full_name ?? 'User').'&background=6366f1&color=fff&size=200' }}" alt="{{ Auth::user()->full_name }}" class="w-full h-full object-cover rounded-full" style="margin:auto;">
                         @else
                         <img src="https://ui-avatars.com/api/?name={{ urlencode(Auth::user()->full_name ?? Auth::user()->first_name) }}&background=6366f1&color=fff&size=200" alt="{{ Auth::user()->full_name }}" class="w-full h-full object-cover rounded-full">
                         @endif
