@@ -174,11 +174,14 @@
             <div style="position:relative; display:inline-block;">
 
                 @auth
-                <img id="profileImgPreview" src="{{ Auth::user()->img 
-      ? Storage::url(Auth::user()->img) 
-      : 'https://ui-avatars.com/api/?name=' . urlencode(Auth::user()->full_name ?? 'User') . '&background=6366f1&color=fff&size=200' 
-    }}" style="width:96px; height:96px; border-radius:50%; border:4px solid #fff;
-           object-fit:cover; box-shadow:0 8px 20px rgba(0,0,0,0.15);">
+                <img id="profileImgPreview" 
+     src="{{ Auth::user()->img 
+          ? asset('storage/' . Auth::user()->img) 
+          : 'https://ui-avatars.com/api/?name=' . urlencode(Auth::user()->full_name ?? Auth::user()->first_name . ' ' . Auth::user()->last_name ?? 'User') . '&background=6366f1&color=fff&size=200' 
+     }}" 
+     style="width:96px; height:96px; border-radius:50%; border:4px solid #fff;
+            object-fit:cover; box-shadow:0 8px 20px rgba(0,0,0,0.15);"
+     onerror="this.src='https://ui-avatars.com/api/?name={{ urlencode(Auth::user()->full_name ?? 'User') }}&background=6366f1&color=fff&size=200'">
                 @else
                 <img id="profileImgPreview" src="https://ui-avatars.com/api/?name=User&background=6366f1&color=fff&size=200" style="width:96px; height:96px; border-radius:50%; border:4px solid #fff;
            object-fit:cover; box-shadow:0 8px 20px rgba(0,0,0,0.15);">
