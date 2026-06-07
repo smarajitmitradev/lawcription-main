@@ -30,4 +30,17 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'razorpay' => [
+        'key' => env('RAZORPAY_KEY_ID'),
+        'secret' => env('RAZORPAY_KEY_SECRET'),
+        'plans'  => [
+            '1_month' => env('RAZORPAY_PLAN_1_MONTH'),
+            '3_month' => env('RAZORPAY_PLAN_3_MONTH'),
+            '6_month' => env('RAZORPAY_PLAN_6_MONTH'),
+            '1_year'  => env('RAZORPAY_PLAN_1_YEAR'),
+            '2_year'  => env('RAZORPAY_PLAN_2_YEAR'),
+            '3_year'  => env('RAZORPAY_PLAN_3_YEAR'),
+        ],
+    ],
+
 ];

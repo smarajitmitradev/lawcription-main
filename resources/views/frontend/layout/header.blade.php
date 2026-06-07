@@ -13,9 +13,15 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/css/vendor.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         window.tailwind = window.tailwind || {};
-        window.tailwind.config = { corePlugins: { preflight: false } };
+        window.tailwind.config = {
+            corePlugins: {
+                preflight: false
+            }
+        };
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -23,5 +29,5 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('frontend/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('frontend/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('frontend/favicon-16x16.png') }}">
-    
+
 </head>

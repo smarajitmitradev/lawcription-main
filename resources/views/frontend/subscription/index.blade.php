@@ -228,29 +228,30 @@
         </h2>
         <p style="color:var(--muted);font-size:1rem;max-width:400px;margin:0 auto 32px;font-family:'Cormorant Garamond',serif;font-size:1.1rem;">No hidden charges. Cancel anytime. Full access from day one.</p>
 
+        <!-- 2-option toggle (Monthly / Yearly) -->
         <div class="toggle-container">
           <button class="toggle-opt on" id="t1" onclick="setToggle('monthly')">Monthly</button>
-          <button class="toggle-opt" id="t2" onclick="setToggle('quarterly')">Quarterly</button>
-          <button class="toggle-opt" id="t3" onclick="setToggle('biannual')">Half-Yearly</button>
+          <button class="toggle-opt" id="t2" onclick="setToggle('yearly')">Yearly</button>
         </div>
       </div>
 
-      <!-- Cards -->
+      <!-- Cards — HTML unchanged from original -->
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;align-items:start;margin-top:50px;">
 
-        <!-- Starter -->
+        <!-- Card 1 · BASIC -->
         <div class="plan-card reveal d2" style="background:var(--surface);border-radius:24px;padding:36px 30px;">
           <div style="margin-bottom:28px;">
             <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
               <div>
                 <span class="tag" style="background:rgba(255,255,255,0.04);color:var(--muted);font-size:10px;margin-bottom:10px;">BASIC</span>
-                <h3 class="serif" style="font-size:1.4rem;font-weight:700;margin-top:8px;color:var(--cream);">1 Month</h3>
+                <h3 class="serif" style="font-size:1.4rem;font-weight:700;margin-top:8px;color:var(--cream);" id="n1">1 Month</h3>
               </div>
               <div style="width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;font-size:20px;">📖</div>
             </div>
             <div style="display:flex;align-items:flex-end;gap:6px;margin-bottom:6px;">
               <span class="serif" style="font-size:3rem;font-weight:700;line-height:1;color:var(--cream);" id="p1">₹499</span>
               <span style="color:var(--muted);font-size:14px;padding-bottom:8px;">/mo</span>
+              <span id="s1" style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px;margin-bottom:8px;letter-spacing:1px;display:none;"></span>
             </div>
             <p id="b1" style="font-size:12px;color:var(--muted);">Billed monthly</p>
           </div>
@@ -275,26 +276,26 @@
               <div class="check-dot" style="background:rgba(255,255,255,0.03);color:#555;font-size:11px;">—</div><span style="font-size:14px;">Expert consultation credits</span>
             </li>
           </ul>
-          <button class="btn-plain w-full py-4 rounded-2xl serif" style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;color:var(--text);width:100%;padding:16px;border-radius:14px;background:transparent;">
+          <button id="plan1Btn" class="btn-plain w-full py-4 rounded-2xl serif" style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;color:var(--text);width:100%;padding:16px;border-radius:14px;background:transparent;">
             Start Reading →
           </button>
         </div>
 
-        <!-- Growth — FEATURED -->
+        <!-- Card 2 · PROFESSIONAL (featured) -->
         <div class="plan-card star reveal d3" style="border-radius:24px;padding:36px 30px;">
           <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--greenlit));border-radius:24px 24px 0 0;"></div>
           <div style="position:absolute;top:20px;right:20px;">
-            <span class="tag" style="background:linear-gradient(135deg,var(--gold),var(--greenlit));color:#0A0908;font-size:10px;font-weight:700;">⭐ POPULAR</span>
+            <span class="tag" id="badge2" style="background:linear-gradient(135deg,var(--gold),var(--greenlit));color:#0A0908;font-size:10px;font-weight:700;">⭐ POPULAR</span>
           </div>
           <div style="margin-bottom:28px;margin-top:8px;">
             <div style="margin-bottom:16px;">
               <span class="tag" style="background:rgba(201,168,76,0.12);color:var(--gold);font-size:10px;margin-bottom:10px;">PROFESSIONAL</span>
-              <h3 class="serif" style="font-size:1.4rem;font-weight:700;margin-top:8px;color:var(--cream);">3 Months</h3>
+              <h3 class="serif" style="font-size:1.4rem;font-weight:700;margin-top:8px;color:var(--cream);" id="n2">3 Months</h3>
             </div>
             <div style="display:flex;align-items:flex-end;gap:6px;margin-bottom:6px;">
               <span class="serif" style="font-size:3rem;font-weight:700;line-height:1;color:var(--cream);" id="p2">₹399</span>
               <span style="color:var(--muted);font-size:14px;padding-bottom:8px;">/mo</span>
-              <span style="background:rgba(201,168,76,0.18);color:var(--gold);font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px;margin-bottom:8px;letter-spacing:1px;">20% OFF</span>
+              <span id="s2" style="background:rgba(201,168,76,0.18);color:var(--gold);font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px;margin-bottom:8px;letter-spacing:1px;">20% OFF</span>
             </div>
             <p id="b2" style="font-size:12px;color:var(--muted);">₹1,197 billed quarterly</p>
           </div>
@@ -320,26 +321,26 @@
             </li>
           </ul>
           <div class="btn-glow" style="border-radius:16px;">
-            <button style="width:100%;padding:16px;border-radius:16px;background:linear-gradient(135deg,var(--green),var(--green2));border:none;cursor:pointer;font-family:'Playfair Display',serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--cream);position:relative;z-index:1;">
+            <button id="plan2Btn" style="width:100%;padding:16px;border-radius:16px;background:linear-gradient(135deg,var(--green),var(--green2));border:none;cursor:pointer;font-family:'Playfair Display',serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--cream);position:relative;z-index:1;">
               Choose Professional ✦
             </button>
           </div>
         </div>
 
-        <!-- Pro -->
+        <!-- Card 3 · ELITE -->
         <div class="plan-card reveal d4" style="background:var(--surface);border-radius:24px;padding:36px 30px;">
           <div style="margin-bottom:28px;">
             <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
               <div>
                 <span class="tag" style="background:rgba(111,168,130,0.1);color:var(--greenlit);font-size:10px;margin-bottom:10px;">ELITE</span>
-                <h3 class="serif" style="font-size:1.4rem;font-weight:700;margin-top:8px;color:var(--cream);">6 Months</h3>
+                <h3 class="serif" style="font-size:1.4rem;font-weight:700;margin-top:8px;color:var(--cream);" id="n3">6 Months</h3>
               </div>
               <div style="width:44px;height:44px;border-radius:12px;background:rgba(111,168,130,0.1);display:flex;align-items:center;justify-content:center;font-size:20px;">🏛️</div>
             </div>
             <div style="display:flex;align-items:flex-end;gap:6px;margin-bottom:6px;">
               <span class="serif" style="font-size:3rem;font-weight:700;line-height:1;color:var(--cream);" id="p3">₹349</span>
               <span style="color:var(--muted);font-size:14px;padding-bottom:8px;">/mo</span>
-              <span style="background:rgba(111,168,130,0.12);color:var(--greenlit);font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px;margin-bottom:8px;letter-spacing:1px;">30% OFF</span>
+              <span id="s3" style="background:rgba(111,168,130,0.12);color:var(--greenlit);font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px;margin-bottom:8px;letter-spacing:1px;">30% OFF</span>
             </div>
             <p id="b3" style="font-size:12px;color:var(--muted);">₹2,094 billed half-yearly</p>
           </div>
@@ -364,14 +365,14 @@
               <div class="check-dot" style="background:rgba(111,168,130,0.1);color:var(--greenlit);">✓</div><span style="font-size:14px;">Institution group licences</span>
             </li>
           </ul>
-          <button class="btn-plain w-full py-4 rounded-2xl serif" style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;color:var(--greenlit);border-color:rgba(111,168,130,0.2);width:100%;padding:16px;border-radius:14px;background:transparent;">
+          <button id="plan3Btn" class="btn-plain w-full py-4 rounded-2xl serif" style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;color:var(--greenlit);border-color:rgba(111,168,130,0.2);width:100%;padding:16px;border-radius:14px;background:transparent;">
             Go Elite →
           </button>
         </div>
 
       </div>
 
-      <!-- Guarantee banner -->
+      <!-- Guarantee banner — unchanged -->
       <div class="reveal d5" style="margin-top:32px;padding:20px 30px;background:linear-gradient(135deg,rgba(61,107,79,0.08),rgba(201,168,76,0.05));border:1px solid rgba(201,168,76,0.15);border-radius:16px;display:flex;justify-content:center;align-items:center;gap:16px;flex-wrap:wrap;text-align:center;">
         <span style="font-size:1.2rem;">⚖️</span>
         <span style="font-size:14px;color:var(--muted);font-family:'Cormorant Garamond',serif;font-size:1rem;">
@@ -623,4 +624,265 @@
 
 @endsection
 
-<script src="{{ asset('frontend/js/subscription.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="{{ asset('frontend/js/subscription.js') }}?v=2"></script>
+
+<script>
+  const isLoggedIn = {{Auth::check() ? 'true' : 'false'}};
+  const loginUrl = "{{ route('login') }}";
+</script>
+
+<script>
+  function checkLoginAndPay(plan, amount) {
+
+    if (!isLoggedIn) {
+      Swal.fire({
+        title: 'Unlock Premium Access ✨',
+        html: `<p class="text-gray-600">Sign in to continue with your subscription and access exclusive legal content.</p>`,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Sign In',
+        cancelButtonText: 'Cancel',
+        confirmButtonColor: '#8b5cf6',
+        backdrop: true,
+        customClass: {
+          popup: 'rounded-3xl'
+        }
+      }).then((result) => {
+        if (result.isConfirmed) window.location.href = loginUrl;
+      });
+      return;
+    }
+
+    // ✅ Check if user already has an active plan
+    const hasActivePlan = {{$isActive ? 'true' : 'false'}};
+    console.log(hasActivePlan, '>>>>>>')
+    const currentPlan = "{{ $planLabel ?? '' }}";
+    const expiryDate = "{{ ($sub ?? null) ? \Carbon\Carbon::parse($sub->expiry_date)->format('d M Y') : '' }}";
+
+    if (hasActivePlan) {
+      Swal.fire({
+        title: 'You Already Have an Active Plan!',
+        html: `
+            <div style="text-align:center; padding:8px 0;">
+                <div style="display:inline-flex; align-items:center; gap:8px;
+                            background:#fef3c7; border:1px solid #fde68a;
+                            padding:10px 20px; border-radius:12px; margin-bottom:14px;">
+                    <i class="fas fa-crown" style="color:#f59e0b; font-size:18px;"></i>
+                    <span style="font-weight:700; color:#92400e; font-size:15px;">
+                        ${currentPlan} Plan
+                    </span>
+                </div>
+                <p style="color:#6b7280; font-size:14px; margin:0;">
+                    Your current plan is active until
+                    <strong style="color:#111827;">${expiryDate}</strong>.
+                </p>
+                <p style="color:#9ca3af; font-size:13px; margin:10px 0 0;">
+                    You can subscribe to a new plan once your current plan expires.
+                </p>
+            </div>
+        `,
+        icon: 'info',
+        showCancelButton: true,
+        confirmButtonText: '<i class="fas fa-eye" style="margin-right:6px;"></i> View My Plan',
+        cancelButtonText: 'OK',
+        confirmButtonColor: '#f59e0b',
+        cancelButtonColor: '#6b7280',
+        customClass: {
+          popup: 'rounded-3xl'
+        }
+      }).then((result) => {
+        if (result.isConfirmed) openPlanModal();
+      });
+      return;
+    }
+
+    payNow(plan, amount);
+  }
+
+  // $(document).ready(function() {
+
+  //   console.log('Page Loaded');
+
+  //   // Force buttons above overlays
+  //   $('#plan1Btn, #plan2Btn, #plan3Btn').css({
+  //     'position': 'relative',
+  //     'z-index': '99999',
+  //     'pointer-events': 'auto'
+  //   });
+
+  //   $(document).on('click touchstart', '#plan1Btn', function(e) {
+  //     e.preventDefault();
+  //     checkLoginAndPay('1_month', 100);
+  //   });
+
+  //   $(document).on('click touchstart', '#plan2Btn', function(e) {
+  //     e.preventDefault();
+  //     checkLoginAndPay('3_month', 200);
+  //   });
+
+  //   $(document).on('click touchstart', '#plan3Btn', function(e) {
+  //     e.preventDefault();
+  //     checkLoginAndPay('6_month', 300);
+  //   });
+
+  // });
+
+  // track current billing mode
+var currentMode = 'monthly';
+
+// keep setToggle in sync
+var _origSetToggle = setToggle;
+window.setToggle = function(mode) {
+  currentMode = mode;
+  _origSetToggle(mode);
+};
+
+$(document).ready(function() {
+
+  console.log('Page Loaded');
+
+  // Force buttons above overlays
+  $('#plan1Btn, #plan2Btn, #plan3Btn').css({
+    'position': 'relative',
+    'z-index': '99999',
+    'pointer-events': 'auto'
+  });
+
+  // Plan config for each mode
+  var planConfig = {
+    monthly: {
+      plan1: { plan: '1_month',  amount: 499 },
+      plan2: { plan: '3_month',  amount: 1197 },
+      plan3: { plan: '6_month',  amount: 2094 },
+    },
+    yearly: {
+      plan1: { plan: '1_year',   amount: 3588 },
+      plan2: { plan: '2_year',   amount: 5976 },
+      plan3: { plan: '3_year',   amount: 7164 },
+    },
+  };
+
+  $(document).on('click touchstart', '#plan1Btn', function(e) {
+    e.preventDefault();
+    var cfg = planConfig[currentMode].plan1;
+    checkLoginAndPay(cfg.plan, cfg.amount);
+  });
+
+  $(document).on('click touchstart', '#plan2Btn', function(e) {
+    e.preventDefault();
+    var cfg = planConfig[currentMode].plan2;
+    checkLoginAndPay(cfg.plan, cfg.amount);
+  });
+
+  $(document).on('click touchstart', '#plan3Btn', function(e) {
+    e.preventDefault();
+    var cfg = planConfig[currentMode].plan3;
+    checkLoginAndPay(cfg.plan, cfg.amount);
+  });
+
+});
+
+function showLoader() {
+    Swal.fire({
+        title: 'Processing...',
+        html: 'Please wait while we set up your subscription.',
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        showConfirmButton: false,
+        didOpen: () => { Swal.showLoading(); }
+    });
+}
+
+function payNow(plan, amount) {
+
+    showLoader(); // ← show loader immediately
+
+    $.ajax({
+        url: '/create-order',
+        type: 'POST',
+        dataType: 'json',
+        data: { _token: '{{ csrf_token() }}', plan: plan, amount: amount },
+
+        success: function(res) {
+
+            Swal.close(); // ← close loader before opening Razorpay
+
+            if (!res.subscription_id) {
+                Swal.fire('Error', 'Could not create subscription. Try again.', 'error');
+                return;
+            }
+
+            var options = {
+                key:             res.key,
+                subscription_id: res.subscription_id,
+                name:            'Lawchiption',
+                description:     'Auto-renewing plan — ' + plan,
+                recurring:       1,
+
+                prefill: {
+                    name:    '{{ Auth::check() ? Auth::user()->full_name ?? "" : "" }}',
+                    email:   '{{ Auth::check() ? Auth::user()->email : "" }}',
+                    contact: '{{ Auth::check() ? Auth::user()->mobile_number : "" }}',
+                },
+
+                theme: { color: '#2d6b4a' },
+
+                handler: function(response) {
+
+                    showLoader(); // ← show loader again while verifying
+
+                    $.ajax({
+                        url: '/verify-payment',
+                        type: 'POST',
+                        dataType: 'json',
+                        data: {
+                            _token:                   '{{ csrf_token() }}',
+                            plan:                     plan,
+                            amount:                   amount,
+                            razorpay_payment_id:      response.razorpay_payment_id,
+                            razorpay_subscription_id: response.razorpay_subscription_id,
+                            razorpay_signature:       response.razorpay_signature,
+                        },
+                        success: function(data) {
+                            if (data.success) {
+                                Swal.fire({
+                                    title: 'Subscription Activated! 🎉',
+                                    text:  'Auto-renewal is set up. You are all set!',
+                                    icon:  'success',
+                                    confirmButtonColor: '#2d6b4a',
+                                }).then(() => location.reload());
+                            } else {
+                                Swal.fire('Error', data.message, 'error');
+                            }
+                        },
+                        error: function() {
+                            Swal.fire('Error', 'Verification failed. Contact support.', 'error');
+                        }
+                    });
+                },
+
+                modal: {
+                    ondismiss: function() {
+                        Swal.close(); // ← close loader if user closes Razorpay
+                        console.log('Checkout closed');
+                    }
+                }
+            };
+
+            var rzp = new Razorpay(options);
+            rzp.on('payment.failed', function(r) {
+                Swal.close();
+                Swal.fire('Payment Failed', r.error.description, 'error');
+            });
+            rzp.open();
+        },
+
+        error: function() {
+            Swal.close();
+            Swal.fire('Error', 'Could not reach server. Try again.', 'error');
+        }
+    });
+}
+</script>

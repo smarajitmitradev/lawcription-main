@@ -5084,8 +5084,8 @@ td:last-child {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 63px;
-    padding: 11px 22px;
+    height: 45px;
+    padding: 6px 14px;
     border-radius: 9999px;
     font-size: 12px;
     font-weight: 700;
