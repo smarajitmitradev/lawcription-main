@@ -156,7 +156,7 @@
     </div>
 
 
-    <div class="row s-footer__bottom !mt-8 !pt-5"> 
+    <!-- <div class="row s-footer__bottom !mt-8 !pt-5"> 
 
         <div class="column xl-6 lg-12">
 
@@ -166,6 +166,41 @@
 
                 Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
             </p>
+
+        </div>
+
+    </div> -->
+
+
+    <div class="row s-footer__bottom !mt-8 !pt-6 border-t border-white/10">
+
+        <div class="column w-full">
+
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
+
+                <!-- Copyright -->
+                <span class="text-sm text-gray-400">
+                    © Lounge {{ date('Y') }}. All Rights Reserved.
+                </span>
+
+                <!-- Links -->
+                <div class="flex flex-wrap items-center justify-center gap-3 text-sm">
+
+                    <a href="{{route('user.privacy')}}" class="px-3 py-1.5 rounded-full bg-white/5 text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300">
+                        Privacy Policy
+                    </a>
+
+                    <a href="{{route('user.terms')}}" class="px-3 py-1.5 rounded-full bg-white/5 text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300">
+                        Terms & Conditions
+                    </a>
+
+                    <a href="{{route('user.about')}}" class="px-3 py-1.5 rounded-full bg-white/5 text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300">
+                        About Us
+                    </a>
+
+                </div>
+
+            </div>
 
         </div>
 

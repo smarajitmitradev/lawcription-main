@@ -21,8 +21,8 @@
             <ul class="header-nav__links !gap-1 !px-3">
 
                 <li>
-                    <a href="{{ route('home') }}" class="!rounded-full !px-3 !py-2 !text-xs !font-semibold !uppercase !tracking-wide
-        {{ request()->routeIs('home') ? '!bg-white !text-black' : 'hover:!bg-white/10 hover:!text-white' }}">
+                    <a href="{{ route('home.new') }}" class="!rounded-full !px-3 !py-2 !text-xs !font-semibold !uppercase !tracking-wide
+        {{ request()->routeIs('home.new') ? '!bg-white !text-black' : 'hover:!bg-white/10 hover:!text-white' }}">
                         Intro
                     </a>
                 </li>

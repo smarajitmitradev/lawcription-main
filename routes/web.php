@@ -6,6 +6,7 @@ use App\Http\Controllers\Frontend\SubscriptionController;
 use App\Http\Controllers\Frontend\RazorpayController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Auth\ProfileController;
+use App\Http\Controllers\Frontend\UserPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +40,7 @@ Route::post('/complete-profile', [AuthController::class, 'saveProfile'])
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index_new'])->name('home.new');
 Route::get('/about-us', [HomeController::class, 'about_us'])->name('about-us');
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
@@ -57,3 +59,7 @@ Route::middleware('auth')->group(function () {
 // webhook
 
 Route::post('/razorpay/webhook', [RazorpayController::class, 'webhook'])->name('razorpay.webhook');
+
+Route::get('/about', [UserPageController::class, 'about'])->name('user.about');
+Route::get('/terms', [UserPageController::class, 'terms'])->name('user.terms');
+Route::get('/privacy', [UserPageController::class, 'privacy'])->name('user.privacy');
