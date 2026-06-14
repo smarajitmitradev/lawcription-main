@@ -47,7 +47,7 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/subscription', [SubscriptionController::class, 'index'])
 
         ->name('subscription.index');
-        
+
 
 
 Route::middleware('auth')->group(function () {
@@ -66,3 +66,5 @@ Route::post('/razorpay/webhook', [RazorpayController::class, 'webhook'])->name('
 Route::get('/about', [UserPageController::class, 'about'])->name('user.about');
 Route::get('/terms', [UserPageController::class, 'terms'])->name('user.terms');
 Route::get('/privacy', [UserPageController::class, 'privacy'])->name('user.privacy');
+
+
