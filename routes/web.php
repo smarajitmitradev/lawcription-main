@@ -47,6 +47,7 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/subscription', [SubscriptionController::class, 'index'])
 
         ->name('subscription.index');
+        
 
 
 Route::middleware('auth')->group(function () {
