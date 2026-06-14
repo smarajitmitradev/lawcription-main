@@ -33,16 +33,26 @@ class AuthController extends Controller
 
         $otp = rand(100000, 999999);
 
-        $user = User::where('mobile_number', $mobile)->first();
+        // ✅ Check including soft-deleted users
+        $user = User::withTrashed()->where('mobile_number', $mobile)->first();
 
         if ($user) {
-
-            $user->update([
-                'otp' => $otp,
-                'otp_expires_at' => now()->addMinutes(5)
-            ]);
+            // ✅ If previously deleted, restore and clear deletion data only
+            if ($user->trashed()) {
+                $user->restore();
+                $user->update([
+                    'deleted_at'    => null,
+                    'delete_reason' => null,
+                    'otp'           => $otp,
+                    'otp_expires_at' => now()->addMinutes(5)
+                ]);
+            } else {
+                $user->update([
+                    'otp'            => $otp,
+                    'otp_expires_at' => now()->addMinutes(5)
+                ]);
+            }
         } else {
-
             $user = User::create([
                 'mobile_number'       => $mobile,
                 'country_code'        => '+91',

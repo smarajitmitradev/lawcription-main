@@ -99,6 +99,7 @@ class RazorpayController extends Controller
             auth()->user()->update([
                 'subscription_expiry' => $expiry,
                 'current_plan'        => $request->plan,
+                'is_premium'          => 1,
             ]);
 
             return response()->json(['success' => true]);

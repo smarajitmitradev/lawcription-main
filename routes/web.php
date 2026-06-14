@@ -54,6 +54,8 @@ Route::middleware('auth')->group(function () {
         Route::post('/verify-payment', [RazorpayController::class, 'verify']);
         Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
         Route::post('/avatar/update', [ProfileController::class, 'update_avatr'])->name('avatar.update');
+
+        Route::delete('/account/delete', [ProfileController::class, 'deleteAccount'])->name('account.delete');
 });
 
 // webhook

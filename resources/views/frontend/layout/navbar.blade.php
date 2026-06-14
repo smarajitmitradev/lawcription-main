@@ -123,6 +123,10 @@
                             <span>My Plan</span>
                         </a>
 
+                        <a href="javascript:void(0)" onclick="openDeleteAccountModal()" class="flex items-center gap-3 px-4 py-3 text-sm text-red-300 hover:bg-red-500/10 transition">
+                            <i class="fas fa-trash text-red-400"></i>
+                            <span>Delete Account</span>
+                        </a>
                         <!-- Logout -->
                         <a href="{{ route('logout') }}" class="flex items-center gap-3 px-4 py-3 text-sm text-red-400 hover:bg-red-500/10 transition border-t border-white/10">
                             <i class="fas fa-right-from-bracket"></i>
@@ -174,14 +178,11 @@
             <div style="position:relative; display:inline-block;">
 
                 @auth
-                <img id="profileImgPreview" 
-     src="{{ Auth::user()->img 
+                <img id="profileImgPreview" src="{{ Auth::user()->img 
           ? asset('storage/' . Auth::user()->img) 
           : 'https://ui-avatars.com/api/?name=' . urlencode(Auth::user()->full_name ?? Auth::user()->first_name . ' ' . Auth::user()->last_name ?? 'User') . '&background=6366f1&color=fff&size=200' 
-     }}" 
-     style="width:96px; height:96px; border-radius:50%; border:4px solid #fff;
-            object-fit:cover; box-shadow:0 8px 20px rgba(0,0,0,0.15);"
-     onerror="this.src='https://ui-avatars.com/api/?name={{ urlencode(Auth::user()->full_name ?? 'User') }}&background=6366f1&color=fff&size=200'">
+     }}" style="width:96px; height:96px; border-radius:50%; border:4px solid #fff;
+            object-fit:cover; box-shadow:0 8px 20px rgba(0,0,0,0.15);" onerror="this.src='https://ui-avatars.com/api/?name={{ urlencode(Auth::user()->full_name ?? 'User') }}&background=6366f1&color=fff&size=200'">
                 @else
                 <img id="profileImgPreview" src="https://ui-avatars.com/api/?name=User&background=6366f1&color=fff&size=200" style="width:96px; height:96px; border-radius:50%; border:4px solid #fff;
            object-fit:cover; box-shadow:0 8px 20px rgba(0,0,0,0.15);">
@@ -1331,6 +1332,203 @@
         doc.save('subscription-receipt-{{ isset($sub) ? $sub->razorpay_payment_id : "receipt" }}.pdf');
     }
 </script>
+
+<!-- Account Delete modal  -->
+
+<!-- Delete Account Modal -->
+<div id="deleteAccountModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 backdrop-blur-sm">
+    <div class="relative w-full max-w-md mx-4 rounded-2xl shadow-2xl overflow-hidden" style="background: linear-gradient(135deg, #1a0a2e 0%, #16213e 50%, #0f3460 100%); border: 1px solid rgba(255,255,255,0.1); max-height: 75vh;">
+
+        <!-- Sticky Header -->
+        <div class="sticky top-0 z-10 px-5 py-3 flex items-center justify-between border-b border-white/10" style="background: linear-gradient(135deg, #1a0a2e 0%, #16213e 100%);">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center">
+                    <i class="fas fa-trash text-red-400 text-xs"></i>
+                </div>
+                <h2 class="text-white font-bold text-base">Delete Account</h2>
+            </div>
+            <button onclick="closeDeleteAccountModal()" class="text-gray-400 hover:text-white transition">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Scrollable Body -->
+        <div class="overflow-y-auto px-5 py-4" style="max-height: calc(75vh - 56px);">
+
+            <!-- Warning -->
+            <div class="bg-red-500/10 border border-red-500/20 rounded-xl p-3 mb-4">
+                <p class="text-red-400 text-xs flex items-start gap-2">
+                    <i class="fas fa-exclamation-triangle mt-0.5"></i>
+                    <span>This action is <strong>permanent</strong> and cannot be undone. All your data will be deleted.</span>
+                </p>
+            </div>
+
+            <!-- Form -->
+            <form id="deleteAccountForm">
+                @csrf
+
+                <!-- Delete Type -->
+                <div class="mb-3">
+                    <label class="block text-gray-300 text-xs font-medium mb-1.5">
+                        Reason Type <span class="text-red-400">*</span>
+                    </label>
+                    <select id="delete_type" name="delete_type" class="w-full border text-white text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:border-indigo-500 transition appearance-none" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                        <option value="" style="background:#16213e;" disabled selected>Select a reason</option>
+                        <option value="not_useful" style="background:#16213e;">Not useful anymore</option>
+                        <option value="privacy_concerns" style="background:#16213e;">Privacy concerns</option>
+                        <option value="switching_service" style="background:#16213e;">Switching to another service</option>
+                        <option value="too_many_notifications" style="background:#16213e;">Too many notifications</option>
+                        <option value="technical_issues" style="background:#16213e;">Technical issues</option>
+                        <option value="other" style="background:#16213e;">Other</option>
+                    </select>
+                </div>
+
+                <!-- Reason Textarea -->
+                <div class="mb-4">
+                    <label class="block text-gray-300 text-xs font-medium mb-1.5">
+                        Additional Reason <span class="text-red-400">*</span>
+                    </label>
+                    <textarea id="delete_reason" name="delete_reason" rows="3" placeholder="Please tell us more about why you're leaving..." class="w-full border text-white text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:border-indigo-500 transition resize-none placeholder-gray-500" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);"></textarea>
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex gap-3 pb-1">
+                    <button type="button" onclick="closeDeleteAccountModal()" class="flex-1 px-4 py-2.5 rounded-xl border border-white/10 text-gray-300 text-xs font-semibold hover:bg-white/10 transition">
+                        Cancel
+                    </button>
+                    <button type="button" onclick="submitDeleteAccount()" class="flex-1 px-4 py-2.5 rounded-xl text-white text-xs font-semibold transition flex items-center justify-center gap-2" style="background: linear-gradient(135deg, #ef4444, #b91c1c);">
+                        <i class="fas fa-trash text-xs"></i>
+                        Delete Account
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openDeleteAccountModal() {
+        document.getElementById('deleteAccountModal').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeDeleteAccountModal() {
+        document.getElementById('deleteAccountModal').style.display = 'none';
+        document.body.style.overflow = '';
+        document.getElementById('deleteAccountForm').reset();
+    }
+
+    function submitDeleteAccount() {
+        const deleteReason = document.getElementById('delete_reason').value.trim();
+        const deleteType   = document.getElementById('delete_type') ? document.getElementById('delete_type').value : '';
+        const btn = document.getElementById('deleteSubmitBtn'); // ✅ grab BEFORE Swal
+        const btnText = document.getElementById('deleteSubmitBtnText');
+
+        if (!deleteReason) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Required',
+                text: 'Please provide a reason.',
+                confirmButtonColor: '#6366f1'
+            });
+            return;
+        }
+
+        if (deleteReason.length < 10) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Too Short',
+                text: 'Reason must be at least 10 characters.',
+                confirmButtonColor: '#6366f1'
+            });
+            return;
+        }
+
+        Swal.fire({
+            icon: 'warning',
+            title: 'Delete Account?',
+            text: 'This action is permanent and cannot be undone. All your data will be deleted.',
+            showCancelButton: true,
+            confirmButtonColor: '#ef4444',
+            cancelButtonColor: '#6b7280',
+            confirmButtonText: 'Yes, Delete it!',
+            cancelButtonText: 'Cancel'
+        }).then((result) => {
+            if (!result.isConfirmed) return;
+
+            // ✅ Re-grab button inside .then() in case of any DOM timing issue
+            const btn = document.getElementById('deleteSubmitBtn');
+            const btnText = document.getElementById('deleteSubmitBtnText');
+
+            if (btn) {
+                btn.disabled = true;
+                btnText.textContent = 'Deleting...';
+            }
+
+            fetch('{{ route("account.delete") }}', {
+                    method: 'DELETE',
+                    body: new URLSearchParams({
+                        '_token': '{{ csrf_token() }}',
+                        'delete_reason': deleteReason,
+                        'delete_type':deleteType,
+                    }),
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    }
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Account Deleted',
+                            text: 'Your account has been deleted successfully. Goodbye!',
+                            confirmButtonColor: '#6366f1',
+                            timer: 2000,
+                            showConfirmButton: false
+                        }).then(() => {
+                            window.location.href = '{{ route("login") }}';
+                        });
+                        closeDeleteAccountModal();
+                    } else {
+                        const errors = Object.values(data.errors ?? {}).flat().join(' ');
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: errors || 'Something went wrong.',
+                            confirmButtonColor: '#ef4444'
+                        });
+                        if (btn) {
+                            btn.disabled = false;
+                            btnText.textContent = 'Delete Account';
+                        }
+                    }
+                })
+                .catch(() => {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Network Error',
+                        text: 'Please try again.',
+                        confirmButtonColor: '#ef4444'
+                    });
+                    if (btn) {
+                        btn.disabled = false;
+                        btnText.textContent = 'Delete Account';
+                    }
+                });
+        });
+    }
+
+    // Close on backdrop click
+    document.getElementById('deleteAccountModal').addEventListener('click', function(e) {
+        if (e.target === this) closeDeleteAccountModal();
+    });
+</script>
+
+
+<!-- End -->
 
 <style>
     .profile-dropdown {

@@ -50,7 +50,7 @@ class ProfileController extends Controller
                 'img'          => $user->img ? Storage::url($user->img) : null,
                 'user_type'    => $user->user_type,
                 'is_premium'   => $user->is_premium,
-                'mobile_number'=> $user->country_code . ' ' . $user->mobile_number,
+                'mobile_number' => $user->country_code . ' ' . $user->mobile_number,
                 'member_since' => $user->created_at->format('d M Y'),
             ]
         ]);
@@ -79,6 +79,38 @@ class ProfileController extends Controller
             'success'  => true,
             'img_url'  => asset('storage/' . $path),
             'message'  => 'Avatar updated successfully.',
+        ]);
+    }
+
+    public function deleteAccount(Request $request)
+    {
+        $request->validate([
+            'delete_type'   => 'required|string',
+            'delete_reason' => 'required|string|min:10|max:1000',
+        ]);
+
+        $user = Auth::user();
+
+        $user->update([
+            'delete_reason' => $request->delete_type . ': ' . $request->delete_reason,
+            'otp'                      => null,
+            'refresh_token'            => null,
+            'refresh_token_expires_at' => null,
+            'device_id'                => null,
+            'fcm_token'                => null,
+            'takeover_token'           => null,
+            'takeover_expires_at'      => null,
+        ]);
+
+        $user->delete(); // soft delete
+
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Account deleted successfully'
         ]);
     }
 }
