@@ -7,6 +7,7 @@ use Razorpay\Api\Api;
 use App\Models\Subscription;
 use Carbon\Carbon;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Log;
 
 class RazorpayController extends Controller
 {
@@ -22,38 +23,32 @@ class RazorpayController extends Controller
     {
         $from = $from ?? Carbon::now();
 
+        if ($plan == '7_day')   return $from->copy()->addDays(7);
         if ($plan == '1_month') return $from->copy()->addMonth();
-        if ($plan == '3_month') return $from->copy()->addMonths(3);
         if ($plan == '6_month') return $from->copy()->addMonths(6);
         if ($plan == '1_year')  return $from->copy()->addYear();
-        if ($plan == '2_year')  return $from->copy()->addYears(2);
-        if ($plan == '3_year')  return $from->copy()->addYears(3);
 
         return $from->copy()->addMonth();
     }
 
     private function getTotalCount($plan)
     {
+        if ($plan == '7_day')   return 4;
         if ($plan == '1_month') return 12;
-        if ($plan == '3_month') return 4;
         if ($plan == '6_month') return 2;
 
-        return 1; // 1_year, 2_year, 3_year — one billing cycle
+        return 1; // 1_year
     }
 
     public function createOrder(Request $request)
     {
         $planId = config('services.razorpay.plans.' . $request->plan);
 
-        // TEMPORARY TEST — remove after
-        // dd([
-        //     'plan_received' => $request->plan,
-        //     'plan_id_found' => $planId,
-        //     'all_plans'     => config('services.razorpay.plans'),
-        // ]);
-
         if (!$planId) {
-            return response()->json(['success' => false, 'message' => 'Invalid plan'], 422);
+            return response()->json([
+                'success' => false,
+                'message' => 'Invalid plan'
+            ], 422);
         }
 
         $subscription = $this->getApi()->subscription->create([
@@ -82,6 +77,15 @@ class RazorpayController extends Controller
                 'razorpay_signature'       => $request->razorpay_signature,
             ]);
 
+            // Prevent duplicate processing
+            $existing = Subscription::where('razorpay_payment_id', $request->razorpay_payment_id)->first();
+            if ($existing) {
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Already activated'
+                ]);
+            }
+
             $expiry = $this->getExpiry($request->plan);
 
             Subscription::create([
@@ -103,48 +107,99 @@ class RazorpayController extends Controller
             ]);
 
             return response()->json(['success' => true]);
+
         } catch (\Exception $e) {
-            return response()->json(['success' => false, 'message' => $e->getMessage()]);
+            Log::error('Payment verification failed', [
+                'user_id'         => auth()->id(),
+                'payment_id'      => $request->razorpay_payment_id,
+                'subscription_id' => $request->razorpay_subscription_id,
+                'plan'            => $request->plan,
+                'amount'          => $request->amount,
+                'error'           => $e->getMessage(),
+            ]);
+
+            return response()->json([
+                'success' => false,
+                'message' => $e->getMessage()
+            ]);
         }
     }
 
     public function webhook(Request $request)
     {
+        // Verify signature
         $signature = $request->header('X-Razorpay-Signature');
-        $expected  = hash_hmac('sha256', $request->getContent(), env('RAZORPAY_WEBHOOK_SECRET'));
+        $expected  = hash_hmac(
+            'sha256',
+            $request->getContent(),
+            env('RAZORPAY_WEBHOOK_SECRET')
+        );
 
         if (!hash_equals($expected, $signature)) {
             return response('Invalid signature', 400);
         }
 
         $event = $request->input('event');
+        $subId = $request->input('payload.subscription.entity.id');
 
+        Log::info('Razorpay Webhook Received', [
+            'event' => $event,
+            'subId' => $subId
+        ]);
+
+        // ── Auto Renewal (subscription.charged) ──
+        // This is the ONLY automatic event we handle
+        // because money is already collected from user
+        // so we must extend their access
         if ($event === 'subscription.charged') {
-            $subId = $request->input('payload.subscription.entity.id');
-            $sub   = Subscription::where('razorpay_subscription_id', $subId)->latest()->first();
+            $sub = Subscription::where('razorpay_subscription_id', $subId)
+                    ->latest()->first();
 
             if ($sub) {
-                $newExpiry = $this->getExpiry($sub->plan_name, Carbon::parse($sub->expiry_date));
+                // Prevent duplicate
+                $paymentId = $request->input('payload.payment.entity.id');
+                $exists = Subscription::where('razorpay_payment_id', $paymentId)->first();
 
-                Subscription::create([
-                    'user_id'                  => $sub->user_id,
-                    'plan_name'                => $sub->plan_name,
-                    'amount'                   => $sub->amount,
-                    'razorpay_subscription_id' => $subId,
-                    'razorpay_payment_id'      => $request->input('payload.payment.entity.id'),
-                    'start_date'               => Carbon::now(),
-                    'expiry_date'              => $newExpiry,
-                    'status'                   => 'paid',
-                ]);
+                if (!$exists) {
+                    $newExpiry = $this->getExpiry(
+                        $sub->plan_name,
+                        Carbon::parse($sub->expiry_date)
+                    );
 
-                $sub->user->update(['subscription_expiry' => $newExpiry]);
+                    Subscription::create([
+                        'user_id'                  => $sub->user_id,
+                        'plan_name'                => $sub->plan_name,
+                        'amount'                   => $sub->amount,
+                        'razorpay_subscription_id' => $subId,
+                        'razorpay_payment_id'      => $paymentId,
+                        'start_date'               => Carbon::now(),
+                        'expiry_date'              => $newExpiry,
+                        'status'                   => 'paid',
+                    ]);
+
+                    $sub->user->update([
+                        'subscription_expiry' => $newExpiry,
+                        'is_premium'          => 1,
+                    ]);
+                }
             }
         }
 
-        if ($event === 'subscription.cancelled') {
-            Subscription::where('razorpay_subscription_id', $request->input('payload.subscription.entity.id'))
-                ->update(['status' => 'cancelled']);
-        }
+        // ── ALL OTHER EVENTS — just log, admin handles manually ──
+        // subscription.activated  → admin handles
+        // subscription.cancelled  → admin handles
+        // subscription.halted     → admin handles
+        // subscription.paused     → admin handles
+        // subscription.resumed    → admin handles
+        // subscription.completed  → admin handles
+        // payment.failed          → admin handles
+        // refund.created          → admin handles
+        // refund.processed        → admin handles
+
+        Log::info('Webhook event received — admin action required', [
+            'event' => $event,
+            'subId' => $subId
+        ]);
 
         return response('OK', 200);
     }

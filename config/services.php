@@ -34,6 +34,7 @@ return [
         'key' => env('RAZORPAY_KEY_ID'),
         'secret' => env('RAZORPAY_KEY_SECRET'),
         'plans'  => [
+            '7_day'   => env('RAZORPAY_PLAN_7_DAY'),   // TEMP — remove after live autopay test
             '1_month' => env('RAZORPAY_PLAN_1_MONTH'),
             '3_month' => env('RAZORPAY_PLAN_3_MONTH'),
             '6_month' => env('RAZORPAY_PLAN_6_MONTH'),
