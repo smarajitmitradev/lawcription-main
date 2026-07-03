@@ -276,4 +276,87 @@ class RazorpayController extends Controller
 
         return response('OK', 200);
     }
+
+
+    // Old webhook updated on 04-07-2026 
+
+    // public function webhook(Request $request)
+    // {
+    //     // Verify signature
+    //     $signature = $request->header('X-Razorpay-Signature');
+    //     $expected  = hash_hmac(
+    //         'sha256',
+    //         $request->getContent(),
+    //         env('RAZORPAY_WEBHOOK_SECRET')
+    //     );
+
+    //     if (!hash_equals($expected, $signature)) {
+    //         return response('Invalid signature', 400);
+    //     }
+
+    //     $event = $request->input('event');
+    //     $subId = $request->input('payload.subscription.entity.id');
+
+    //     Log::info('Razorpay Webhook Received', [
+    //         'event' => $event,
+    //         'subId' => $subId
+    //     ]);
+
+    //     // ── Auto Renewal (subscription.charged) ──
+    //     // This is the ONLY automatic event we handle
+    //     // because money is already collected from user
+    //     // so we must extend their access
+    //     if ($event === 'subscription.charged') {
+    //         $sub = Subscription::where('razorpay_subscription_id', $subId)
+    //             ->latest()->first();
+
+    //         if ($sub) {
+    //             // Prevent duplicate
+    //             $paymentId = $request->input('payload.payment.entity.id');
+    //             $exists = Subscription::where('razorpay_payment_id', $paymentId)->first();
+
+    //             if (!$exists) {
+    //                 $newExpiry = $this->getExpiry(
+    //                     $sub->plan_name,
+    //                     Carbon::parse($sub->expiry_date)
+    //                 );
+
+    //                 Subscription::create([
+    //                     'user_id'                  => $sub->user_id,
+    //                     'plan_name'                => $sub->plan_name,
+    //                     'amount'                   => $sub->amount,
+    //                     'razorpay_subscription_id' => $subId,
+    //                     'razorpay_payment_id'      => $paymentId,
+    //                     'start_date'               => Carbon::now(),
+    //                     'expiry_date'              => $newExpiry,
+    //                     'status'                   => 'paid',
+    //                 ]);
+
+    //                 $sub->user->update([
+    //                     'subscription_expiry' => $newExpiry,
+    //                     'is_premium'          => 1,
+    //                 ]);
+    //             }
+    //         }
+    //     }
+
+    //     // ── ALL OTHER EVENTS — just log, admin handles manually ──
+    //     // subscription.activated  → admin handles
+    //     // subscription.cancelled  → admin handles
+    //     // subscription.halted     → admin handles
+    //     // subscription.paused     → admin handles
+    //     // subscription.resumed    → admin handles
+    //     // subscription.completed  → admin handles
+    //     // payment.failed          → admin handles
+    //     // refund.created          → admin handles
+    //     // refund.processed        → admin handles
+
+    //     Log::info('Webhook event received — admin action required', [
+    //         'event' => $event,
+    //         'subId' => $subId
+    //     ]);
+
+    //     return response('OK', 200);
+    // }
+    
 }
