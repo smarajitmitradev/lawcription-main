@@ -33,11 +33,13 @@ class RazorpayController extends Controller
 
     private function getTotalCount($plan)
     {
-        if ($plan == '7_day')   return 4;
-        if ($plan == '1_month') return 12;
-        if ($plan == '6_month') return 2;
+        if ($plan == '7_day')   return 4;    // TEMP test — 4 weeks only
 
-        return 1; // 1_year
+        if ($plan == '1_month') return 360;  // 360 months = 30 years
+        if ($plan == '6_month') return 60;   // 60 cycles = 30 years
+        if ($plan == '1_year')  return 30;   // 30 cycles = 30 years
+
+        return 30;
     }
 
     public function createOrder(Request $request)
@@ -107,7 +109,6 @@ class RazorpayController extends Controller
             ]);
 
             return response()->json(['success' => true]);
-
         } catch (\Exception $e) {
             Log::error('Payment verification failed', [
                 'user_id'         => auth()->id(),
@@ -147,18 +148,14 @@ class RazorpayController extends Controller
             'subId' => $subId
         ]);
 
-        // ── Auto Renewal (subscription.charged) ──
-        // This is the ONLY automatic event we handle
-        // because money is already collected from user
-        // so we must extend their access
+        // ── Auto Renewal ──
         if ($event === 'subscription.charged') {
             $sub = Subscription::where('razorpay_subscription_id', $subId)
-                    ->latest()->first();
+                ->latest()->first();
 
             if ($sub) {
-                // Prevent duplicate
                 $paymentId = $request->input('payload.payment.entity.id');
-                $exists = Subscription::where('razorpay_payment_id', $paymentId)->first();
+                $exists    = Subscription::where('razorpay_payment_id', $paymentId)->first();
 
                 if (!$exists) {
                     $newExpiry = $this->getExpiry(
@@ -185,21 +182,97 @@ class RazorpayController extends Controller
             }
         }
 
-        // ── ALL OTHER EVENTS — just log, admin handles manually ──
-        // subscription.activated  → admin handles
-        // subscription.cancelled  → admin handles
-        // subscription.halted     → admin handles
-        // subscription.paused     → admin handles
-        // subscription.resumed    → admin handles
-        // subscription.completed  → admin handles
-        // payment.failed          → admin handles
-        // refund.created          → admin handles
-        // refund.processed        → admin handles
+        // ── Cancelled ──
+        if ($event === 'subscription.cancelled') {
+            $sub = Subscription::where('razorpay_subscription_id', $subId)
+                ->latest()->first();
 
-        Log::info('Webhook event received — admin action required', [
-            'event' => $event,
-            'subId' => $subId
-        ]);
+            if ($sub) {
+                $sub->update(['status' => 'cancelled']);
+                $sub->user->update(['is_premium' => 0]);
+            }
+        }
+
+        // ── Halted (payment failed multiple times) ──
+        if ($event === 'subscription.halted') {
+            $sub = Subscription::where('razorpay_subscription_id', $subId)
+                ->latest()->first();
+
+            if ($sub) {
+                $sub->update(['status' => 'halted']);
+                $sub->user->update(['is_premium' => 0]);
+            }
+        }
+
+        // ── Paused ──
+        if ($event === 'subscription.paused') {
+            $sub = Subscription::where('razorpay_subscription_id', $subId)
+                ->latest()->first();
+
+            if ($sub) {
+                $sub->update(['status' => 'paused']);
+                $sub->user->update(['is_premium' => 0]);
+            }
+        }
+
+        // ── Resumed ──
+        if ($event === 'subscription.resumed') {
+            $sub = Subscription::where('razorpay_subscription_id', $subId)
+                ->latest()->first();
+
+            if ($sub) {
+                $sub->update(['status' => 'paid']);
+                $sub->user->update(['is_premium' => 1]);
+            }
+        }
+
+        // ── Payment Failed ──
+        if ($event === 'payment.failed') {
+            $sub = Subscription::where('razorpay_subscription_id', $subId)
+                ->latest()->first();
+
+            if ($sub) {
+                $sub->update(['status' => 'payment_failed']);
+            }
+        }
+
+        // ── Refund Created ──
+        if ($event === 'refund.created') {
+            $paymentId = $request->input('payload.refund.entity.payment_id');
+            $sub = Subscription::where('razorpay_payment_id', $paymentId)
+                ->latest()->first();
+
+            if ($sub) {
+                $sub->update(['status' => 'refund_initiated']);
+                $sub->user->update(['is_premium' => 0]);
+            }
+        }
+
+        // ── Refund Processed ──
+        if ($event === 'refund.processed') {
+            $paymentId = $request->input('payload.refund.entity.payment_id');
+            $sub = Subscription::where('razorpay_payment_id', $paymentId)
+                ->latest()->first();
+
+            if ($sub) {
+                $sub->update(['status' => 'refunded']);
+                $sub->user->update(['is_premium' => 0]);
+            }
+        }
+
+        // ── Completed ──
+        // With totalCount = 30 years this will practically NEVER fire automatically
+        // Only fires if admin manually completes from admin panel
+        // But just in case, handle it here too
+        if ($event === 'subscription.completed') {
+            $sub = Subscription::where('razorpay_subscription_id', $subId)
+                ->latest()->first();
+
+            if ($sub) {
+                $sub->update(['status' => 'completed']);
+                $sub->user->update(['is_premium' => 0]);
+            }
+        }
 
         return response('OK', 200);
     }
