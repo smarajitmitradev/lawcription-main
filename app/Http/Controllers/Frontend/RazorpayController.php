@@ -200,7 +200,7 @@ class RazorpayController extends Controller
                 $sub->user->update(['is_premium' => 0]);
             }
         }
-        
+
         // ── Halted (payment failed multiple times) ──
         if ($event === 'subscription.halted') {
             $sub = Subscription::where('razorpay_subscription_id', $subId)
@@ -265,6 +265,22 @@ class RazorpayController extends Controller
             if ($sub) {
                 $sub->update(['status' => 'refunded']);
                 $sub->user->update(['is_premium' => 0]);
+            }
+        }
+        // ── Refund Failed ──
+        if ($event === 'refund.failed') {
+            $paymentId = $request->input('payload.refund.entity.payment_id');
+            $sub = Subscription::where('razorpay_payment_id', $paymentId)
+                ->latest()->first();
+
+            if ($sub) {
+                $sub->update(['status' => 'refund_failed']);
+                Log::error('Razorpay refund failed for payment', [
+                    'payment_id' => $paymentId,
+                    'subscription_id' => $sub->id,
+                ]);
+                // Note: is_premium stays 0 here (already revoked when refund was initiated) —
+                // admin needs to manually review and decide whether to restore access or retry refund.
             }
         }
 
