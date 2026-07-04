@@ -15,7 +15,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->command('subscriptions:expire-premium')
+            ->twiceDaily(1, 13); // 1 AM and 1 PM server time
     }
 
     /**
@@ -25,7 +26,7 @@ class Kernel extends ConsoleKernel
      */
     protected function commands()
     {
-        $this->load(__DIR__.'/Commands');
+        $this->load(__DIR__ . '/Commands');
 
         require base_path('routes/console.php');
     }

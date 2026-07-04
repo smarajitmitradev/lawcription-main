@@ -188,11 +188,19 @@ class RazorpayController extends Controller
                 ->latest()->first();
 
             if ($sub) {
+                // Don't overwrite if admin already marked as completed
+                if ($sub->status === 'completed') {
+                    Log::info('Webhook cancelled ignored — already marked completed', [
+                        'subId' => $subId
+                    ]);
+                    return response('OK', 200);
+                }
+
                 $sub->update(['status' => 'cancelled']);
                 $sub->user->update(['is_premium' => 0]);
             }
         }
-
+        
         // ── Halted (payment failed multiple times) ──
         if ($event === 'subscription.halted') {
             $sub = Subscription::where('razorpay_subscription_id', $subId)
@@ -211,7 +219,7 @@ class RazorpayController extends Controller
 
             if ($sub) {
                 $sub->update(['status' => 'paused']);
-                $sub->user->update(['is_premium' => 0]);
+                // $sub->user->update(['is_premium' => 0]);
             }
         }
 
@@ -270,7 +278,7 @@ class RazorpayController extends Controller
 
             if ($sub) {
                 $sub->update(['status' => 'completed']);
-                $sub->user->update(['is_premium' => 0]);
+                // $sub->user->update(['is_premium' => 0]);
             }
         }
 
@@ -358,5 +366,5 @@ class RazorpayController extends Controller
 
     //     return response('OK', 200);
     // }
-    
+
 }
