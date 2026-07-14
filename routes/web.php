@@ -68,3 +68,4 @@ Route::get('/terms', [UserPageController::class, 'terms'])->name('user.terms');
 Route::get('/privacy', [UserPageController::class, 'privacy'])->name('user.privacy');
 
 
+
