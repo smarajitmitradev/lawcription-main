@@ -142,7 +142,7 @@
       </h2>
     </div>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;" class="reveal d3">
+    <div class="legal-features"  class="reveal d3">
 
       <!-- Feature list left -->
       <div style="display:flex;flex-direction:column;gap:20px;">

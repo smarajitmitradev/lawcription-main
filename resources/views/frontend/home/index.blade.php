@@ -363,6 +363,66 @@
                         </p>
 
                     </div>
+                     <div class="testimonials-slider__slide swiper-slide">
+
+                        <div class="testimonials-slider__author">
+
+                            <img src="{{ asset('frontend/images/avatars/user-02.jpg') }}"
+                                 alt="Author image"
+                                 class="testimonials-slider__avatar">
+
+                            <cite class="testimonials-slider__cite">
+                                John Rockefeller
+                                <span>Cleveland, Ohio</span>
+                            </cite>
+
+                        </div>
+
+                        <p>
+                            Excellent coffee and wonderful atmosphere.
+                        </p>
+
+                    </div>
+                     <div class="testimonials-slider__slide swiper-slide">
+
+                        <div class="testimonials-slider__author">
+
+                            <img src="{{ asset('frontend/images/avatars/user-02.jpg') }}"
+                                 alt="Author image"
+                                 class="testimonials-slider__avatar">
+
+                            <cite class="testimonials-slider__cite">
+                                John Rockefeller
+                                <span>Cleveland, Ohio</span>
+                            </cite>
+
+                        </div>
+
+                        <p>
+                            Excellent coffee and wonderful atmosphere.
+                        </p>
+
+                    </div>
+                     <div class="testimonials-slider__slide swiper-slide">
+
+                        <div class="testimonials-slider__author">
+
+                            <img src="{{ asset('frontend/images/avatars/user-02.jpg') }}"
+                                 alt="Author image"
+                                 class="testimonials-slider__avatar">
+
+                            <cite class="testimonials-slider__cite">
+                                John Rockefeller
+                                <span>Cleveland, Ohio</span>
+                            </cite>
+
+                        </div>
+
+                        <p>
+                            Excellent coffee and wonderful atmosphere.
+                        </p>
+
+                    </div>
 
                     <div class="testimonials-slider__slide swiper-slide">
 

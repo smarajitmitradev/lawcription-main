@@ -130,7 +130,7 @@
       </h2>
     </div>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;" class="reveal d3">
+    <div class="legal-features" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;" class="reveal d3">
       <div style="display:flex;flex-direction:column;gap:20px;">
         <div style="display:flex;gap:18px;align-items:flex-start;padding:24px;background:var(--surface);border:1px solid var(--border);border-radius:20px;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.3)'" onmouseout="this.style.borderColor='var(--border)'">
           <div class="feat-icon" style="background:rgba(201,168,76,0.1);">⚖️</div>
