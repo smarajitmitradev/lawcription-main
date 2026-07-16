@@ -236,10 +236,10 @@
       </div>
 
       <!-- Cards — HTML unchanged from original -->
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;align-items:start;margin-top:50px;">
+      <div class="pricing-cards" style="">
 
         <!-- Card 1 · BASIC -->
-        <div class="plan-card reveal d2" style="background:var(--surface);border-radius:24px;padding:36px 30px;">
+        <div class="plan-card reveal d2" style="background:var(--surface);border-radius:24px;padding:36px 30px; width:100%;">
           <div style="margin-bottom:28px;">
             <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
               <div>

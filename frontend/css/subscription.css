@@ -172,6 +172,7 @@ body::after {
         transform 0.4s cubic-bezier(0.22, 0.68, 0, 1.2),
         box-shadow 0.4s ease;
     border: 1px solid var(--border);
+    width: 100%;
 }
 .plan-card::before {
     content: "";
@@ -326,6 +327,7 @@ body::after {
     transition:
         transform 0.3s ease,
         border-color 0.3s;
+    margin: 30px 0px;
 }
 .testi-card:hover {
     transform: translateY(-4px);
@@ -411,4 +413,24 @@ body::after {
         display: flex;
         flex-direction: column;
     }
+    .pricing-cards {
+        display: flex;
+        flex-direction: column;
+    }
+    .trusted-place {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.pricing-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+    margin-top: 50px;
+}
+.trusted-place {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
 }

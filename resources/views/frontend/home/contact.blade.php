@@ -204,7 +204,7 @@
                                     Full Name
                                 </label>
 
-                                <input type="text" name="name" class="w-full h-14 px-5 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 focus:outline-none transition">
+                                <input type="text" name="name" style="border:1px solid #555; height:50px" class="  w-full h-14 px-5 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 focus:outline-none transition">
                             </div>
 
                             <div>
@@ -212,7 +212,7 @@
                                     Phone
                                 </label>
 
-                                <input type="text" name="phone" class="w-full h-14 px-5 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 focus:outline-none transition">
+                                <input type="text" name="phone" style="border:1px solid #555; height:50px" class="w-full h-14 px-5 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 focus:outline-none transition">
                             </div>
 
                         </div>
@@ -222,7 +222,7 @@
                                 Email Address
                             </label>
 
-                            <input type="email" name="email" class="w-full h-14 px-5 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 focus:outline-none transition">
+                            <input type="email" name="email" style="border:1px solid #555; height:50px" class="w-full h-14 px-5 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 focus:outline-none transition">
                         </div>
 
                         <div>
@@ -230,7 +230,7 @@
                                 Subject
                             </label>
 
-                            <input type="text" name="subject" class="w-full h-14 px-5 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 focus:outline-none transition">
+                            <input type="text" name="subject" style="border:1px solid #555; height:50px" class="w-full h-14 px-5 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 focus:outline-none transition">
                         </div>
 
                         <div>
@@ -238,7 +238,7 @@
                                 Message
                             </label>
 
-                            <textarea rows="6" name="message" class="w-full p-5 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 focus:outline-none transition"></textarea>
+                            <textarea rows="6" name="message" style="border:1px solid #555; min-height:150px" class="w-full p-5 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 focus:outline-none transition"></textarea>
                         </div>
 
                         <button type="submit" class="w-full h-14 rounded-2xl font-semibold text-black bg-gradient-to-r from-cyan-400 to-teal-400 hover:scale-[1.02] transition duration-300">
