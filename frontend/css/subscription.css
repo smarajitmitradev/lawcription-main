@@ -410,15 +410,23 @@ body::after {
 
 @media (max-width: 768px) {
     .legal-features {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
     }
     .pricing-cards {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
     }
     .trusted-place {
-        display: flex;
+        display: flex !important;
+        flex-direction: column;
+    }
+    .weekly-part {
+        display: flex !important;
+        flex-direction: column;
+    }
+    .built-for {
+        display: flex !important;
         flex-direction: column;
     }
 }
@@ -432,5 +440,16 @@ body::after {
 .trusted-place {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.weekly-part {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-top: 24px;
+}
+.built-for {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
 }

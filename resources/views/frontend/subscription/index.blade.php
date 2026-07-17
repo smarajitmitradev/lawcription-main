@@ -165,8 +165,8 @@
       </div>
     </div>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:24px;" class="reveal d4">
-      <div style="padding:28px;background:var(--surface);border:1px solid var(--border);border-radius:20px;position:relative;overflow:hidden;">
+    <div class="weekly-part" style="" class="reveal d4">
+      <div style="margin:12px 0px; padding:28px;background:var(--surface);border:1px solid var(--border);border-radius:20px;position:relative;overflow:hidden;">
         <div style="position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:radial-gradient(var(--gold),transparent);opacity:0.1;"></div>
         <div style="font-size:2rem;margin-bottom:14px;">📰</div>
         <h3 class="serif" style="font-weight:700;font-size:0.95rem;margin-bottom:8px;color:var(--cream);">Weekly Digest</h3>
@@ -503,7 +503,7 @@
       <span class="tag" style="background:rgba(111,168,130,0.08);color:var(--greenlit);border:1px solid rgba(111,168,130,0.15);margin-bottom:16px;display:inline-flex;">Coverage Areas</span>
       <h2 class="serif" style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;letter-spacing:-1px;">Built for every specialty.</h2>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;" class="reveal d2">
+    <div class="built-for" style="" class="reveal d2">
       <div style="border-radius:24px;overflow:hidden;border:1px solid var(--border);position:relative;grid-row:span 2;">
         <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=700&q=80" alt="Surgery" style="width:100%;height:100%;object-fit:cover;display:block;min-height:400px;filter:brightness(0.55) sepia(0.3);" />
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,9,8,0.95) 30%,rgba(10,9,8,0.15));"></div>
