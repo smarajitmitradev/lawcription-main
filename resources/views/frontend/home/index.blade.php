@@ -47,11 +47,19 @@
                     Your trusted healthcare partner, offering expert diagnosis, advanced treatment, and compassionate care to help you and your family live healthier, happier lives.
                 </p>
 
-                <ul class="intro-block-content__social">
-                    <li><a href="#">FB</a></li>
-                    <li><a href="#">IG</a></li>
-                    <li><a href="#">PI</a></li>
-                    <li><a href="#">X</a></li>
+                <ul class="intro-block-content__social mt-4">
+                    <li><a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a></li>
+                    <li><a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a></li>
+                    <li><a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a></li>
+                    <li><a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a></li>
                 </ul>
 
             </div>
@@ -102,21 +110,8 @@
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quasi earum, ut consequuntur pariatur fugiat aliquam voluptatem.
-            </p>
-
-            <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dolorem vero sit neque sequi eius illum at porro aperiam.
-            </p>
-
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dolorem vero sit neque sequi eius illum at porro aperiam.
-            </p>
-
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dolorem vero sit neque sequi eius illum.
+                
             </p>
 
         </div>

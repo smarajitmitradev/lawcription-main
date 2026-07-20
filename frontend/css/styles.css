@@ -3712,12 +3712,21 @@ td:last-child {
 .intro-block-content__social li {
     padding-left: 0;
     margin-right: var(--vspace-0_625);
+    border: 1px solid #eee;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 .intro-block-content__social a {
-    font-size: var(--text-sm);
+    /* font-size: var(--text-sm); */
     letter-spacing: 0.15em;
     color: var(--color-text-light);
+    font-size: 18px;
+    font-weight: 600;
 }
 
 /* --------------------------------------------------------------------
@@ -3986,6 +3995,9 @@ td:last-child {
 
     .intro-scroll {
         display: none;
+    }
+    .intro-header__big-type {
+        font-size: 58px;
     }
 }
 
