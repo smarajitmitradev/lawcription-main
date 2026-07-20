@@ -19,9 +19,9 @@
         <div class="intro-header">
             <div class="intro-header__overline">Welcome to</div>
 
-            <h1 class="intro-header__big-type">
-                Lounge <br>
-                Cafe
+            <h1  class="add-headline intro-header__big-type">
+               Lawcription
+                
             </h1>
         </div>
 
@@ -44,8 +44,7 @@
             <div class="intro-block-content__text-wrap">
 
                 <p class="intro-block-content__text">
-                    Savor moments of bliss with every sip, as our expertly
-                    crafted coffees and delectable pastries embrace your senses.
+                    Your trusted healthcare partner, offering expert diagnosis, advanced treatment, and compassionate care to help you and your family live healthier, happier lives.
                 </p>
 
                 <ul class="intro-block-content__social">
