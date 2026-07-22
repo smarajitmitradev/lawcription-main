@@ -130,7 +130,7 @@
       </h2>
     </div>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;" class="reveal d3">
+    <div class="legal-features" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;" class="reveal d3">
       <div style="display:flex;flex-direction:column;gap:20px;">
         <div style="display:flex;gap:18px;align-items:flex-start;padding:24px;background:var(--surface);border:1px solid var(--border);border-radius:20px;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.3)'" onmouseout="this.style.borderColor='var(--border)'">
           <div class="feat-icon" style="background:rgba(201,168,76,0.1);">⚖️</div>
@@ -165,8 +165,8 @@
       </div>
     </div>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:24px;" class="reveal d4">
-      <div style="padding:28px;background:var(--surface);border:1px solid var(--border);border-radius:20px;position:relative;overflow:hidden;">
+    <div class="weekly-part" style="" class="reveal d4">
+      <div style="margin:12px 0px; padding:28px;background:var(--surface);border:1px solid var(--border);border-radius:20px;position:relative;overflow:hidden;">
         <div style="position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:radial-gradient(var(--gold),transparent);opacity:0.1;"></div>
         <div style="font-size:2rem;margin-bottom:14px;">📰</div>
         <h3 class="serif" style="font-weight:700;font-size:0.95rem;margin-bottom:8px;color:var(--cream);">Weekly Digest</h3>
@@ -380,10 +380,10 @@
       {{-- ══ END TEMP TEST CARD ══ --}}
 
       {{-- ── 3 PLAN CARDS ── --}}
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;align-items:start;margin-top:50px;">
+      <div  class="pricing-cards" >
 
         {{-- Card 1 · 1 MONTH --}}
-        <div class="plan-card reveal d2" style="background:var(--surface);border-radius:24px;padding:36px 30px;">
+        <div class="plan-card reveal d2" style="background:var(--surface);border-radius:24px;padding:36px 30px; margin:40px 0;">
           <div style="margin-bottom:28px;">
             <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
               <div>
@@ -413,7 +413,7 @@
         </div>
 
         {{-- Card 2 · 3 MONTHS (featured) --}}
-        <div class="plan-card star reveal d3" style="border-radius:24px;padding:36px 30px;">
+        <div class="plan-card star reveal d3" style="border-radius:24px;padding:36px 30px; margin:40px 0;">
           <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--greenlit));border-radius:24px 24px 0 0;"></div>
           <div style="position:absolute;top:20px;right:20px;">
             <span class="tag" style="background:linear-gradient(135deg,var(--gold),var(--greenlit));color:#0A0908;font-size:10px;font-weight:700;">⭐ POPULAR</span>
@@ -447,7 +447,7 @@
         </div>
 
         {{-- Card 3 · 1 YEAR --}}
-        <div class="plan-card reveal d4" style="background:var(--surface);border-radius:24px;padding:36px 30px;">
+        <div class="plan-card reveal d4" style="background:var(--surface);border-radius:24px;padding:36px 30px; margin:40px 0;">
           <div style="margin-bottom:28px;">
             <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
               <div>
@@ -503,7 +503,7 @@
       <span class="tag" style="background:rgba(111,168,130,0.08);color:var(--greenlit);border:1px solid rgba(111,168,130,0.15);margin-bottom:16px;display:inline-flex;">Coverage Areas</span>
       <h2 class="serif" style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;letter-spacing:-1px;">Built for every specialty.</h2>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;" class="reveal d2">
+    <div class="built-for" style="" class="reveal d2">
       <div style="border-radius:24px;overflow:hidden;border:1px solid var(--border);position:relative;grid-row:span 2;">
         <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=700&q=80" alt="Surgery" style="width:100%;height:100%;object-fit:cover;display:block;min-height:400px;filter:brightness(0.55) sepia(0.3);" />
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,9,8,0.95) 30%,rgba(10,9,8,0.15));"></div>
@@ -600,7 +600,7 @@
       <span class="tag" style="background:rgba(201,168,76,0.08);color:var(--gold2);border:1px solid rgba(201,168,76,0.15);margin-bottom:16px;display:inline-flex;">Testimonials</span>
       <h2 class="serif" style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;letter-spacing:-1px;">Trusted by 12,000+ physicians.</h2>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;" class="reveal d2">
+    <div  class="trusted-place reveal d2">
       <div class="testi-card" style="border-radius:20px;padding:28px;">
         <div style="display:flex;gap:3px;margin-bottom:16px;color:var(--gold);font-size:14px;">★★★★★</div>
         <p class="light-serif" style="font-size:1.05rem;color:rgba(237,232,222,0.75);line-height:1.7;margin-bottom:20px;font-style:italic;">"Finally, legal commentary that speaks in clinical terms. The Consumer Protection Act series alone saved me from a very costly misunderstanding."</p>

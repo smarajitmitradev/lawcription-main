@@ -19,9 +19,9 @@
         <div class="intro-header">
             <div class="intro-header__overline">Welcome to</div>
 
-            <h1 class="intro-header__big-type">
-                Lounge <br>
-                Cafe
+            <h1  class="add-headline intro-header__big-type">
+               Lawcription
+                
             </h1>
         </div>
 
@@ -44,15 +44,22 @@
             <div class="intro-block-content__text-wrap">
 
                 <p class="intro-block-content__text">
-                    Savor moments of bliss with every sip, as our expertly
-                    crafted coffees and delectable pastries embrace your senses.
+                    Your trusted healthcare partner, offering expert diagnosis, advanced treatment, and compassionate care to help you and your family live healthier, happier lives.
                 </p>
 
-                <ul class="intro-block-content__social">
-                    <li><a href="#">FB</a></li>
-                    <li><a href="#">IG</a></li>
-                    <li><a href="#">PI</a></li>
-                    <li><a href="#">X</a></li>
+                <ul class="intro-block-content__social mt-4">
+                    <li><a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a></li>
+                    <li><a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a></li>
+                    <li><a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a></li>
+                    <li><a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a></li>
                 </ul>
 
             </div>
@@ -103,21 +110,8 @@
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quasi earum, ut consequuntur pariatur fugiat aliquam voluptatem.
-            </p>
-
-            <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dolorem vero sit neque sequi eius illum at porro aperiam.
-            </p>
-
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dolorem vero sit neque sequi eius illum at porro aperiam.
-            </p>
-
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dolorem vero sit neque sequi eius illum.
+                
             </p>
 
         </div>
@@ -344,6 +338,66 @@
                 <div class="swiper-wrapper">
 
                     <div class="testimonials-slider__slide swiper-slide">
+
+                        <div class="testimonials-slider__author">
+
+                            <img src="{{ asset('frontend/images/avatars/user-02.jpg') }}"
+                                 alt="Author image"
+                                 class="testimonials-slider__avatar">
+
+                            <cite class="testimonials-slider__cite">
+                                John Rockefeller
+                                <span>Cleveland, Ohio</span>
+                            </cite>
+
+                        </div>
+
+                        <p>
+                            Excellent coffee and wonderful atmosphere.
+                        </p>
+
+                    </div>
+                     <div class="testimonials-slider__slide swiper-slide">
+
+                        <div class="testimonials-slider__author">
+
+                            <img src="{{ asset('frontend/images/avatars/user-02.jpg') }}"
+                                 alt="Author image"
+                                 class="testimonials-slider__avatar">
+
+                            <cite class="testimonials-slider__cite">
+                                John Rockefeller
+                                <span>Cleveland, Ohio</span>
+                            </cite>
+
+                        </div>
+
+                        <p>
+                            Excellent coffee and wonderful atmosphere.
+                        </p>
+
+                    </div>
+                     <div class="testimonials-slider__slide swiper-slide">
+
+                        <div class="testimonials-slider__author">
+
+                            <img src="{{ asset('frontend/images/avatars/user-02.jpg') }}"
+                                 alt="Author image"
+                                 class="testimonials-slider__avatar">
+
+                            <cite class="testimonials-slider__cite">
+                                John Rockefeller
+                                <span>Cleveland, Ohio</span>
+                            </cite>
+
+                        </div>
+
+                        <p>
+                            Excellent coffee and wonderful atmosphere.
+                        </p>
+
+                    </div>
+                     <div class="testimonials-slider__slide swiper-slide">
 
                         <div class="testimonials-slider__author">
 
