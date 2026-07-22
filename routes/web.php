@@ -7,6 +7,7 @@ use App\Http\Controllers\Frontend\RazorpayController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Auth\ProfileController;
 use App\Http\Controllers\Frontend\UserPageController;
+use App\Http\Controllers\AccountDeletionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,6 +60,23 @@ Route::middleware('auth')->group(function () {
         Route::delete('/account/delete', [ProfileController::class, 'deleteAccount'])->name('account.delete');
 });
 
+
+
+// Public — no auth middleware. This is the URL you give Google Play.
+Route::middleware('throttle:5,1')->group(function () {
+        Route::get('/delete-account', [AccountDeletionController::class, 'show'])
+                ->name('account-deletion.show');
+
+        Route::post('/delete-account', [AccountDeletionController::class, 'destroy'])
+                ->name('account-deletion.destroy');
+
+        Route::get('/delete-account/otp', [AccountDeletionController::class, 'showOtp'])
+                ->name('account-deletion.otp');
+
+        Route::post('/delete-account/otp', [AccountDeletionController::class, 'verifyOtp'])
+                ->name('account-deletion.otp.verify');
+});
+
 // webhook
 
 Route::post('/razorpay/webhook', [RazorpayController::class, 'webhook'])->name('razorpay.webhook');
@@ -67,6 +85,3 @@ Route::get('/about', [UserPageController::class, 'about'])->name('user.about');
 Route::get('/terms', [UserPageController::class, 'terms'])->name('user.terms');
 
 Route::get('/privacy', [UserPageController::class, 'privacy'])->name('user.privacy');
-
-
-
