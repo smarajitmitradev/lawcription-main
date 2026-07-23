@@ -49,7 +49,19 @@
             animation: borderGlow 6s ease infinite;
         }
 
-        .glass-card { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); }
+        .glass-card { background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    width: 500px;
+    max-width: 90%;
+    height: 600px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    border-radius: 12px; }
+
+    
 
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(16px); }
@@ -93,7 +105,7 @@
 
     <div class="relative z-10 h-full flex items-center justify-center px-3 sm:px-4 py-3 sm:py-4">
         <div class="w-full max-w-2xl">
-            <div class="glow-border rounded-[2rem] p-[2px] shadow-2xl">
+            <div class="">
                 <div class="glass-card fade-up rounded-[calc(2rem-2px)] p-5 sm:p-8 md:p-10">
 
                     {{-- ================= HEADER ================= --}}

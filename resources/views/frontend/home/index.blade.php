@@ -117,7 +117,6 @@
         </div>
 
     </div>
-
 </section>
 
 
@@ -324,7 +323,6 @@
 
 <!-- # testimonials -->
 <section id="testimonials" class="container s-testimonials">
-
     <div class="row s-testimonials__content">
 
         <div class="column xl-12">
