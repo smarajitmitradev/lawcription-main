@@ -453,3 +453,49 @@ body::after {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
+.innovation-panel {
+    background: var(--surface2);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .innovation-panel {
+        display: block !important;
+    }
+    .new_btn {
+        display: inline-block;
+        margin: 10px 0px;
+    }
+}
+.new_btn {
+    background: rgba(61, 107, 79, 0.2);
+    border: 1px solid rgba(61, 107, 79, 0.35);
+    border-radius: 10px;
+    padding: 6px 14px;
+    font-size: 12px;
+    color: var(--greenlit);
+    font-weight: 600;
+}
+.table-responsive {
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+@media (max-width: 768px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .pricing-table {
+        min-width: 900px;
+    }
+}
