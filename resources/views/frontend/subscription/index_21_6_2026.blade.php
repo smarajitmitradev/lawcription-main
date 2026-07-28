@@ -443,10 +443,10 @@
       <table class="pricing-table" style="">
         <thead>
           <tr style="background:var(--surface2);">
-            <th style="padding:18px 24px;text-align:left;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:var(--muted);border-bottom:1px solid var(--border);">Feature</th>
-            <th style="padding:18px 24px;text-align:center;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;border-bottom:1px solid var(--border);color:var(--cream);">1 Month</th>
-            <th style="padding:18px 24px;text-align:center;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:var(--gold);border-bottom:1px solid var(--border);background:rgba(201,168,76,0.05);">3 Months ⭐</th>
-            <th style="padding:18px 24px;text-align:center;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:var(--greenlit);border-bottom:1px solid var(--border);">6 Months</th>
+            <th style="padding:18px 24px; width:80px;text-align:left;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:var(--muted);border-bottom:1px solid var(--border);">Feature</th>
+            <th style="padding:18px 24px; width:80px; text-align:center;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;border-bottom:1px solid var(--border);color:var(--cream);">1 Month</th>
+            <th style="padding:18px 24px; width:80px; text-align:center;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:var(--gold);border-bottom:1px solid var(--border);background:rgba(201,168,76,0.05);">3 Months ⭐</th>
+            <th style="padding:18px 24px; width:80px; text-align:center;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:var(--greenlit);border-bottom:1px solid var(--border);">6 Months</th>
           </tr>
         </thead>
         <tbody>
