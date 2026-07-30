@@ -3656,6 +3656,11 @@ td:last-child {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+@media screen and (max-width: 600px) {
+    .intro-header__big-type {
+        font-size: 48px;
+    }
+}
 
 .intro-pic-primary {
     --pic-primary-width: calc((100 / (12/4)) * 1%);

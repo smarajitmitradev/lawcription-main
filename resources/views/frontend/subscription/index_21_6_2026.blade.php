@@ -63,12 +63,12 @@
         <!-- Main card -->
         <div style="position:absolute;left:50%;top:0;transform:translateX(-50%);width:480px;border-radius:20px;overflow:hidden;border:1px solid rgba(201,168,76,0.22);box-shadow:0 40px 100px rgba(0,0,0,0.6);">
           <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=900&q=80" alt="Legal books" style="width:100%;height:220px;object-fit:cover;display:block;filter:brightness(0.7) sepia(0.3);" />
-          <div style="background:var(--surface2);padding:16px 20px;display:flex;align-items:center;justify-content:space-between;">
+          <div class="innovation-panel" style="">
             <div>
               <div style="font-size:11px;color:var(--muted);margin-bottom:4px;letter-spacing:1px;text-transform:uppercase;">Latest Article</div>
               <div style="font-size:13px;font-weight:600;color:var(--cream);">Consumer Protection Act & Medical Negligence</div>
             </div>
-            <div style="background:rgba(61,107,79,0.2);border:1px solid rgba(61,107,79,0.35);border-radius:10px;padding:6px 14px;font-size:12px;color:var(--greenlit);font-weight:600;">New</div>
+            <div class="new_btn" style="background:rgba(61,107,79,0.2);border:1px solid rgba(61,107,79,0.35);border-radius:10px;padding:6px 14px;font-size:12px;color:var(--greenlit);font-weight:600;">New</div>
           </div>
         </div>
 
@@ -96,37 +96,37 @@
      TRUST MARQUEE
   ══════════════════════════════════════════ -->
   <div style="overflow:hidden;padding:28px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(255,255,255,0.012);position:relative;z-index:2;">
-    <div style="font-size:10px;text-align:center;color:var(--muted);letter-spacing:4px;text-transform:uppercase;margin-bottom:16px;">Trusted by doctors from</div>
+    <div style="font-size:10px;text-align:center;color:#fff;letter-spacing:4px;text-transform:uppercase;margin-bottom:16px;">Trusted by doctors from</div>
     <div style="overflow:hidden;">
       <div class="marquee-track" style="gap:56px;align-items:center;padding:0 28px;">
-        <span class="serif" style="font-size:1rem;font-weight:600;color:rgba(242,234,216,0.2);letter-spacing:2px;white-space:nowrap;">AIIMS</span>
+        <span class="serif" style="font-size:1rem;font-weight:600;color:#fff;letter-spacing:2px;white-space:nowrap;">AIIMS</span>
         <span style="color:rgba(201,168,76,0.15);">◆</span>
-        <span class="serif" style="font-size:1rem;font-weight:600;color:rgba(242,234,216,0.2);letter-spacing:2px;white-space:nowrap;">FORTIS</span>
+        <span class="serif" style="font-size:1rem;font-weight:600;color:#fff;letter-spacing:2px;white-space:nowrap;">FORTIS</span>
         <span style="color:rgba(201,168,76,0.15);">◆</span>
-        <span class="serif" style="font-size:1rem;font-weight:600;color:rgba(242,234,216,0.2);letter-spacing:2px;white-space:nowrap;">APOLLO</span>
+        <span class="serif" style="font-size:1rem;font-weight:600;color:#fff;letter-spacing:2px;white-space:nowrap;">APOLLO</span>
         <span style="color:rgba(201,168,76,0.15);">◆</span>
-        <span class="serif" style="font-size:1rem;font-weight:600;color:rgba(242,234,216,0.2);letter-spacing:2px;white-space:nowrap;">NIMHANS</span>
+        <span class="serif" style="font-size:1rem;font-weight:600;color:#fff;letter-spacing:2px;white-space:nowrap;">NIMHANS</span>
         <span style="color:rgba(201,168,76,0.15);">◆</span>
-        <span class="serif" style="font-size:1rem;font-weight:600;color:rgba(242,234,216,0.2);letter-spacing:2px;white-space:nowrap;">PGI CHANDIGARH</span>
+        <span class="serif" style="font-size:1rem;font-weight:600;color:#fff;letter-spacing:2px;white-space:nowrap;">PGI CHANDIGARH</span>
         <span style="color:rgba(201,168,76,0.15);">◆</span>
-        <span class="serif" style="font-size:1rem;font-weight:600;color:rgba(242,234,216,0.2);letter-spacing:2px;white-space:nowrap;">MANIPAL</span>
+        <span class="serif" style="font-size:1rem;font-weight:600;color:#fff;letter-spacing:2px;white-space:nowrap;">MANIPAL</span>
         <span style="color:rgba(201,168,76,0.15);">◆</span>
-        <span class="serif" style="font-size:1rem;font-weight:600;color:rgba(242,234,216,0.2);letter-spacing:2px;white-space:nowrap;">TATA MEMORIAL</span>
+        <span class="serif" style="font-size:1rem;font-weight:600;color:#fff;letter-spacing:2px;white-space:nowrap;">TATA MEMORIAL</span>
         <span style="color:rgba(201,168,76,0.15);">◆</span>
         <!-- duplicate -->
-        <span class="serif" style="font-size:1rem;font-weight:600;color:rgba(242,234,216,0.2);letter-spacing:2px;white-space:nowrap;">AIIMS</span>
+        <span class="serif" style="font-size:1rem;font-weight:600;color:#fff;letter-spacing:2px;white-space:nowrap;">AIIMS</span>
         <span style="color:rgba(201,168,76,0.15);">◆</span>
-        <span class="serif" style="font-size:1rem;font-weight:600;color:rgba(242,234,216,0.2);letter-spacing:2px;white-space:nowrap;">FORTIS</span>
+        <span class="serif" style="font-size:1rem;font-weight:600;color:#fff;letter-spacing:2px;white-space:nowrap;">FORTIS</span>
         <span style="color:rgba(201,168,76,0.15);">◆</span>
-        <span class="serif" style="font-size:1rem;font-weight:600;color:rgba(242,234,216,0.2);letter-spacing:2px;white-space:nowrap;">APOLLO</span>
+        <span class="serif" style="font-size:1rem;font-weight:600;color:#fff;letter-spacing:2px;white-space:nowrap;">APOLLO</span>
         <span style="color:rgba(201,168,76,0.15);">◆</span>
-        <span class="serif" style="font-size:1rem;font-weight:600;color:rgba(242,234,216,0.2);letter-spacing:2px;white-space:nowrap;">NIMHANS</span>
+        <span class="serif" style="font-size:1rem;font-weight:600;color:#fff;letter-spacing:2px;white-space:nowrap;">NIMHANS</span>
         <span style="color:rgba(201,168,76,0.15);">◆</span>
-        <span class="serif" style="font-size:1rem;font-weight:600;color:rgba(242,234,216,0.2);letter-spacing:2px;white-space:nowrap;">PGI CHANDIGARH</span>
+        <span class="serif" style="font-size:1rem;font-weight:600;color:#fff;letter-spacing:2px;white-space:nowrap;">PGI CHANDIGARH</span>
         <span style="color:rgba(201,168,76,0.15);">◆</span>
-        <span class="serif" style="font-size:1rem;font-weight:600;color:rgba(242,234,216,0.2);letter-spacing:2px;white-space:nowrap;">MANIPAL</span>
+        <span class="serif" style="font-size:1rem;font-weight:600;color:#fff;letter-spacing:2px;white-space:nowrap;">MANIPAL</span>
         <span style="color:rgba(201,168,76,0.15);">◆</span>
-        <span class="serif" style="font-size:1rem;font-weight:600;color:rgba(242,234,216,0.2);letter-spacing:2px;white-space:nowrap;">TATA MEMORIAL</span>
+        <span class="serif" style="font-size:1rem;font-weight:600;color:#fff;letter-spacing:2px;white-space:nowrap;">TATA MEMORIAL</span>
       </div>
     </div>
   </div>
@@ -439,14 +439,14 @@
       <p style="color:var(--muted);font-size:14px;font-family:'Cormorant Garamond',serif;font-size:1rem;">Every feature, side by side.</p>
     </div>
 
-    <div class="reveal d2" style="border:1px solid var(--border);border-radius:20px;overflow:hidden;">
-      <table style="width:100%;border-collapse:collapse;font-size:14px;">
+    <div class="table-responsive reveal d2" style="">
+      <table class="pricing-table" style="">
         <thead>
           <tr style="background:var(--surface2);">
-            <th style="padding:18px 24px;text-align:left;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:var(--muted);border-bottom:1px solid var(--border);">Feature</th>
-            <th style="padding:18px 24px;text-align:center;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;border-bottom:1px solid var(--border);color:var(--cream);">1 Month</th>
-            <th style="padding:18px 24px;text-align:center;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:var(--gold);border-bottom:1px solid var(--border);background:rgba(201,168,76,0.05);">3 Months ⭐</th>
-            <th style="padding:18px 24px;text-align:center;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:var(--greenlit);border-bottom:1px solid var(--border);">6 Months</th>
+            <th style="padding:18px 24px; width:80px;text-align:left;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:var(--muted);border-bottom:1px solid var(--border);">Feature</th>
+            <th style="padding:18px 24px; width:80px; text-align:center;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;border-bottom:1px solid var(--border);color:var(--cream);">1 Month</th>
+            <th style="padding:18px 24px; width:80px; text-align:center;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:var(--gold);border-bottom:1px solid var(--border);background:rgba(201,168,76,0.05);">3 Months ⭐</th>
+            <th style="padding:18px 24px; width:80px; text-align:center;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:var(--greenlit);border-bottom:1px solid var(--border);">6 Months</th>
           </tr>
         </thead>
         <tbody>
