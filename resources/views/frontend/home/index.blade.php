@@ -20,7 +20,7 @@
             <div class="intro-header__overline">Welcome to</div>
 
             <h1  class="add-headline intro-header__big-type">
-               Lawcription
+            Lawcription™
                 
             </h1>
         </div>

@@ -753,12 +753,12 @@ $(document).ready(function() {
   // Plan config for each mode
   var planConfig = {
     monthly: {
-      plan1: { plan: '1_month',  amount: 499 },
+      plan1: { plan: '1_month',  amount: 999 },
       plan2: { plan: '3_month',  amount: 1197 },
-      plan3: { plan: '6_month',  amount: 2094 },
+      plan3: { plan: '6_month',  amount: 5394 },
     },
     yearly: {
-      plan1: { plan: '1_year',   amount: 3588 },
+      plan1: { plan: '1_year',   amount: 8988 },
       plan2: { plan: '2_year',   amount: 5976 },
       plan3: { plan: '3_year',   amount: 7164 },
     },

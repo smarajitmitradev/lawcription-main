@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete Your Account - Lawcription</title>
+    <title>Delete Your Account - Lawcription™</title>
 
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b91c1c' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7V4a1 1 0 011-1h4a1 1 0 011 1v3M4 7h16'/%3E%3C/svg%3E">
 
@@ -125,7 +125,7 @@
                             <h1 class="text-lg sm:text-2xl font-extrabold text-gray-900 tracking-tight leading-tight">
                                 {{ ($step ?? 'request') === 'otp' ? 'Verify Your Number' : 'Delete Your Account' }}
                             </h1>
-                            <p class="text-xs sm:text-sm text-gray-400 font-semibold tracking-wide">LAWCRIPTION</p>
+                            <p class="text-xs sm:text-sm text-gray-400 font-semibold tracking-wide">Lawcription™</p>
                         </div>
                         <span class="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-bold text-red-700 bg-red-50 border border-red-100 px-3 py-1.5 rounded-full">
                             <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> IRREVERSIBLE

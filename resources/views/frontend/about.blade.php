@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us – Lawcription</title>
+    <title>About Us – Lawcription™</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -15,7 +15,7 @@
         <div class="max-w-5xl mx-auto px-4 flex items-center justify-between">
 
             <div>
-                <h1 class="text-2xl font-bold">Lawcription</h1>
+                <h1 class="text-2xl font-bold">Lawcription™</h1>
                 <p class="text-sm opacity-90">Operated by Healthcription</p>
             </div>
 
@@ -34,15 +34,15 @@
     <!-- Main Content -->
     <main class="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-8 my-8 leading-relaxed">
 
-        <h2 class="text-xl font-bold mb-4 text-center">ABOUT US – Lawcription</h2>
+        <h2 class="text-xl font-bold mb-4 text-center">ABOUT US – Lawcription™</h2>
 
-        <p><b>Lawcription</b> is a specialized medico-legal knowledge platform designed to bridge the gap between medical practice and legal awareness in India.</p>
+        <p><b>Lawcription™</b> is a specialized medico-legal knowledge platform designed to bridge the gap between medical practice and legal awareness in India.</p>
 
         <h3 class="font-semibold mt-6 mb-2">Legal Identity & Ownership</h3>
-        <p><b>Lawcription</b> is a digital platform and brand operated under <b>Healthcription</b>, owned and managed by Mrs. Poulomi Debnath. All services, financial transactions, and legal obligations associated with the App are undertaken by the parent entity, <b>Healthcription</b>.</p>
+        <p><b>Lawcription™</b> is a digital platform and brand operated under <b>Healthcription</b>, owned and managed by Mrs. Poulomi Debnath. All services, financial transactions, and legal obligations associated with the App are undertaken by the parent entity, <b>Healthcription</b>.</p>
 
         <h3 class="font-semibold mt-6 mb-2">Leadership & Expertise</h3>
-        <p>The intellectual and medico-legal framework of <b>Lawcription</b> is led by Dr. Sujan Debnath (MBBS, LLB). To ensure statutory depth and practical relevance, our content development process integrates insights and reviews from a consultative network of experienced legal practitioners.</p>
+        <p>The intellectual and medico-legal framework of <b>Lawcription™</b> is led by Dr. Sujan Debnath (MBBS, LLB). To ensure statutory depth and practical relevance, our content development process integrates insights and reviews from a consultative network of experienced legal practitioners.</p>
 
         <p>From time to time, inputs may be obtained from independent legal professionals practicing across various courts and tribunals in India, where relevant.</p>
 
@@ -51,7 +51,7 @@
         <p>This collaborative approach ensures that our educational resources reflect the current judicial landscape of the Republic of India.</p>
 
         <h3 class="font-semibold mt-6 mb-2">Our Mission</h3>
-        <p>Lawcription aims to support healthcare professionals, students, and the general public by providing structured, practical, and easy-to-understand medico-legal information relevant to real-world scenarios.</p>
+        <p>Lawcription™ aims to support healthcare professionals, students, and the general public by providing structured, practical, and easy-to-understand medico-legal information relevant to real-world scenarios.</p>
 
         <p>The platform offers:</p>
         <ul class="list-disc ml-6">
@@ -62,7 +62,7 @@
         </ul>
 
         <h3 class="font-semibold mt-6 mb-2">Our Approach</h3>
-        <p>Lawcription is built on the principle that:</p>
+        <p>Lawcription™ is built on the principle that:</p>
         <ul class="list-disc ml-6">
             <li>Awareness is the first step to legal protection.</li>
             <li>Proper documentation is essential for safe medical practice.</li>
@@ -70,7 +70,7 @@
         </ul>
 
         <h3 class="font-semibold mt-6 mb-2">Important Clarification</h3>
-        <p>Lawcription is an <b>educational and informational platform only</b>.</p>
+        <p>Lawcription™ is an <b>educational and informational platform only</b>.</p>
         <ul class="list-disc ml-6">
             <li>It does <b>not</b> provide legal advice.</li>
             <li>It does <b>not</b> substitute professional consultation.</li>
@@ -82,7 +82,7 @@
         <p>To create a trusted platform that enables safer, more informed, and legally aware medical practice across India.</p>
 
         <h3 class="font-semibold mt-6 mb-2">Our Commitment</h3>
-        <p>Lawcription is committed to:</p>
+        <p>Lawcription™ is committed to:</p>
         <ul class="list-disc ml-6">
             <li>Accuracy and responsible information sharing.</li>
             <li>Compliance with Indian laws and ethical standards.</li>
@@ -93,7 +93,7 @@
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white text-center py-4">
-        <p class="text-sm">&copy; 2026 Healthcription (Lawcription). All Rights Reserved.</p>
+        <p class="text-sm">&copy; 2026 Healthcription (Lawcription™). All Rights Reserved.</p>
     </footer>
 
 </body>

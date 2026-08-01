@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy – Lawcription</title>
+    <title>Privacy Policy – Lawcription™</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -15,7 +15,7 @@
         <div class="max-w-5xl mx-auto px-4 flex items-center justify-between">
 
             <div>
-                <h1 class="text-2xl font-bold">Lawcription</h1>
+                <h1 class="text-2xl font-bold">Lawcription™</h1>
                 <p class="text-sm opacity-90">Operated by Healthcription</p>
             </div>
 
@@ -40,7 +40,7 @@
         <h3 class="font-semibold mt-6 mb-2">1. STATUTORY FRAMEWORK, OWNERSHIP & SCOPE</h3>
         <p>This Privacy Policy (“Policy”) is a digital mandate published in accordance with the <b>Information Technology Act, 2000</b> and the <b>Digital Personal Data Protection Act (DPDPA), 2023</b>.</p>
 
-        <p><b>Lawcription</b> is a digital platform and brand operated under <b>Healthcription</b>, owned by Mrs. Poulomi Debnath. For the purpose of this Policy, <b>Healthcription</b> (operating as "Lawcription") shall be the <b>"Data Fiduciary"</b> responsible for protecting the privacy of its Users (<b>"Data Principals"</b>).</p>
+        <p><b>Lawcription™</b> is a digital platform and brand operated under <b>Healthcription</b>, owned by Mrs. Poulomi Debnath. For the purpose of this Policy, <b>Healthcription</b> (operating as "Lawcription™") shall be the <b>"Data Fiduciary"</b> responsible for protecting the privacy of its Users (<b>"Data Principals"</b>).</p>
 
         <p>All services, financial transactions, and legal obligations—including the processing of your Personal Data—are undertaken by <b>Healthcription</b>. By accessing the App, you provide <b>Unambiguous, Informed, and Affirmative Consent</b> to the processing of your data as described herein.</p>
 
@@ -85,7 +85,7 @@
         </ul>
 
         <h3 class="font-semibold mt-6 mb-2">7. SECURITY ARCHITECTURE</h3>
-        <p>We employ <b>Reasonable Security Practices and Procedures (RSPP)</b> as per <b>ISO/IEC 27001 standards</b>, including end-to-end encryption and Role-Based Access Control (RBAC). Lawcription (Healthcription) is not liable for breaches resulting from User negligence or systemic vulnerabilities beyond its reasonable control.</p>
+        <p>We employ <b>Reasonable Security Practices and Procedures (RSPP)</b> as per <b>ISO/IEC 27001 standards</b>, including end-to-end encryption and Role-Based Access Control (RBAC). Lawcription™ (Healthcription) is not liable for breaches resulting from User negligence or systemic vulnerabilities beyond its reasonable control.</p>
 
         <h3 class="font-semibold mt-6 mb-2">8. STATUTORY RIGHTS OF THE DATA PRINCIPAL</h3>
         <p>Pursuant to the <b>DPDPA, 2023</b>, you are entitled to:</p>
@@ -119,7 +119,7 @@
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white text-center py-4">
-        <p class="text-sm">&copy; 2026 Healthcription (Lawcription). All Rights Reserved.</p>
+        <p class="text-sm">&copy; 2026 Healthcription (Lawcription™). All Rights Reserved.</p>
     </footer>
 
 </body>

@@ -73,11 +73,34 @@
                 <div class="relative group">
 
                     <!-- Profile Button -->
-                    <button class="flex items-center justify-center w-11 h-11 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 overflow-hidden self-center">
+                    <!-- <button class="flex items-center justify-center w-11 h-11 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 overflow-hidden self-center">
 
                         @auth
                         @if(Auth::user()->img)
                         <img src="{{ Auth::user()->img ? asset('storage/' . Auth::user()->img) : 'https://ui-avatars.com/api/?name='.urlencode(Auth::user()->full_name ?? 'User').'&background=6366f1&color=fff&size=200' }}" alt="{{ Auth::user()->full_name }}" class="w-full h-full object-cover rounded-full" style="margin:auto;">
+                        @else
+                        <img src="https://ui-avatars.com/api/?name={{ urlencode(Auth::user()->full_name ?? Auth::user()->first_name) }}&background=6366f1&color=fff&size=200" alt="{{ Auth::user()->full_name }}" class="w-full h-full object-cover rounded-full">
+                        @endif
+                        @else
+                        <i class="fas fa-user text-white text-lg"></i>
+                        @endauth
+
+                    </button> -->
+                    <button class="flex items-center justify-center w-11 h-11 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 overflow-hidden self-center">
+
+                        @auth
+                        @php
+                        $imgUrl = null;
+                        if (Auth::user()->img) {
+                        $localPath = storage_path('app/public/' . Auth::user()->img);
+                        $imgUrl = file_exists($localPath)
+                        ? asset('storage/' . Auth::user()->img)
+                        : 'https://lawcription.in/medico-legal-admin/main/public/storage/' . Auth::user()->img;
+                        }
+                        @endphp
+
+                        @if($imgUrl)
+                        <img src="{{ $imgUrl }}" alt="{{ Auth::user()->full_name }}" class="w-full h-full object-cover rounded-full" style="margin:auto;">
                         @else
                         <img src="https://ui-avatars.com/api/?name={{ urlencode(Auth::user()->full_name ?? Auth::user()->first_name) }}&background=6366f1&color=fff&size=200" alt="{{ Auth::user()->full_name }}" class="w-full h-full object-cover rounded-full">
                         @endif
@@ -1421,7 +1444,7 @@
 
     function submitDeleteAccount() {
         const deleteReason = document.getElementById('delete_reason').value.trim();
-        const deleteType   = document.getElementById('delete_type') ? document.getElementById('delete_type').value : '';
+        const deleteType = document.getElementById('delete_type') ? document.getElementById('delete_type').value : '';
         const btn = document.getElementById('deleteSubmitBtn'); // ✅ grab BEFORE Swal
         const btnText = document.getElementById('deleteSubmitBtnText');
 
@@ -1471,7 +1494,7 @@
                     body: new URLSearchParams({
                         '_token': '{{ csrf_token() }}',
                         'delete_reason': deleteReason,
-                        'delete_type':deleteType,
+                        'delete_type': deleteType,
                     }),
                     headers: {
                         'X-Requested-With': 'XMLHttpRequest',
