@@ -461,7 +461,7 @@
               <span style="color:var(--muted);font-size:14px;padding-bottom:8px;">/mo</span>
               <span style="background:rgba(111,168,130,0.12);color:var(--greenlit);font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px;margin-bottom:8px;letter-spacing:1px;">40% OFF</span>
             </div>
-            <p style="font-size:12px;color:var(--muted);">₹8,988 billed annually</p>
+            <p style="font-size:12px;color:var(--muted);">₹8,988 billed annually</p> 
           </div>
           <div style="height:1px;background:var(--border);margin-bottom:28px;"></div>
           <ul style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px;">
