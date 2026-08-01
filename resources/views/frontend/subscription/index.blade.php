@@ -333,7 +333,7 @@
       </div>
 
       {{-- ══ TEMP TEST CARD — REMOVE AFTER LIVE AUTOPAY TESTING ══ --}}
-      <div style="margin-top:40px;margin-bottom:-10px;">
+      <!-- <div style="margin-top:40px;margin-bottom:-10px;">
         <div style="display:flex;align-items:center;gap:10px;justify-content:center;margin-bottom:14px;">
           <div style="height:1px;width:60px;background:repeating-linear-gradient(90deg,rgba(220,38,38,0.4) 0,rgba(220,38,38,0.4) 6px,transparent 6px,transparent 12px);"></div>
           <span style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(220,38,38,0.7);font-family:'DM Sans',sans-serif;font-weight:600;">⚠ Dev / Testing Only — Remove Before Production</span>
@@ -376,7 +376,7 @@
             </button>
           </div>
         </div>
-      </div>
+      </div> -->
       {{-- ══ END TEMP TEST CARD ══ --}}
 
       {{-- ── 3 PLAN CARDS ── --}}
