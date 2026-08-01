@@ -711,9 +711,9 @@
 <script>
   /* ── Plan map (matches subscription.js planConfig) ── */
   var planConfig = {
-    plan1:    { plan: '1_month',  amount: 499  },
-    plan2:    { plan: '6_month',  amount: 2394 },
-    plan3:    { plan: '1_year',   amount: 3588 },
+    plan1:    { plan: '1_month',  amount: 999  },
+    plan2:    { plan: '6_month',  amount: 5394 },
+    plan3:    { plan: '1_year',   amount: 8988 },
     planTest: { plan: '7_day',    amount: 1    }, /* TEMP — remove after live autopay test */
   };
 
