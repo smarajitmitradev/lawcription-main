@@ -393,7 +393,7 @@
               <div style="width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;font-size:20px;">📖</div>
             </div>
             <div style="display:flex;align-items:flex-end;gap:6px;margin-bottom:6px;">
-              <span class="serif" style="font-size:3rem;font-weight:700;line-height:1;color:var(--cream);">₹499</span>
+              <span class="serif" style="font-size:3rem;font-weight:700;line-height:1;color:var(--cream);">₹999</span>
               <span style="color:var(--muted);font-size:14px;padding-bottom:8px;">/mo</span>
             </div>
             <p style="font-size:12px;color:var(--muted);">Billed monthly</p>
@@ -424,7 +424,7 @@
               <h3 class="serif" style="font-size:1.4rem;font-weight:700;margin-top:8px;color:var(--cream);">6 Months</h3>
             </div>
             <div style="display:flex;align-items:flex-end;gap:6px;margin-bottom:6px;">
-              <span class="serif" style="font-size:3rem;font-weight:700;line-height:1;color:var(--cream);">₹399</span>
+              <span class="serif" style="font-size:3rem;font-weight:700;line-height:1;color:var(--cream);">₹899</span>
               <span style="color:var(--muted);font-size:14px;padding-bottom:8px;">/mo</span>
               <span style="background:rgba(201,168,76,0.18);color:var(--gold);font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px;margin-bottom:8px;letter-spacing:1px;">20% OFF</span>
             </div>
@@ -457,7 +457,7 @@
               <div style="width:44px;height:44px;border-radius:12px;background:rgba(111,168,130,0.1);display:flex;align-items:center;justify-content:center;font-size:20px;">💎</div>
             </div>
             <div style="display:flex;align-items:flex-end;gap:6px;margin-bottom:6px;">
-              <span class="serif" style="font-size:3rem;font-weight:700;line-height:1;color:var(--cream);">₹299</span>
+              <span class="serif" style="font-size:3rem;font-weight:700;line-height:1;color:var(--cream);">₹749</span>
               <span style="color:var(--muted);font-size:14px;padding-bottom:8px;">/mo</span>
               <span style="background:rgba(111,168,130,0.12);color:var(--greenlit);font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px;margin-bottom:8px;letter-spacing:1px;">40% OFF</span>
             </div>
