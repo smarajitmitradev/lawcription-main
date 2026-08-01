@@ -3652,7 +3652,7 @@ td:last-child {
 }
 @media screen and (max-width: 600px) {
     .intro-header__big-type {
-        font-size: 48px;
+        font-size: 30px;
     }
 }
 
