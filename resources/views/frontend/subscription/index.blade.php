@@ -1,6 +1,6 @@
 @extends('frontend.layout.master')
 
-@section('title', 'Lawchiption')
+@section('title', 'Lawcription')
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -236,7 +236,7 @@
             {{-- Icon row --}}
             <div class="flex items-center justify-center gap-2 mb-2">
               <span style="font-size:18px;">⚖️</span>
-              <span style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(242,234,216,0.6);font-family:'DM Sans',sans-serif;">Lawchiption Savings</span>
+              <span style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(242,234,216,0.6);font-family:'DM Sans',sans-serif;">Lawcription Savings</span>
               <span style="font-size:18px;">📜</span>
             </div>
 
@@ -291,7 +291,7 @@
 
             <div class="flex items-center justify-center gap-2 mt-4 flex-wrap" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:999px;padding:6px 8px;display:inline-flex;margin:16px auto 0;width:fit-content;">
               <button class="plan-pill pill-1" id="pill1" onclick="selectPill(1)">
-                📖 1 Month &nbsp;·&nbsp; ₹499
+                📖 1 Month &nbsp;·&nbsp; ₹999
               </button>
               <button class="plan-pill pill-2 pill-active" id="pill2" onclick="selectPill(2)">
                 ⭐ 6 Months &nbsp;·&nbsp; 20% off
@@ -333,7 +333,7 @@
       </div>
 
       {{-- ══ TEMP TEST CARD — REMOVE AFTER LIVE AUTOPAY TESTING ══ --}}
-      <div style="margin-top:40px;margin-bottom:-10px;">
+      <!-- <div style="margin-top:40px;margin-bottom:-10px;">
         <div style="display:flex;align-items:center;gap:10px;justify-content:center;margin-bottom:14px;">
           <div style="height:1px;width:60px;background:repeating-linear-gradient(90deg,rgba(220,38,38,0.4) 0,rgba(220,38,38,0.4) 6px,transparent 6px,transparent 12px);"></div>
           <span style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(220,38,38,0.7);font-family:'DM Sans',sans-serif;font-weight:600;">⚠ Dev / Testing Only — Remove Before Production</span>
@@ -376,7 +376,7 @@
             </button>
           </div>
         </div>
-      </div>
+      </div> -->
       {{-- ══ END TEMP TEST CARD ══ --}}
 
       {{-- ── 3 PLAN CARDS ── --}}
@@ -428,7 +428,7 @@
               <span style="color:var(--muted);font-size:14px;padding-bottom:8px;">/mo</span>
               <span style="background:rgba(201,168,76,0.18);color:var(--gold);font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px;margin-bottom:8px;letter-spacing:1px;">20% OFF</span>
             </div>
-            <p style="font-size:12px;color:var(--muted);">₹2,394 billed half-yearly</p>
+            <p style="font-size:12px;color:var(--muted);">₹5,394 billed half-yearly</p>
           </div>
           <div style="height:1px;background:rgba(201,168,76,0.18);margin-bottom:28px;"></div>
           <ul style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px;">
@@ -461,7 +461,7 @@
               <span style="color:var(--muted);font-size:14px;padding-bottom:8px;">/mo</span>
               <span style="background:rgba(111,168,130,0.12);color:var(--greenlit);font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px;margin-bottom:8px;letter-spacing:1px;">40% OFF</span>
             </div>
-            <p style="font-size:12px;color:var(--muted);">₹3,588 billed annually</p>
+            <p style="font-size:12px;color:var(--muted);">₹8,988 billed annually</p>
           </div>
           <div style="height:1px;background:var(--border);margin-bottom:28px;"></div>
           <ul style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px;">
@@ -651,7 +651,7 @@
       </details>
       <details style="background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;cursor:pointer;">
         <summary style="padding:20px 24px;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--cream);">Is this legal advice? <span style="color:var(--gold);font-size:20px;line-height:1;">+</span></summary>
-        <div style="padding:0 24px 20px;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--muted);line-height:1.7;">Lawchiption publishes legal commentary and educational analysis for informational purposes. It does not constitute formal legal advice, and subscription does not create an attorney-client relationship.</div>
+        <div style="padding:0 24px 20px;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--muted);line-height:1.7;">Lawcription publishes legal commentary and educational analysis for informational purposes. It does not constitute formal legal advice, and subscription does not create an attorney-client relationship.</div>
       </details>
       <details style="background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;cursor:pointer;">
         <summary style="padding:20px 24px;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--cream);">Can I upgrade mid-plan? <span style="color:var(--gold);font-size:20px;line-height:1;">+</span></summary>
@@ -681,7 +681,7 @@
         Know your rights.<br />
         <span class="shimmer-text light-serif" style="font-style:italic;">Protect your practice.</span>
       </h2>
-      <p class="reveal d3" style="color:var(--muted);font-family:'Cormorant Garamond',serif;font-size:1.15rem;line-height:1.75;margin-bottom:36px;">Join 12,000+ doctors already reading Lawchiption. Your first 14 days are completely risk-free.</p>
+      <p class="reveal d3" style="color:var(--muted);font-family:'Cormorant Garamond',serif;font-size:1.15rem;line-height:1.75;margin-bottom:36px;">Join 12,000+ doctors already reading Lawcription. Your first 14 days are completely risk-free.</p>
       <div class="reveal d4" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
         <div class="btn-glow" style="border-radius:14px;">
           <button style="padding:16px 36px;border-radius:14px;background:linear-gradient(135deg,var(--green),var(--greenlit));border:none;cursor:pointer;font-family:'Playfair Display',serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--cream);position:relative;z-index:1;">

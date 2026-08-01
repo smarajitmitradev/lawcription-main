@@ -1,6 +1,6 @@
 @extends('frontend.layout.master')
 
-@section('title', 'Lawcription – Gallery')
+@section('title', 'Lawcription™ – Gallery')
 
 @section('content')
 
@@ -28,7 +28,7 @@
         <div class="relative max-w-7xl mx-auto text-center">
 
             <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-cyan-400/20 bg-cyan-500/10 text-cyan-400 text-xs tracking-widest uppercase font-semibold">
-                Contact Lawcription
+                Contact Lawcription™
             </span>
 
             <h1 class="mt-8 text-5xl md:text-7xl font-black leading-tight">

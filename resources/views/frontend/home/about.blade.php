@@ -1,6 +1,6 @@
 @extends('frontend.layout.master')
 
-@section('title', 'Lawcription – About Us')
+@section('title', 'Lawcription™ – About Us')
 
 @section('content')
 
@@ -230,7 +230,7 @@
             </h1>
 
             <p class="about-serif reveal d3 mb-12" style="font-size:1.2rem;color:var(--about-muted);line-height:1.85;max-width:560px;margin-left:auto;margin-right:auto;margin-bottom:3rem;">
-                Lawcription was born from a simple frustration — doctors facing legal complexities with no trusted, accessible resource to turn to. We built the platform we wished existed.
+                Lawcription™ was born from a simple frustration — doctors facing legal complexities with no trusted, accessible resource to turn to. We built the platform we wished existed.
             </p>
 
             <!-- Stats row -->
@@ -271,7 +271,7 @@
                     Medical education in India trains brilliant clinicians — but leaves them almost entirely unprepared for the legal realities of practice. Consent disputes, negligence allegations, NMC compliance — these are everyday risks.
                 </p>
                 <p style="font-size:15px;color:var(--about-muted);line-height:1.85;">
-                    Lawcription bridges that gap. We translate complex judicial language and regulatory text into plain, clinically relevant commentary that any doctor can understand and act on.
+                    Lawcription™ bridges that gap. We translate complex judicial language and regulatory text into plain, clinically relevant commentary that any doctor can understand and act on.
                 </p>
 
                 <!-- Feature pills -->
@@ -289,7 +289,7 @@
                     <p class="about-serif" style="font-size:clamp(1.1rem,2.5vw,1.5rem);font-style:italic;color:var(--about-cream);line-height:1.6;font-weight:300;">
                         "Every doctor deserves to practise with confidence — clinically and legally."
                     </p>
-                    <div style="font-size:11px;color:var(--about-gold);margin-top:10px;letter-spacing:1px;">— Lawcription Founding Principle</div>
+                    <div style="font-size:11px;color:var(--about-gold);margin-top:10px;letter-spacing:1px;">— Lawcription™ Founding Principle</div>
                 </div>
             </div>
 
@@ -352,7 +352,7 @@
 
             <div class="reveal d2">
                 <span class="about-tag mb-5 inline-flex" style="background:rgba(201,168,76,0.08);color:var(--about-gold);border:1px solid rgba(201,168,76,0.18);">How We Got Here</span>
-                <h2 class="about-serif mb-10" style="font-size:clamp(1.7rem,3.5vw,2.5rem);font-weight:700;letter-spacing:-1px;color:var(--about-cream);">The Lawcription journey.</h2>
+                <h2 class="about-serif mb-10" style="font-size:clamp(1.7rem,3.5vw,2.5rem);font-weight:700;letter-spacing:-1px;color:var(--about-cream);">The Lawcription™ journey.</h2>
 
                 <div style="position:relative;padding-left:0;">
                     <div class="tl-line"></div>
@@ -371,7 +371,7 @@
                         <div style="padding-top:8px;">
                             <div style="font-size:10px;color:var(--about-gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;">2022 · Launch</div>
                             <h4 class="about-serif mb-2" style="font-size:1.05rem;font-weight:700;color:var(--about-cream);">First 100 articles published</h4>
-                            <p style="font-size:13px;color:var(--about-muted);line-height:1.75;">Lawcription launched with a focused library of Consumer Protection Act analyses and consent guides. Within 3 months, 2,000 doctors had subscribed.</p>
+                            <p style="font-size:13px;color:var(--about-muted);line-height:1.75;">Lawcription™ launched with a focused library of Consumer Protection Act analyses and consent guides. Within 3 months, 2,000 doctors had subscribed.</p>
                         </div>
                     </div>
 
@@ -389,7 +389,7 @@
                         <div style="padding-top:8px;">
                             <div style="font-size:10px;color:var(--about-greenlit);letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;">2024–Present</div>
                             <h4 class="about-serif mb-2" style="font-size:1.05rem;font-weight:700;color:var(--about-cream);">12,000 doctors and growing</h4>
-                            <p style="font-size:13px;color:var(--about-muted);line-height:1.75;">Today Lawcription is India's leading medico-legal intelligence platform, trusted by physicians across AIIMS, Apollo, Fortis, and thousands of independent practitioners.</p>
+                            <p style="font-size:13px;color:var(--about-muted);line-height:1.75;">Today Lawcription™ is India's leading medico-legal intelligence platform, trusted by physicians across AIIMS, Apollo, Fortis, and thousands of independent practitioners.</p>
                         </div>
                     </div>
                 </div>

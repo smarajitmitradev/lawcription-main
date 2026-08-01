@@ -1,6 +1,6 @@
 @extends('frontend.layout.master')
 
-@section('title', 'Lawcription – Gallery')
+@section('title', 'Lawcription™ – Gallery')
 
 @section('content')
 
@@ -899,7 +899,7 @@
         <div class="max-w-6xl mx-auto">
             <div class="g-reveal gd1 flex items-center gap-4 mb-10">
                 <span class="g-tag" style="background:rgba(251,113,133,0.1);color:var(--g-rose);border:1px solid rgba(251,113,133,0.22);">Culture</span>
-                <h2 class="g-serif" style="font-size:1.8rem;font-weight:700;color:var(--g-cream);letter-spacing:-.5px;">Life at Lawcription</h2>
+                <h2 class="g-serif" style="font-size:1.8rem;font-weight:700;color:var(--g-cream);letter-spacing:-.5px;">Life at Lawcription™</h2>
             </div>
 
             <div class="bento g-reveal gd2">
