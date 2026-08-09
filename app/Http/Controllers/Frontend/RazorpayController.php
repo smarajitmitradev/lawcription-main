@@ -187,34 +187,36 @@ class RazorpayController extends Controller
     }
 
     public function callback(Request $request)
-    {
-        try {
-            Log::info('Callback received', ['all' => $request->all()]);
+{
+    try {
+        Log::info('Callback received', ['all' => $request->all()]);
 
-            $paymentId = $request->razorpay_payment_id;
-            $signature = $request->razorpay_signature;
+        $paymentId = $request->razorpay_payment_id;
+        $signature = $request->razorpay_signature;
 
-            if (!$paymentId) {
-                throw new \Exception('No payment_id in callback');
-            }
+        if (!$paymentId) {
+            throw new \Exception('No payment_id in callback');
+        }
 
-            // Fetch payment from Razorpay API
-            $payment = $this->getApi()->payment->fetch($paymentId);
-            $orderId = $payment['order_id'] ?? null;
+        // Fetch payment from Razorpay API
+        $payment = $this->getApi()->payment->fetch($paymentId);
+        $orderId = $payment['order_id'] ?? null;
+        $method  = $payment['method']   ?? null;
 
-            Log::info('Fetched payment', [
-                'payment_id'  => $paymentId,
-                'order_id'    => $orderId,
-                'invoice_id'  => $payment['invoice_id'] ?? null,
-                'amount'      => $payment['amount'] ?? 0,
-                'payment_data' => $payment->toArray(),
-            ]);
+        Log::info('Fetched payment', [
+            'payment_id'  => $paymentId,
+            'order_id'    => $orderId,
+            'invoice_id'  => $payment['invoice_id'] ?? null,
+            'amount'      => $payment['amount'] ?? 0,
+            'method'      => $method,
+        ]);
 
+        // Skip signature check for emandate/NACH
+        if ($method !== 'emandate') {
             if (!$orderId) {
                 throw new \Exception('Could not resolve order_id from payment');
             }
 
-            // Correct HMAC for emandate/NACH callback
             $expectedSignature = hash_hmac(
                 'sha256',
                 $paymentId . '|' . $orderId,
@@ -229,80 +231,87 @@ class RazorpayController extends Controller
             if (!hash_equals($expectedSignature, $signature)) {
                 throw new \Exception('Invalid signature');
             }
-
-            // Get subscription_id via invoice
-            $invoiceId = $payment['invoice_id'] ?? null;
-            if (!$invoiceId) {
-                throw new \Exception('No invoice_id found in payment');
-            }
-
-            $invoice        = $this->getApi()->invoice->fetch($invoiceId);
-            $subscriptionId = $invoice['subscription_id'] ?? null;
-
-            Log::info('Fetched invoice', [
-                'invoice_id'      => $invoiceId,
-                'subscription_id' => $subscriptionId,
+        } else {
+            Log::info('Emandate method — signature check skipped', [
+                'payment_id' => $paymentId,
+                'method'     => $method,
             ]);
-
-            if (!$subscriptionId) {
-                throw new \Exception('Could not resolve subscription_id from invoice');
-            }
-
-            // Prevent duplicate processing
-            $existing = Subscription::where('razorpay_payment_id', $paymentId)->first();
-            if ($existing) {
-                return redirect('/subscription')->with('success', 'Subscription already activated!');
-            }
-
-            $rzSub  = $this->getApi()->subscription->fetch($subscriptionId);
-            $userId = $rzSub->notes['user_id'] ?? null;
-            $plan   = $rzSub->notes['plan']    ?? null;
-
-            Log::info('Fetched subscription notes', [
-                'subscription_id' => $subscriptionId,
-                'user_id'         => $userId,
-                'plan'            => $plan,
-            ]);
-
-            if (!$userId || !$plan) {
-                throw new \Exception('Missing user_id or plan in subscription notes');
-            }
-
-            $expiry = $this->getExpiry($plan);
-
-            Subscription::create([
-                'user_id'                  => $userId,
-                'plan_name'                => $plan,
-                'amount'                   => ($payment['amount'] ?? 0) / 100, // paise to rupees
-                'razorpay_subscription_id' => $subscriptionId,
-                'razorpay_payment_id'      => $paymentId,
-                'razorpay_signature'       => $signature,
-                'start_date'               => Carbon::now(),
-                'expiry_date'              => $expiry,
-                'status'                   => 'paid',
-            ]);
-
-            $affected = \App\Models\User::where('id', $userId)->update([
-                'subscription_expiry' => $expiry,
-                'current_plan'        => $plan,
-                'is_premium'          => 1,
-            ]);
-
-            Log::info('Net banking callback user update', [
-                'user_id'  => $userId,
-                'affected' => $affected,
-            ]);
-
-            return redirect('/subscription')->with('success', 'Subscription activated successfully! 🎉');
-        } catch (\Throwable $e) {
-            Log::error('Net banking callback failed', [
-                'payment_id' => $request->razorpay_payment_id ?? null,
-                'error'      => $e->getMessage(),
-            ]);
-
-            return redirect('/subscription')->with('error', 'Payment verification failed. Contact support with ID: ' . ($request->razorpay_payment_id ?? 'N/A'));
         }
+
+        // Get subscription_id via invoice
+        $invoiceId = $payment['invoice_id'] ?? null;
+        if (!$invoiceId) {
+            throw new \Exception('No invoice_id found in payment');
+        }
+
+        $invoice        = $this->getApi()->invoice->fetch($invoiceId);
+        $subscriptionId = $invoice['subscription_id'] ?? null;
+
+        Log::info('Fetched invoice', [
+            'invoice_id'      => $invoiceId,
+            'subscription_id' => $subscriptionId,
+        ]);
+
+        if (!$subscriptionId) {
+            throw new \Exception('Could not resolve subscription_id from invoice');
+        }
+
+        // Prevent duplicate processing
+        $existing = Subscription::where('razorpay_payment_id', $paymentId)->first();
+        if ($existing) {
+            return redirect('/subscription')->with('info', 'Mandate already registered. Access will be activated once payment is processed.');
+        }
+
+        $rzSub  = $this->getApi()->subscription->fetch($subscriptionId);
+        $userId = $rzSub->notes['user_id'] ?? null;
+        $plan   = $rzSub->notes['plan']    ?? null;
+
+        Log::info('Fetched subscription notes', [
+            'subscription_id' => $subscriptionId,
+            'user_id'         => $userId,
+            'plan'            => $plan,
+        ]);
+
+        if (!$userId || !$plan) {
+            throw new \Exception('Missing user_id or plan in subscription notes');
+        }
+
+        $expiry = $this->getExpiry($plan);
+
+        // Save as pending — is_premium NOT set yet
+        // Access will be granted when subscription.charged webhook fires (actual debit)
+        Subscription::create([
+            'user_id'                  => $userId,
+            'plan_name'                => $plan,
+            'amount'                   => ($payment['amount'] ?? 0) / 100,
+            'razorpay_subscription_id' => $subscriptionId,
+            'razorpay_payment_id'      => $paymentId,
+            'razorpay_signature'       => $signature,
+            'start_date'               => Carbon::now(),
+            'expiry_date'              => $expiry,
+            'status'                   => 'pending', // ← mandate registered, not debited yet
+        ]);
+
+        Log::info('Net banking mandate registered — pending debit', [
+            'user_id'         => $userId,
+            'plan'            => $plan,
+            'subscription_id' => $subscriptionId,
+        ]);
+
+        // No is_premium update here — webhook will handle it after actual debit
+        return redirect('/subscription')->with('info',
+            'Your mandate has been registered successfully. Premium access will be activated within 1-3 working days once your bank processes the payment.');
+
+    } catch (\Throwable $e) {
+        Log::error('Net banking callback failed', [
+            'payment_id' => $request->razorpay_payment_id ?? null,
+            'error'      => $e->getMessage(),
+        ]);
+
+        return redirect('/subscription')->with('error',
+            'Payment verification failed. Contact support with ID: ' . ($request->razorpay_payment_id ?? 'N/A'));
     }
+}
 
     public function webhook(Request $request)
     {

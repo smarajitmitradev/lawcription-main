@@ -25,6 +25,19 @@
 </script>
 @endif
 
+@if(session('info'))
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        Swal.fire({
+            title: 'Mandate Registered! ⏳',
+            text: "{{ session('info') }}",
+            icon: 'info',
+            confirmButtonColor: '#2d6b4a',
+        });
+    });
+</script>
+@endif
+
 <div class="subscription-html">
 
   {{-- ══════════════════════════════════════════
@@ -1000,7 +1013,7 @@
           Swal.fire('Error', res.message || 'Could not create subscription. Try again.', 'error');
           return;
         }
-        
+
 
         var options = {
           key: res.key,
