@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>@yield('title', 'Lounge Cafe')</title>
+    <title>@yield('title', 'Lawcription™')</title>
 
     <script>
         document.documentElement.classList.remove('no-js');

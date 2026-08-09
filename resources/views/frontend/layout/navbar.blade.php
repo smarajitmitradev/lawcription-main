@@ -6,7 +6,7 @@
 
             <div class="header-logo !left-5 md:!left-8">
                 <a class="logo" href="{{ route('home') }}">
-                    <img class="!w-28 md:!w-32" src="{{ asset('frontend/images/logo.svg') }}" alt="Homepage">
+                    <img class="!w-28 md:!w-32" src="{{ asset('frontend/images/logo-1.svg') }}" alt="Homepage">
                 </a>
             </div>
 
@@ -35,7 +35,7 @@
                 </li>
 
                 <li>
-                    <a href="#menu" class="!rounded-full !px-3 !py-2 !text-xs !font-semibold !uppercase !tracking-wide hover:!bg-white/10 hover:!text-white">
+                    <a href="{{ route('menu') }}" class="!rounded-full !px-3 !py-2 !text-xs !font-semibold !uppercase !tracking-wide hover:!bg-white/10 hover:!text-white">
                         Menu
                     </a>
                 </li>

@@ -1,6 +1,7 @@
 @extends('frontend.layout.master')
 
 @section('title', 'Lawcription™ – About Us')
+@section('bodyClass', 'page-about')
 
 @section('content')
 
@@ -202,6 +203,19 @@
         padding-top: 0px !important;
         /* Adjust according to header height */
     }
+
+    body.page-about .lc-footer{
+      --green:#3d6b4a !important; --green2:#2d5a3d !important; --greenlit:#6fa882 !important;
+      --gold: #cc0cd3 !important;
+    --gold2: #3b055c !important;
+      --cream:#f2ead8 !important; --text:#ede8de !important;
+      --bg:#0a0908 !important; --surface:#131211 !important; --surface2:#1a1917 !important;
+      --border:rgba(242,234,216,0.08) !important; --border2:rgba(201,168,76,0.16) !important;
+      --muted:#9a9488 !important; --muted2:#b3ab9c !important;
+      background:var(--bg) !important; color:var(--muted2) !important; font-family:'DM Sans',sans-serif !important;
+      border-top:1px solid var(--border) !important; position:relative !important; overflow:hidden !important;
+      display:block !important; width:100% !important;
+    }
 </style>
 
 <div class="about-wrap">
@@ -236,7 +250,7 @@
             <!-- Stats row -->
             <div class="reveal d4 flex justify-center gap-4 flex-wrap">
                 <div class="stat-card">
-                    <div class="about-serif about-shimmer" style="font-size:2.2rem;font-weight:700;line-height:1;">2021</div>
+                    <div class="about-serif about-shimmer" style="font-size:2.2rem;font-weight:700;line-height:1;">2025</div>
                     <div style="font-size:10px;color:var(--about-muted);margin-top:6px;letter-spacing:2px;text-transform:uppercase;">Founded</div>
                 </div>
                 <div class="stat-card">
@@ -338,7 +352,7 @@
                 <div class="value-card">
                     <div style="font-size:2rem;margin-bottom:16px;">🎓</div>
                     <h3 class="about-serif mb-3" style="font-size:1.15rem;font-weight:700;color:var(--about-cream);">Continuous Learning</h3>
-                    <p style="font-size:14px;color:var(--about-muted);line-height:1.75;">Through CME-accredited modules, we make legal literacy a formal part of professional development.</p>
+                    <p style="font-size:14px;color:var(--about-muted);line-height:1.75;">We believe legal literacy should be an ongoing part of every medical professional's journey, not a one-time lesson.</p>
                 </div>
             </div>
         </div>
@@ -360,34 +374,34 @@
                     <div style="display:flex;gap:20px;align-items:flex-start;padding-bottom:32px;">
                         <div class="tl-dot">📌</div>
                         <div style="padding-top:8px;">
-                            <div style="font-size:10px;color:var(--about-gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;">2021 · The Idea</div>
-                            <h4 class="about-serif mb-2" style="font-size:1.05rem;font-weight:700;color:var(--about-cream);">Born from frustration</h4>
-                            <p style="font-size:13px;color:var(--about-muted);line-height:1.75;">A group of doctors and advocates, tired of seeing colleagues blindsided by legal cases, decided to build a resource they wished had existed during training.</p>
+                            <div style="font-size:10px;color:var(--about-gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;">2024 · The Idea</div>
+                            <h4 class="about-serif mb-2" style="font-size:1.05rem;font-weight:700;color:var(--about-cream);">Where Vision Meets Purpose</h4>
+                            <p style="font-size:13px;color:var(--about-muted);line-height:1.75;">It began with a simple belief: every doctor deserves to feel confident and protected, not just in medicine, but in the law that surrounds it. That belief brought together a group of doctors and advocates to build Lawcription.</p>
                         </div>
                     </div>
 
                     <div style="display:flex;gap:20px;align-items:flex-start;padding-bottom:32px;">
                         <div class="tl-dot">🚀</div>
                         <div style="padding-top:8px;">
-                            <div style="font-size:10px;color:var(--about-gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;">2022 · Launch</div>
-                            <h4 class="about-serif mb-2" style="font-size:1.05rem;font-weight:700;color:var(--about-cream);">First 100 articles published</h4>
-                            <p style="font-size:13px;color:var(--about-muted);line-height:1.75;">Lawcription™ launched with a focused library of Consumer Protection Act analyses and consent guides. Within 3 months, 2,000 doctors had subscribed.</p>
+                            <div style="font-size:10px;color:var(--about-gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;">2025 · Launch</div>
+                            <h4 class="about-serif mb-2" style="font-size:1.05rem;font-weight:700;color:var(--about-cream);">First 40 articles published</h4>
+                            <p style="font-size:13px;color:var(--about-muted);line-height:1.75;">Lawcription™ launched with a focused library of Consumer Protection Act analyses and consent guides.</p>
                         </div>
                     </div>
 
                     <div style="display:flex;gap:20px;align-items:flex-start;padding-bottom:32px;">
                         <div class="tl-dot">📈</div>
                         <div style="padding-top:8px;">
-                            <div style="font-size:10px;color:var(--about-gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;">2023 · Growth</div>
-                            <h4 class="about-serif mb-2" style="font-size:1.05rem;font-weight:700;color:var(--about-cream);">CME modules & expert network</h4>
-                            <p style="font-size:13px;color:var(--about-muted);line-height:1.75;">We launched accredited CME modules and built a network of 18 medico-legal consultants — a first in India for digital medical publishing.</p>
+                            <div style="font-size:10px;color:var(--about-gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;">2025 · Growth</div>
+                            <h4 class="about-serif mb-2" style="font-size:1.05rem;font-weight:700;color:var(--about-cream);">Learning modules & expert network</h4>
+                            <p style="font-size:13px;color:var(--about-muted);line-height:1.75;">We launched structured learning modules and built a network of 18 medico-legal consultants.</p>
                         </div>
                     </div>
 
                     <div style="display:flex;gap:20px;align-items:flex-start;">
                         <div class="tl-dot" style="border-color:rgba(111,168,130,0.4);">🏛️</div>
                         <div style="padding-top:8px;">
-                            <div style="font-size:10px;color:var(--about-greenlit);letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;">2024–Present</div>
+                            <div style="font-size:10px;color:var(--about-greenlit);letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;">2026–Present</div>
                             <h4 class="about-serif mb-2" style="font-size:1.05rem;font-weight:700;color:var(--about-cream);">12,000 doctors and growing</h4>
                             <p style="font-size:13px;color:var(--about-muted);line-height:1.75;">Today Lawcription™ is India's leading medico-legal intelligence platform, trusted by physicians across AIIMS, Apollo, Fortis, and thousands of independent practitioners.</p>
                         </div>
@@ -470,7 +484,7 @@
                 <span class="about-shimmer" style="font-style:italic;font-weight:300;">who practise with confidence.</span>
             </h2>
             <p class="about-serif reveal d3 mb-10" style="color:var(--about-muted);font-size:1.15rem;line-height:1.8;">
-                Your first 14 days are completely risk-free. No hidden charges. Cancel anytime.
+            Join Risk-Free — Access Starts Instantly. No hidden charges. Cancel anytime.
             </p>
             <div class="reveal d4 flex gap-4 justify-center flex-wrap">
                 <a href="{{ route('subscription.index') }}" style="text-decoration:none;">

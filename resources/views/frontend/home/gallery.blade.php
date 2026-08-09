@@ -1,6 +1,7 @@
 @extends('frontend.layout.master')
 
 @section('title', 'Lawcription™ – Gallery')
+@section('bodyClass', 'page-gallery')
 
 @section('content')
 
@@ -571,6 +572,18 @@
         padding-top: 0px !important;
         /* Adjust according to header height */
     }
+
+    body.page-gallery .lc-footer{
+      --green:#3d6b4a !important; --green2:#2d5a3d !important; --greenlit:#6fa882 !important;
+      --gold:#122dd1 !important; --gold2:#b8922e !important;
+      --cream:#f2ead8 !important; --text:#ede8de !important;
+      --bg:#0a0908 !important; --surface:#131211 !important; --surface2:#1a1917 !important;
+      --border:rgba(242,234,216,0.08) !important; --border2:rgba(201,168,76,0.16) !important;
+      --muted:#9a9488 !important; --muted2:#b3ab9c !important;
+      background:var(--bg) !important; color:var(--muted2) !important; font-family:'DM Sans',sans-serif !important;
+      border-top:1px solid var(--border) !important; position:relative !important; overflow:hidden !important;
+      display:block !important; width:100% !important;
+    }
 </style>
 
 <div class="gallery-wrap">
@@ -677,7 +690,7 @@
                 <!-- Third column -->
                 <div style="display:flex;flex-direction:column;gap:16px;">
                     <div class="feat-item" style="height:200px;" onclick="openLightbox(this)">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Office" style="height:100%;">
+                        <img src="https://plus.unsplash.com/premium_photo-1698084059560-9a53de7b816b?q=80&w=811&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Office" style="height:100%;">
                         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,15,20,.8),transparent 55%);"></div>
                         <span class="feat-badge" style="background:rgba(45,212,191,.15);color:var(--g-teal);border:1px solid rgba(45,212,191,.25);">Office</span>
                         <div style="position:absolute;bottom:16px;left:16px;">
@@ -685,7 +698,7 @@
                         </div>
                     </div>
                     <div class="feat-item" style="height:200px;" onclick="openLightbox(this)">
-                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Event" style="height:100%;">
+                        <img src="https://plus.unsplash.com/premium_photo-1694476607274-003dd175d073?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Event" style="height:100%;">
                         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,15,20,.8),transparent 55%);"></div>
                         <span class="feat-badge" style="background:rgba(251,113,133,.15);color:var(--g-rose);border:1px solid rgba(251,113,133,.25);">Event</span>
                         <div style="position:absolute;bottom:16px;left:16px;">
@@ -740,7 +753,7 @@
             <div class="masonry g-reveal gd2" id="masonryGrid">
 
                 <div class="masonry-item c-teal" data-cat="team" onclick="openLightbox(this)" data-caption="Dr. Arjun Sharma — Founder">
-                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80" alt="Team" style="height:320px;object-fit:cover;">
+                    <img src="https://images.unsplash.com/photo-1526930382372-67bf22c0fce2?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Team" style="height:320px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-teal);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Team</span>
                         <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Dr. Arjun Sharma</p>
@@ -764,7 +777,7 @@
                 </div>
 
                 <div class="masonry-item c-rose" data-cat="team" onclick="openLightbox(this)" data-caption="Adv. Priya Nair — Legal Director">
-                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80" alt="Team" style="height:260px;object-fit:cover;">
+                    <img src="https://images.unsplash.com/photo-1513224502586-d1e602410265?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Team" style="height:260px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-rose);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Team</span>
                         <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Adv. Priya Nair</p>
@@ -772,7 +785,7 @@
                 </div>
 
                 <div class="masonry-item c-teal" data-cat="office" onclick="openLightbox(this)" data-caption="Editorial Team in session — Mumbai">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="Office" style="height:200px;object-fit:cover;">
+                    <img src="https://plus.unsplash.com/premium_photo-1702598479744-f0fefa59d3a2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Office" style="height:200px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-teal);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Culture</span>
                         <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Editorial Team Session</p>
@@ -788,7 +801,7 @@
                 </div>
 
                 <div class="masonry-item c-violet" data-cat="team" onclick="openLightbox(this)" data-caption="Dr. Rohan Verma — CME Director">
-                    <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=600&q=80" alt="Team" style="height:240px;object-fit:cover;">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Team" style="height:240px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-violet);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Team</span>
                         <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Dr. Rohan Verma</p>
@@ -804,7 +817,7 @@
                 </div>
 
                 <div class="masonry-item c-teal" data-cat="office" onclick="openLightbox(this)" data-caption="Research & Writing Studio">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Office" style="height:260px;object-fit:cover;">
+                    <img src="https://images.unsplash.com/photo-1524683745036-b46f52b8505a?q=80&w=415&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Office" style="height:260px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-teal);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Office</span>
                         <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Research Studio</p>
@@ -828,7 +841,7 @@
                 </div>
 
                 <div class="masonry-item c-rose" data-cat="office" onclick="openLightbox(this)" data-caption="Strategy meeting — leadership team">
-                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80" alt="Office" style="height:230px;object-fit:cover;">
+                    <img src="https://plus.unsplash.com/premium_photo-1673958771993-f1c596da32f5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Office" style="height:230px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-rose);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Culture</span>
                         <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Leadership Strategy Meet</p>
@@ -846,10 +859,10 @@
         <div class="max-w-3xl mx-auto">
             <div style="font-size:3rem;margin-bottom:16px;opacity:.5;">"</div>
             <p class="g-serif" style="font-size:clamp(1.4rem,3vw,2rem);font-style:italic;font-weight:400;color:var(--g-cream);line-height:1.6;margin:0 0 20px;">
-                These images capture more than moments — they document a movement to make Indian medicine safer, wiser, and legally protected.
+            "Ignorantia juris non excusat." Ignorance of the law excuses no one.
             </p>
             <div style="font-size:12px;color:var(--g-teal);letter-spacing:2px;text-transform:uppercase;font-weight:600;">
-                — Dr. Arjun Sharma, Founder
+                — Ancient Roman legal maxim
             </div>
         </div>
     </div>
@@ -873,10 +886,10 @@
                 ['https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80','Annual MedLaw Summit','New Delhi, 2023'],
                 ['https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=500&q=80','CME Workshop','Bengaluru, 2023'],
                 ['https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?w=500&q=80','Healthcare Law Forum','Mumbai, 2024'],
-                ['https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=500&q=80','Doctor Rights Seminar','Chennai, 2023'],
+                ['https://images.unsplash.com/photo-1777443726993-8f9c8e96e46e?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','Doctor Rights Seminar','Chennai, 2023'],
                 ['https://images.unsplash.com/photo-1544531585-9847b68c8c86?w=500&q=80','NMC Compliance Bootcamp','Pune, 2024'],
-                ['https://images.unsplash.com/photo-1530099486328-e021101a494a?w=500&q=80','Medico-Legal Moot','Hyderabad, 2022'],
-                ['https://images.unsplash.com/photo-1511578314322-379afb476865?w=500&q=80','Legal Literacy Drive','Kolkata, 2023'],
+                ['https://images.unsplash.com/photo-1737984954497-06d1615cc177?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','Medico-Legal Moot','Hyderabad, 2022'],
+                ['https://images.unsplash.com/photo-1512102438733-bfa4ed29aef7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','Legal Literacy Drive','Kolkata, 2023'],
                 ];
                 @endphp
                 @foreach($eventImgs as $ev)
@@ -895,61 +908,76 @@
     <div class="g-divider"></div>
 
     {{-- ══ BENTO GRID ══ --}}
-    <section class="py-16 px-6">
-        <div class="max-w-6xl mx-auto">
-            <div class="g-reveal gd1 flex items-center gap-4 mb-10">
-                <span class="g-tag" style="background:rgba(251,113,133,0.1);color:var(--g-rose);border:1px solid rgba(251,113,133,0.22);">Culture</span>
-                <h2 class="g-serif" style="font-size:1.8rem;font-weight:700;color:var(--g-cream);letter-spacing:-.5px;">Life at Lawcription™</h2>
+    <section class="py-16 px-6" style="background-color: #111;">
+    <div class="max-w-6xl mx-auto">
+        <div class="g-reveal gd1 flex items-center gap-4 mb-10">
+            <span class="g-tag" style="background:rgba(251,113,133,0.1);color:var(--g-rose);border:1px solid rgba(251,113,133,0.22); padding: 4px 12px; border-radius: 99px; font-weight: 500;">Culture</span>
+            <h2 class="g-serif" style="font-size:2.2rem;font-weight:700;color:var(--g-cream);letter-spacing:-.5px; margin: 0;">Life at Lawcription™</h2>
+        </div>
+
+        <div class="bento g-reveal gd2" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; grid-auto-rows: minmax(180px, auto);">
+            
+            <!-- Item 1: HQ -->
+            <div class="bento-item" style="grid-row: span 2; position: relative; overflow: hidden; border-radius: 12px; cursor: pointer;">
+                <img src="https://images.unsplash.com/photo-1618939304347-e91b1f33d2ab?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Modern office building" style="width: 100%; height: 100%; object-fit: crop;">
+                <div class="bento-label" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                    <p style="font-size:16px;font-weight:600;color:#fff;margin:0 0 4px;">Mumbai Headquarters</p>
+                    <p style="font-size:13px;color:rgba(255,255,255,.7);margin:0;">Where ideas become articles</p>
+                </div>
             </div>
 
-            <div class="bento g-reveal gd2">
-                <div class="bento-item row2" onclick="openLightbox(this)" data-caption="Our Mumbai headquarters">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80" alt="HQ">
-                    <div class="bento-label">
-                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0 0 3px;">Mumbai Headquarters</p>
-                        <p style="font-size:12px;color:rgba(255,255,255,.55);margin:0;">Where ideas become articles</p>
-                    </div>
-                </div>
-                <div class="bento-item" onclick="openLightbox(this)" data-caption="Team at work">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="Team">
-                    <div class="bento-label">
-                        <p style="font-size:13px;font-weight:600;color:#fff;margin:0;">Team Collaboration</p>
-                    </div>
-                </div>
-                <div class="bento-item" onclick="openLightbox(this)" data-caption="Annual team retreat 2023">
-                    <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&q=80" alt="Team retreat">
-                    <div class="bento-label">
-                        <p style="font-size:13px;font-weight:600;color:#fff;margin:0;">Team Retreat 2023</p>
-                    </div>
-                </div>
-                <div class="bento-item span2" onclick="openLightbox(this)" data-caption="Strategy planning session — leadership team">
-                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="Strategy">
-                    <div class="bento-label">
-                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0 0 3px;">Strategy Planning</p>
-                        <p style="font-size:12px;color:rgba(255,255,255,.55);margin:0;">Leadership team quarterly session</p>
-                    </div>
-                </div>
-                <div class="bento-item" onclick="openLightbox(this)" data-caption="Research desk — deep work">
-                    <img src="https://images.unsplash.com/photo-1530099486328-e021101a494a?w=600&q=80" alt="Research">
-                    <div class="bento-label">
-                        <p style="font-size:13px;font-weight:600;color:#fff;margin:0;">Deep Research</p>
-                    </div>
-                </div>
-                <div class="bento-item" onclick="openLightbox(this)" data-caption="Podcast recording studio — MedLaw Talks">
-                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&q=80" alt="Studio">
-                    <div class="bento-label">
-                        <p style="font-size:13px;font-weight:600;color:#fff;margin:0;">MedLaw Talks Studio</p>
-                    </div>
-                </div>
-                <div class="bento-item" onclick="openLightbox(this)" data-caption="Awards night — Medico-Legal Excellence 2024">
-                    <img src="https://images.unsplash.com/photo-1544531585-9847b68c8c86?w=600&q=80" alt="Awards">
-                    <div class="bento-label">
-                        <p style="font-size:13px;font-weight:600;color:#fff;margin:0;">Excellence Awards 2024</p>
-                    </div>
+            <!-- Item 2: Collaboration -->
+            <div class="bento-item" style="position: relative; overflow: hidden; border-radius: 12px; cursor: pointer;">
+                <img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="People having a discussion in a bright room" style="width: 100%; height: 100%; object-fit: crop;">
+                <div class="bento-label" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                    <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Team Collaboration</p>
                 </div>
             </div>
+
+            <!-- Item 3: Retreat -->
+            <div class="bento-item" style="position: relative; overflow: hidden; border-radius: 12px; cursor: pointer;">
+                <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=600&h=400&auto=format&fit=crop" alt="Team high-fiving outdoors" style="width: 100%; height: 100%; object-fit: crop;">
+                <div class="bento-label" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                    <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Team Retreat 2023</p>
+                </div>
+            </div>
+
+            <!-- Item 4: Strategy (Span 2) -->
+            <div class="bento-item" style="grid-column: span 2; position: relative; overflow: hidden; border-radius: 12px; cursor: pointer;">
+                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&h=500&auto=format&fit=crop" alt="Business people discussing charts on a whiteboard" style="width: 100%; height: 100%; object-fit: crop;">
+                <div class="bento-label" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                    <p style="font-size:16px;font-weight:600;color:#fff;margin:0 0 4px;">Strategy Planning</p>
+                    <p style="font-size:13px;color:rgba(255,255,255,.7);margin:0;">Leadership team quarterly session</p>
+                </div>
+            </div>
+
+            <!-- Item 5: Research -->
+            <div class="bento-item" style="position: relative; overflow: hidden; border-radius: 12px; cursor: pointer;">
+                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=600&h=400&auto=format&fit=crop" alt="Person writing in a notebook near a laptop" style="width: 100%; height: 100%; object-fit: crop;">
+                <div class="bento-label" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                    <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Deep Research</p>
+                </div>
+            </div>
+
+            <!-- Item 6: Recording -->
+            <div class="bento-item" style="position: relative; overflow: hidden; border-radius: 12px; cursor: pointer;">
+                <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Two microphones in a professional studio" style="width: 100%; height: 100%; object-fit: crop;">
+                <div class="bento-label" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                    <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Content Studio</p>
+                </div>
+            </div>
+
+            <!-- Item 7: Celebration -->
+            <div class="bento-item" style="position: relative; overflow: hidden; border-radius: 12px; cursor: pointer;">
+                <img src="https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?q=80&w=600&h=400&auto=format&fit=crop" alt="Group of colleagues celebrating with confetti" style="width: 100%; height: 100%; object-fit: crop;">
+                <div class="bento-label" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                    <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Achievement Awards 2024</p>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <div class="g-divider"></div>
 
@@ -965,7 +993,8 @@
                 <span class="g-shimmer" style="font-style:italic;font-weight:400;">Join 12,000+ doctors.</span>
             </h2>
             <p class="g-reveal gd3 mb-10" style="color:var(--g-muted);font-size:1.1rem;line-height:1.8;font-weight:300;">
-                Start your free 14-day trial. No credit card required.
+                
+Join Risk-Free — Access Starts Instantly. No credit card required.
             </p>
             <div class="g-reveal gd4 flex gap-4 justify-center flex-wrap">
                 <a href="{{ route('subscription.index') }}" style="text-decoration:none;">

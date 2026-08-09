@@ -33,6 +33,7 @@ return [
     'razorpay' => [
         'key' => env('RAZORPAY_KEY_ID_LIVE'),
         'secret' => env('RAZORPAY_KEY_SECRET_LIVE'),
+        'webhook_secret' => env('RAZORPAY_WEBHOOK_SECRET'),
         'plans'  => [
             '7_day'   => env('RAZORPAY_PLAN_7_DAY'),   // TEMP — remove after live autopay test
             '1_month' => env('RAZORPAY_PLAN_1_MONTH'),

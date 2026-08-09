@@ -44,6 +44,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index_new'])->name('home.new');
 Route::get('/about-us', [HomeController::class, 'about_us'])->name('about-us');
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
+Route::get('/menu', [HomeController::class, 'menu'])->name('menu');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/subscription', [SubscriptionController::class, 'index'])
 

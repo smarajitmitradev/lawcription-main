@@ -1,22 +1,48 @@
 @extends('frontend.layout.master')
 
 @section('title', 'Lawcription™ – Gallery')
+@section('bodyClass', 'page-contact')
 
 @section('content')
 
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+    .contact-wrap {
+        font-family: 'DM Sans', sans-serif;
+    }
+
+    .contact-wrap .serif {
+        font-family: 'Playfair Display', serif;
+    }
+
     .box-fnt-size {
         font-size: 24px;
         font-family: serif;
     }
 
     body {
-        padding-top: 0px !important ;
-        /* Adjust according to header height */
+        padding-top: 0px !important;
     }
+
+    body.page-contact .lc-footer{
+      --green:#3d6b4a !important; --green2:#2d5a3d !important; --greenlit:#6fa882 !important;
+      --gold:#122dd1 !important; --gold2:#b8922e !important;
+      --cream:#f2ead8 !important; --text:#ede8de !important;
+      --bg:#0a0908 !important; --surface:#131211 !important; --surface2:#1a1917 !important;
+      --border:rgba(242,234,216,0.08) !important; --border2:rgba(201,168,76,0.16) !important;
+      --muted:#9a9488 !important; --muted2:#b3ab9c !important;
+      background:var(--bg) !important; color:var(--muted2) !important; font-family:'DM Sans',sans-serif !important;
+      border-top:1px solid var(--border) !important; position:relative !important; overflow:hidden !important;
+      display:block !important; width:100% !important;
+    }
+
+    All three keep contrast intact for the gold accents,
+    cream headings,
+    and muted body text already in the footer — no other overrides needed.
 </style>
 
-<div class="bg-[#0d0f14] text-white overflow-hidden">
+<div class="contact-wrap bg-[#0d0f14] text-white overflow-hidden">
 
     <!-- HERO SECTION -->
     <section class="relative py-32 px-6 overflow-hidden">
@@ -31,7 +57,7 @@
                 Contact Lawcription™
             </span>
 
-            <h1 class="mt-8 text-5xl md:text-7xl font-black leading-tight">
+            <h1 class="serif mt-8 text-5xl md:text-7xl font-black leading-tight">
                 Let's Connect &
                 <span class="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
                     Start The Conversation
@@ -57,7 +83,7 @@
                     <i class="fas fa-phone"></i>
                 </div>
 
-                <h3 class="text-xl font-bold mb-3">
+                <h3 class="serif text-xl font-bold mb-3">
                     Call Us
                 </h3>
 
@@ -114,7 +140,7 @@
                     <i class="fas fa-user-doctor"></i>
                 </div>
 
-                <h3 class="text-xl font-bold mb-3">
+                <h3 class="serif text-xl font-bold mb-3">
                     Dr. Sujan Debnath
                 </h3>
 
@@ -122,8 +148,8 @@
                     Founder & Medical Director
                 </p>
 
-                <a href="mailto:sujan@lawcription.com" class="text-amber-400 font-semibold hover:text-amber-300 break-all box-fnt-size">
-                    sujan@lawcription.com
+                <a href="mailto:lawcriptionofficial@gmail.com" class="text-amber-400 font-semibold hover:text-amber-300 break-all box-fnt-size">
+                    lawcriptionofficial@gmail.com
                 </a>
             </div>
 
@@ -145,11 +171,11 @@
                         Get In Touch
                     </span>
 
-                    <h2 class="text-4xl font-black mt-6 mb-6">
+                    <h2 class="serif text-4xl font-black mt-6 mb-6">
                         We'd Love To Hear From You
                     </h2>
 
-                    <p class="text-gray-400 leading-relaxed mb-10">
+                    <p class="serif text-gray-400 leading-relaxed mb-10">
                         Have questions about medico-legal guidance, subscriptions,
                         partnerships, or educational resources? Send us a message and our team
                         will respond as soon as possible.
@@ -162,10 +188,10 @@
                                 <i class="fas fa-clock"></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold mb-1">
+                                <h4 class="serif font-semibold mb-1">
                                     Business Hours
                                 </h4>
-                                <p class="text-gray-400">
+                                <p class="serif text-gray-400">
                                     Monday – Saturday
                                     <br>
                                     9:00 AM – 6:00 PM
@@ -257,7 +283,7 @@
 
 
     <!-- MAP SECTION -->
-    <section class="px-6 pb-24">
+    <!-- <section class="px-6 pb-24">
 
         <div class="max-w-7xl mx-auto">
 
@@ -270,7 +296,7 @@
 
         </div>
 
-    </section>
+    </section> -->
 
 </div>
 

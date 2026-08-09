@@ -65,4 +65,9 @@ class HomeController extends Controller
     {
         return view('frontend.home.contact');
     }
+
+    public function menu()
+    {
+        return view('frontend.home.menu');
+    }
 }

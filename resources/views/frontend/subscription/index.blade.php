@@ -160,7 +160,7 @@
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,9,8,0.85),transparent 50%);"></div>
         <div style="position:absolute;bottom:20px;left:20px;right:20px;">
           <div style="font-size:11px;color:var(--gold);font-weight:600;letter-spacing:2px;margin-bottom:6px;text-transform:uppercase;">Expert Analysis</div>
-          <div class="serif" style="font-size:1.05rem;font-weight:600;color:var(--cream);">Written by practising medico-legal consultants</div>
+          <div class="serif" style="font-size:1.05rem;font-weight:600;color:var(--cream);">Written by medico-legal consultants</div>
         </div>
       </div>
     </div>
@@ -168,15 +168,15 @@
     <div class="weekly-part" style="" class="reveal d4">
       <div style="margin:12px 0px; padding:28px;background:var(--surface);border:1px solid var(--border);border-radius:20px;position:relative;overflow:hidden;">
         <div style="position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:radial-gradient(var(--gold),transparent);opacity:0.1;"></div>
-        <div style="font-size:2rem;margin-bottom:14px;">📰</div>
-        <h3 class="serif" style="font-weight:700;font-size:0.95rem;margin-bottom:8px;color:var(--cream);">Weekly Digest</h3>
-        <p style="font-size:13px;color:var(--muted);line-height:1.65;">Curated newsletter with the week's most important legal developments sent every Friday.</p>
+        <div style="font-size:2rem;margin-bottom:14px;">📋</div>
+        <h3 class="serif" style="font-weight:700;font-size:0.95rem;margin-bottom:8px;color:var(--cream);">Curated Medico-Legal Insights</h3>
+        <p style="font-size:13px;color:var(--muted);line-height:1.65;">Timely updates on key medical-legal developments and direct highlights of newly released documents added to the subscriber portal.</p>
       </div>
       <div style="padding:28px;background:var(--surface);border:1px solid var(--border);border-radius:20px;position:relative;overflow:hidden;">
         <div style="position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:radial-gradient(var(--green),transparent);opacity:0.14;"></div>
-        <div style="font-size:2rem;margin-bottom:14px;">🎓</div>
-        <h3 class="serif" style="font-weight:700;font-size:0.95rem;margin-bottom:8px;color:var(--cream);">CME-Eligible Modules</h3>
-        <p style="font-size:13px;color:var(--muted);line-height:1.65;">Earn continuing medical education credits through accredited legal literacy modules.</p>
+        <div style="font-size:2rem;margin-bottom:14px;">📜</div>
+        <h3 class="serif" style="font-weight:700;font-size:0.95rem;margin-bottom:8px;color:var(--cream);">Ready-to-Use Medical Templates</h3>
+        <p style="font-size:13px;color:var(--muted);line-height:1.65;">Download NMC-compliant prescription formats, medical certificates, consent forms etc — pre-formatted and ready to customize for your practice.</p>
       </div>
       <div style="padding:28px;background:var(--surface);border:1px solid var(--border);border-radius:20px;position:relative;overflow:hidden;">
         <div style="position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:radial-gradient(var(--gold2),transparent);opacity:0.09;"></div>
@@ -205,30 +205,54 @@
 
         {{-- ══ ANIMATED GRADIENT BANNER (replaces toggle) ══ --}}
         <div class="reveal d3" style="margin-bottom:10px;">
-          <div
-            id="savings-banner"
-            class="relative mx-auto overflow-hidden rounded-2xl px-6 py-5 text-center"
-            style="max-width:600px; background-size:300% 300%; animation: gradientShift 6s ease infinite;"
-          >
+          <div id="savings-banner" class="relative mx-auto overflow-hidden rounded-2xl px-6 py-5 text-center" style="max-width:600px; background-size:300% 300%; animation: gradientShift 6s ease infinite;">
             {{-- Tailwind animated gradient via inline keyframes --}}
             <style>
               @keyframes gradientShift {
-                0%   { background-position: 0% 50%;   background-image: linear-gradient(135deg,#1a3d2b,#2d6b4a,#c9a84c,#3d6b4f); }
-                25%  { background-position: 50% 100%; background-image: linear-gradient(135deg,#c9a84c,#1a3d2b,#3d6b4f,#b8922e); }
-                50%  { background-position: 100% 50%; background-image: linear-gradient(135deg,#3d6b4f,#c9a84c,#1a3d2b,#2d6b4a); }
-                75%  { background-position: 50% 0%;   background-image: linear-gradient(135deg,#b8922e,#3d6b4f,#c9a84c,#1a3d2b); }
-                100% { background-position: 0% 50%;   background-image: linear-gradient(135deg,#1a3d2b,#2d6b4a,#c9a84c,#3d6b4f); }
+                0% {
+                  background-position: 0% 50%;
+                  background-image: linear-gradient(135deg, #1a3d2b, #2d6b4a, #c9a84c, #3d6b4f);
+                }
+
+                25% {
+                  background-position: 50% 100%;
+                  background-image: linear-gradient(135deg, #c9a84c, #1a3d2b, #3d6b4f, #b8922e);
+                }
+
+                50% {
+                  background-position: 100% 50%;
+                  background-image: linear-gradient(135deg, #3d6b4f, #c9a84c, #1a3d2b, #2d6b4a);
+                }
+
+                75% {
+                  background-position: 50% 0%;
+                  background-image: linear-gradient(135deg, #b8922e, #3d6b4f, #c9a84c, #1a3d2b);
+                }
+
+                100% {
+                  background-position: 0% 50%;
+                  background-image: linear-gradient(135deg, #1a3d2b, #2d6b4a, #c9a84c, #3d6b4f);
+                }
               }
+
               @keyframes shimmerPulse {
-                0%, 100% { opacity: 1; }
-                50%       { opacity: 0.75; }
+
+                0%,
+                100% {
+                  opacity: 1;
+                }
+
+                50% {
+                  opacity: 0.75;
+                }
               }
+
               #savings-banner::before {
                 content: '';
                 position: absolute;
                 inset: 0;
                 border-radius: 1rem;
-                border: 1px solid rgba(201,168,76,0.35);
+                border: 1px solid rgba(201, 168, 76, 0.35);
                 pointer-events: none;
               }
             </style>
@@ -241,11 +265,8 @@
             </div>
 
             {{-- Main text --}}
-            <p
-              class="serif"
-              style="font-size:clamp(1rem,2.5vw,1.3rem);font-weight:700;color:#f2ead8;line-height:1.4;margin-bottom:6px;animation:shimmerPulse 3s ease-in-out infinite;"
-            >
-              Longer commitment, stronger protection — save up to <span style="color:#f5d87a;">40%</span> on annual access.
+            <p class="serif" style="font-size:clamp(1rem,2.5vw,1.3rem);font-weight:700;color:#f2ead8;line-height:1.4;margin-bottom:6px;animation:shimmerPulse 3s ease-in-out infinite;">
+              Longer commitment, stronger protection — save up to <span style="color:#f5d87a;">25%</span> on annual access.
             </p>
 
             {{-- Sub-text --}}
@@ -268,25 +289,63 @@
                 position: relative;
                 user-select: none;
               }
-              .plan-pill:hover { filter: brightness(1.15); transform: translateY(-1px); }
+
+              .plan-pill:hover {
+                filter: brightness(1.15);
+                transform: translateY(-1px);
+              }
 
               /* default (unselected) */
-              .plan-pill.pill-1 { background:rgba(242,234,216,0.06); border-color:rgba(242,234,216,0.15); color:rgba(242,234,216,0.5); }
-              .plan-pill.pill-2 { background:rgba(201,168,76,0.07);  border-color:rgba(201,168,76,0.2);   color:rgba(201,168,76,0.55); }
-              .plan-pill.pill-3 { background:rgba(61,107,79,0.07);   border-color:rgba(61,107,79,0.2);    color:rgba(111,168,130,0.55); }
+              .plan-pill.pill-1 {
+                background: rgba(242, 234, 216, 0.06);
+                border-color: rgba(242, 234, 216, 0.15);
+                color: rgba(242, 234, 216, 0.5);
+              }
+
+              .plan-pill.pill-2 {
+                background: rgba(201, 168, 76, 0.07);
+                border-color: rgba(201, 168, 76, 0.2);
+                color: rgba(201, 168, 76, 0.55);
+              }
+
+              .plan-pill.pill-3 {
+                background: rgba(61, 107, 79, 0.07);
+                border-color: rgba(61, 107, 79, 0.2);
+                color: rgba(111, 168, 130, 0.55);
+              }
 
               /* active (selected) */
-              .plan-pill.pill-1.pill-active { background:rgba(242,234,216,0.13); border-color:rgba(242,234,216,0.45); color:#f2ead8; box-shadow: 0 0 14px rgba(242,234,216,0.08); }
-              .plan-pill.pill-2.pill-active { background:rgba(201,168,76,0.18);  border-color:rgba(201,168,76,0.55);   color:#c9a84c; box-shadow: 0 0 14px rgba(201,168,76,0.15); }
-              .plan-pill.pill-3.pill-active { background:rgba(61,107,79,0.18);   border-color:rgba(61,107,79,0.55);    color:#6fa882; box-shadow: 0 0 14px rgba(61,107,79,0.15); }
+              .plan-pill.pill-1.pill-active {
+                background: rgba(242, 234, 216, 0.13);
+                border-color: rgba(242, 234, 216, 0.45);
+                color: #f2ead8;
+                box-shadow: 0 0 14px rgba(242, 234, 216, 0.08);
+              }
+
+              .plan-pill.pill-2.pill-active {
+                background: rgba(201, 168, 76, 0.18);
+                border-color: rgba(201, 168, 76, 0.55);
+                color: #c9a84c;
+                box-shadow: 0 0 14px rgba(201, 168, 76, 0.15);
+              }
+
+              .plan-pill.pill-3.pill-active {
+                background: rgba(61, 107, 79, 0.18);
+                border-color: rgba(61, 107, 79, 0.55);
+                color: #6fa882;
+                box-shadow: 0 0 14px rgba(61, 107, 79, 0.15);
+              }
 
               /* card highlight glow */
               .plan-card.card-highlight {
-                box-shadow: 0 0 0 2px rgba(201,168,76,0.5), 0 20px 60px rgba(0,0,0,0.5) !important;
+                box-shadow: 0 0 0 2px rgba(201, 168, 76, 0.5), 0 20px 60px rgba(0, 0, 0, 0.5) !important;
                 transform: translateY(-6px) scale(1.01);
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
               }
-              .plan-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+
+              .plan-card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+              }
             </style>
 
             <div class="flex items-center justify-center gap-2 mt-4 flex-wrap" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:999px;padding:6px 8px;display:inline-flex;margin:16px auto 0;width:fit-content;">
@@ -294,37 +353,48 @@
                 📖 1 Month &nbsp;·&nbsp; ₹999
               </button>
               <button class="plan-pill pill-2 pill-active" id="pill2" onclick="selectPill(2)">
-                ⭐ 6 Months &nbsp;·&nbsp; 20% off
+                ⭐ 6 Months &nbsp;·&nbsp; 10% off
               </button>
               <button class="plan-pill pill-3" id="pill3" onclick="selectPill(3)">
-                💎 1 Year &nbsp;·&nbsp; 40% off
+                💎 1 Year &nbsp;·&nbsp; 25% off
               </button>
             </div>
 
             <script>
               function selectPill(n) {
                 /* reset all pills */
-                [1,2,3].forEach(function(i) {
-                  var p = document.getElementById('pill'+i);
-                  if (p) { p.classList.remove('pill-active'); }
+                [1, 2, 3].forEach(function(i) {
+                  var p = document.getElementById('pill' + i);
+                  if (p) {
+                    p.classList.remove('pill-active');
+                  }
                 });
                 /* reset all card highlights */
                 document.querySelectorAll('.plan-card').forEach(function(c) {
                   c.classList.remove('card-highlight');
                 });
                 /* activate chosen pill */
-                var chosen = document.getElementById('pill'+n);
-                if (chosen) { chosen.classList.add('pill-active'); }
+                var chosen = document.getElementById('pill' + n);
+                if (chosen) {
+                  chosen.classList.add('pill-active');
+                }
                 /* highlight chosen card — cards are 1-indexed in DOM order */
                 var cards = document.querySelectorAll('.plan-card');
-                if (cards[n-1]) { cards[n-1].classList.add('card-highlight'); }
+                if (cards[n - 1]) {
+                  cards[n - 1].classList.add('card-highlight');
+                }
                 /* smooth scroll to card on mobile */
-                if (cards[n-1] && window.innerWidth < 768) {
-                  cards[n-1].scrollIntoView({ behavior:'smooth', block:'center' });
+                if (cards[n - 1] && window.innerWidth < 768) {
+                  cards[n - 1].scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                  });
                 }
               }
               /* highlight card 1 on load */
-              document.addEventListener('DOMContentLoaded', function() { selectPill(2); });
+              document.addEventListener('DOMContentLoaded', function() {
+                selectPill(2);
+              });
             </script>
           </div>
         </div>
@@ -380,7 +450,7 @@
       {{-- ══ END TEMP TEST CARD ══ --}}
 
       {{-- ── 3 PLAN CARDS ── --}}
-      <div  class="pricing-cards" >
+      <div class="pricing-cards">
 
         {{-- Card 1 · 1 MONTH --}}
         <div class="plan-card reveal d2" style="background:var(--surface);border-radius:24px;padding:36px 30px; margin:40px 0;">
@@ -400,12 +470,24 @@
           </div>
           <div style="height:1px;background:var(--border);margin-bottom:28px;"></div>
           <ul style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px;">
-            <li class="check-item"><div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Full article access</span></li>
-            <li class="check-item"><div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Weekly legal digest</span></li>
-            <li class="check-item"><div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Case search (50 searches/mo)</span></li>
-            <li class="check-item"><div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Email support</span></li>
-            <li class="check-item" style="opacity:0.3;"><div class="check-dot" style="background:rgba(255,255,255,0.03);color:#555;font-size:11px;">—</div><span style="font-size:14px;">CME modules</span></li>
-            <li class="check-item" style="opacity:0.3;"><div class="check-dot" style="background:rgba(255,255,255,0.03);color:#555;font-size:11px;">—</div><span style="font-size:14px;">Expert consultation credits</span></li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Full article access</span>
+            </li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Weekly legal digest</span>
+            </li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Case search (50 searches/mo)</span>
+            </li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Email support</span>
+            </li>
+            <li class="check-item" style="opacity:0.3;">
+              <div class="check-dot" style="background:rgba(255,255,255,0.03);color:#555;font-size:11px;">—</div><span style="font-size:14px;">CME modules</span>
+            </li>
+            <li class="check-item" style="opacity:0.3;">
+              <div class="check-dot" style="background:rgba(255,255,255,0.03);color:#555;font-size:11px;">—</div><span style="font-size:14px;">Expert consultation credits</span>
+            </li>
           </ul>
           <button id="plan1Btn" class="btn-plain w-full py-4 rounded-2xl serif" style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;color:var(--text);width:100%;padding:16px;border-radius:14px;background:transparent;">
             Start Reading →
@@ -432,12 +514,24 @@
           </div>
           <div style="height:1px;background:rgba(201,168,76,0.18);margin-bottom:28px;"></div>
           <ul style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px;">
-            <li class="check-item"><div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Unlimited article access</span></li>
-            <li class="check-item"><div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Weekly + special bulletins</span></li>
-            <li class="check-item"><div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Unlimited case search</span></li>
-            <li class="check-item"><div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">3 CME modules/month</span></li>
-            <li class="check-item"><div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Priority support</span></li>
-            <li class="check-item" style="opacity:0.35;"><div class="check-dot" style="background:rgba(255,255,255,0.03);color:#555;font-size:11px;">—</div><span style="font-size:14px;">Expert consultation credits</span></li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Unlimited article access</span>
+            </li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Weekly + special bulletins</span>
+            </li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Unlimited case search</span>
+            </li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">3 CME modules/month</span>
+            </li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Priority support</span>
+            </li>
+            <li class="check-item" style="opacity:0.35;">
+              <div class="check-dot" style="background:rgba(255,255,255,0.03);color:#555;font-size:11px;">—</div><span style="font-size:14px;">Expert consultation credits</span>
+            </li>
           </ul>
           <div class="btn-glow" style="border-radius:16px;">
             <button id="plan2Btn" style="width:100%;padding:16px;border-radius:16px;background:linear-gradient(135deg,var(--green),var(--green2));border:none;cursor:pointer;font-family:'Playfair Display',serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--cream);position:relative;z-index:1;">
@@ -461,16 +555,28 @@
               <span style="color:var(--muted);font-size:14px;padding-bottom:8px;">/mo</span>
               <span style="background:rgba(111,168,130,0.12);color:var(--greenlit);font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px;margin-bottom:8px;letter-spacing:1px;">40% OFF</span>
             </div>
-            <p style="font-size:12px;color:var(--muted);">₹8,988 billed annually</p> 
+            <p style="font-size:12px;color:var(--muted);">₹8,988 billed annually</p>
           </div>
           <div style="height:1px;background:var(--border);margin-bottom:28px;"></div>
           <ul style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px;">
-            <li class="check-item"><div class="check-dot" style="background:rgba(111,168,130,0.1);color:var(--greenlit);">✓</div><span style="font-size:14px;">Everything in Professional</span></li>
-            <li class="check-item"><div class="check-dot" style="background:rgba(111,168,130,0.1);color:var(--greenlit);">✓</div><span style="font-size:14px;">Unlimited CME modules</span></li>
-            <li class="check-item"><div class="check-dot" style="background:rgba(111,168,130,0.1);color:var(--greenlit);">✓</div><span style="font-size:14px;">2 expert consultation credits</span></li>
-            <li class="check-item"><div class="check-dot" style="background:rgba(111,168,130,0.1);color:var(--greenlit);">✓</div><span style="font-size:14px;">Downloadable PDF archive</span></li>
-            <li class="check-item"><div class="check-dot" style="background:rgba(111,168,130,0.1);color:var(--greenlit);">✓</div><span style="font-size:14px;">Dedicated account manager</span></li>
-            <li class="check-item"><div class="check-dot" style="background:rgba(111,168,130,0.1);color:var(--greenlit);">✓</div><span style="font-size:14px;">Institution group licences</span></li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(111,168,130,0.1);color:var(--greenlit);">✓</div><span style="font-size:14px;">Everything in Professional</span>
+            </li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(111,168,130,0.1);color:var(--greenlit);">✓</div><span style="font-size:14px;">Unlimited CME modules</span>
+            </li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(111,168,130,0.1);color:var(--greenlit);">✓</div><span style="font-size:14px;">2 expert consultation credits</span>
+            </li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(111,168,130,0.1);color:var(--greenlit);">✓</div><span style="font-size:14px;">Downloadable PDF archive</span>
+            </li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(111,168,130,0.1);color:var(--greenlit);">✓</div><span style="font-size:14px;">Dedicated account manager</span>
+            </li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(111,168,130,0.1);color:var(--greenlit);">✓</div><span style="font-size:14px;">Institution group licences</span>
+            </li>
           </ul>
           <button id="plan3Btn" class="btn-plain serif" style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;color:var(--greenlit);border-color:rgba(111,168,130,0.2);width:100%;padding:16px;border-radius:14px;background:transparent;">
             Go Elite →
@@ -483,7 +589,7 @@
       <div class="reveal d5" style="margin-top:32px;padding:20px 30px;background:linear-gradient(135deg,rgba(61,107,79,0.08),rgba(201,168,76,0.05));border:1px solid rgba(201,168,76,0.15);border-radius:16px;display:flex;justify-content:center;align-items:center;gap:16px;flex-wrap:wrap;text-align:center;">
         <span style="font-size:1.2rem;">⚖️</span>
         <span style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--muted);">
-          <span style="color:var(--cream);font-weight:600;">14-day money-back guarantee</span> · Cancel anytime · Secure payment · No hidden fees
+          <span style="color:var(--cream);font-weight:600;">Join Risk-Free — Access Starts Instantly</span> · Cancel anytime · Secure payment · No hidden fees
         </span>
         <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
           <span style="background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:8px;padding:4px 10px;font-size:11px;color:var(--muted);">💳 Visa</span>
@@ -508,7 +614,7 @@
         <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=700&q=80" alt="Surgery" style="width:100%;height:100%;object-fit:cover;display:block;min-height:400px;filter:brightness(0.55) sepia(0.3);" />
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,9,8,0.95) 30%,rgba(10,9,8,0.15));"></div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:32px;">
-          <span class="tag" style="background:rgba(201,168,76,0.15);color:var(--gold);font-size:10px;margin-bottom:12px;">SURGEONS &amp; SPECIALISTS</span>
+          <span class="tag" style="background:rgba(201,168,76,0.15);color:var(--gold);font-size:10px;margin-bottom:12px;">ALL SPECIALISTS</span>
           <h3 class="serif" style="font-size:1.4rem;font-weight:700;margin-bottom:10px;color:var(--cream);">Operative risk, consent &amp; liability.</h3>
           <p style="font-size:14px;color:rgba(237,232,222,0.65);line-height:1.6;">Deep-dives into surgical negligence cases, post-operative complications, and theatre consent documentation standards.</p>
         </div>
@@ -517,7 +623,7 @@
         <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&q=80" alt="GP" style="width:100%;height:200px;object-fit:cover;display:block;filter:brightness(0.55) sepia(0.25);" />
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,9,8,0.95) 30%,transparent);"></div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:22px;">
-          <span class="tag" style="background:rgba(111,168,130,0.1);color:var(--greenlit);font-size:10px;margin-bottom:8px;">GPs &amp; PRIMARY CARE</span>
+          <span class="tag" style="background:rgba(111,168,130,0.1);color:var(--greenlit);font-size:10px;margin-bottom:8px;">GP &amp; PRIMARY CARE</span>
           <h3 class="serif" style="font-size:1.1rem;font-weight:700;color:var(--cream);">Referral duties &amp; prescription law.</h3>
         </div>
       </div>
@@ -526,7 +632,7 @@
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,9,8,0.95) 30%,transparent);"></div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:22px;">
           <span class="tag" style="background:rgba(201,168,76,0.1);color:var(--gold2);font-size:10px;margin-bottom:8px;">HOSPITAL ADMINISTRATORS</span>
-          <h3 class="serif" style="font-size:1.1rem;font-weight:700;color:var(--cream);">Licensing, accreditation &amp; NABH.</h3>
+          <h3 class="serif" style="font-size:1.1rem;font-weight:700;color:var(--cream);">Legal Risk Management.</h3>
         </div>
       </div>
     </div>
@@ -541,51 +647,69 @@
       <p style="color:var(--muted);font-family:'Cormorant Garamond',serif;font-size:1rem;">Every feature, side by side.</p>
     </div>
     <div class="table-responsive reveal d2" style="">
-      <table  class="pricing-table">
+      <table class="pricing-table">
         <thead>
           <tr style="background:var(--surface2);">
             <th style="padding:18px 24px;width:80px; text-align:left;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:var(--muted);border-bottom:1px solid var(--border);">Feature</th>
             <th style="padding:18px 24px;width:80px; text-align:center;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;border-bottom:1px solid var(--border);color:var(--cream);">1 Month</th>
-            <th style="padding:18px 24px;width:80px; text-align:center;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:var(--gold);border-bottom:1px solid var(--border);background:rgba(201,168,76,0.05);">6 Months ⭐</th>
-            <th style="padding:18px 24px;width:80px; text-align:center;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:var(--greenlit);border-bottom:1px solid var(--border);">1 Year</th>
+            <th style="padding:18px 24px;width:80px; text-align:center;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:var(--gold);border-bottom:1px solid var(--border);background:rgba(201,168,76,0.05);">6 Months ⭐ Best Value</th>
+            <th style="padding:18px 24px;width:80px; text-align:center;font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:var(--greenlit);border-bottom:1px solid var(--border);background:rgba(111,168,130,0.05);">1 Year 🏆 Most Popular</th>
           </tr>
         </thead>
         <tbody>
           <tr class="compare-row" style="border-bottom:1px solid var(--border);">
-            <td style="padding:16px 24px;color:var(--muted);">Article access</td>
-            <td style="padding:16px 24px;text-align:center;color:var(--text);">Full</td>
-            <td style="padding:16px 24px;text-align:center;background:rgba(201,168,76,0.03);color:var(--gold);font-weight:600;">Unlimited</td>
-            <td style="padding:16px 24px;text-align:center;color:var(--greenlit);font-weight:600;">Unlimited</td>
+            <td style="padding:16px 24px;color:var(--muted);">Price</td>
+            <td style="padding:16px 24px;text-align:center;color:var(--text);">₹999 / month</td>
+            <td style="padding:16px 24px;text-align:center;background:rgba(201,168,76,0.03);color:var(--gold);font-weight:600;">₹899 / month</td>
+            <td style="padding:16px 24px;text-align:center;background:rgba(111,168,130,0.03);color:var(--greenlit);font-weight:600;">₹749 / month</td>
           </tr>
           <tr class="compare-row" style="border-bottom:1px solid var(--border);">
-            <td style="padding:16px 24px;color:var(--muted);">Case search / month</td>
-            <td style="padding:16px 24px;text-align:center;">50</td>
-            <td style="padding:16px 24px;text-align:center;background:rgba(201,168,76,0.03);">Unlimited</td>
-            <td style="padding:16px 24px;text-align:center;">Unlimited</td>
+            <td style="padding:16px 24px;color:var(--muted);">Billing</td>
+            <td style="padding:16px 24px;text-align:center;color:var(--text);">Pay monthly</td>
+            <td style="padding:16px 24px;text-align:center;background:rgba(201,168,76,0.03);color:var(--gold);">Pay every 6 months</td>
+            <td style="padding:16px 24px;text-align:center;background:rgba(111,168,130,0.03);color:var(--greenlit);">Pay yearly</td>
           </tr>
           <tr class="compare-row" style="border-bottom:1px solid var(--border);">
-            <td style="padding:16px 24px;color:var(--muted);">CME modules</td>
-            <td style="padding:16px 24px;text-align:center;color:#555;">✕</td>
-            <td style="padding:16px 24px;text-align:center;background:rgba(201,168,76,0.03);color:var(--gold);">3 / month</td>
-            <td style="padding:16px 24px;text-align:center;color:var(--greenlit);">Unlimited</td>
+            <td style="padding:16px 24px;color:var(--muted);">Access to all features</td>
+            <td style="padding:16px 24px;text-align:center;color:var(--text);">✓ Unlimited</td>
+            <td style="padding:16px 24px;text-align:center;background:rgba(201,168,76,0.03);color:var(--gold);font-weight:600;">✓ Unlimited</td>
+            <td style="padding:16px 24px;text-align:center;background:rgba(111,168,130,0.03);color:var(--greenlit);font-weight:600;">✓ Unlimited</td>
           </tr>
           <tr class="compare-row" style="border-bottom:1px solid var(--border);">
-            <td style="padding:16px 24px;color:var(--muted);">Expert consultation credits</td>
-            <td style="padding:16px 24px;text-align:center;color:#555;">✕</td>
-            <td style="padding:16px 24px;text-align:center;background:rgba(201,168,76,0.03);color:#555;">✕</td>
-            <td style="padding:16px 24px;text-align:center;color:var(--greenlit);">2 / year</td>
+            <td style="padding:16px 24px;color:var(--muted);">Daily legal updates</td>
+            <td style="padding:16px 24px;text-align:center;color:var(--text);">✓</td>
+            <td style="padding:16px 24px;text-align:center;background:rgba(201,168,76,0.03);color:var(--gold);">✓</td>
+            <td style="padding:16px 24px;text-align:center;background:rgba(111,168,130,0.03);color:var(--greenlit);">✓</td>
           </tr>
           <tr class="compare-row" style="border-bottom:1px solid var(--border);">
-            <td style="padding:16px 24px;color:var(--muted);">PDF archive downloads</td>
-            <td style="padding:16px 24px;text-align:center;color:#555;">✕</td>
-            <td style="padding:16px 24px;text-align:center;background:rgba(201,168,76,0.03);color:#555;">✕</td>
-            <td style="padding:16px 24px;text-align:center;color:var(--greenlit);">✓</td>
+            <td style="padding:16px 24px;color:var(--muted);">Ready-to-use tools</td>
+            <td style="padding:16px 24px;text-align:center;color:var(--text);">✓</td>
+            <td style="padding:16px 24px;text-align:center;background:rgba(201,168,76,0.03);color:var(--gold);">✓</td>
+            <td style="padding:16px 24px;text-align:center;background:rgba(111,168,130,0.03);color:var(--greenlit);">✓</td>
+          </tr>
+          <tr class="compare-row" style="border-bottom:1px solid var(--border);">
+            <td style="padding:16px 24px;color:var(--muted);">Articles, videos & PDFs</td>
+            <td style="padding:16px 24px;text-align:center;color:var(--text);">✓</td>
+            <td style="padding:16px 24px;text-align:center;background:rgba(201,168,76,0.03);color:var(--gold);">✓</td>
+            <td style="padding:16px 24px;text-align:center;background:rgba(111,168,130,0.03);color:var(--greenlit);">✓</td>
+          </tr>
+          <tr class="compare-row" style="border-bottom:1px solid var(--border);">
+            <td style="padding:16px 24px;color:var(--muted);">Case laws & search</td>
+            <td style="padding:16px 24px;text-align:center;color:var(--text);">✓ Unlimited</td>
+            <td style="padding:16px 24px;text-align:center;background:rgba(201,168,76,0.03);color:var(--gold);font-weight:600;">✓ Unlimited</td>
+            <td style="padding:16px 24px;text-align:center;background:rgba(111,168,130,0.03);color:var(--greenlit);font-weight:600;">✓ Unlimited</td>
+          </tr>
+          <tr class="compare-row" style="border-bottom:1px solid var(--border);">
+            <td style="padding:16px 24px;color:var(--muted);">Support & future updates</td>
+            <td style="padding:16px 24px;text-align:center;color:var(--text);">✓ Included</td>
+            <td style="padding:16px 24px;text-align:center;background:rgba(201,168,76,0.03);color:var(--gold);">✓ Included</td>
+            <td style="padding:16px 24px;text-align:center;background:rgba(111,168,130,0.03);color:var(--greenlit);">✓ Included</td>
           </tr>
           <tr class="compare-row">
-            <td style="padding:16px 24px;color:var(--muted);">Group / institution licence</td>
-            <td style="padding:16px 24px;text-align:center;color:#555;">✕</td>
-            <td style="padding:16px 24px;text-align:center;background:rgba(201,168,76,0.03);color:#555;">✕</td>
-            <td style="padding:16px 24px;text-align:center;color:var(--greenlit);">✓</td>
+            <td style="padding:16px 24px;color:var(--muted);">Effective monthly cost</td>
+            <td style="padding:16px 24px;text-align:center;color:var(--text);font-weight:600;">₹999</td>
+            <td style="padding:16px 24px;text-align:center;background:rgba(201,168,76,0.03);color:var(--gold);font-weight:600;">₹899 <span style="font-size:11px;color:var(--muted);">(Save ₹100/mo)</span></td>
+            <td style="padding:16px 24px;text-align:center;background:rgba(111,168,130,0.03);color:var(--greenlit);font-weight:600;">₹749 <span style="font-size:11px;color:var(--muted);">(Save ₹250/mo)</span></td>
           </tr>
         </tbody>
       </table>
@@ -597,40 +721,44 @@
   ══════════════════════════════════════════ --}}
   <section style="padding:80px 24px;max-width:1100px;margin:0 auto;position:relative;z-index:2;">
     <div style="text-align:center;margin-bottom:60px;" class="reveal d1">
-      <span class="tag" style="background:rgba(201,168,76,0.08);color:var(--gold2);border:1px solid rgba(201,168,76,0.15);margin-bottom:16px;display:inline-flex;">Testimonials</span>
+      <span class="tag" style="background:rgba(201,168,76,0.08);color:var(--gold2);border:1px solid rgba(201,168,76,0.15);margin-bottom:16px;display:inline-flex;">Legal Insights</span>
       <h2 class="serif" style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;letter-spacing:-1px;">Trusted by 12,000+ physicians.</h2>
     </div>
-    <div  class="trusted-place reveal d2">
+    <div class="trusted-place reveal d2">
       <div class="testi-card" style="border-radius:20px;padding:28px;">
         <div style="display:flex;gap:3px;margin-bottom:16px;color:var(--gold);font-size:14px;">★★★★★</div>
-        <p class="light-serif" style="font-size:1.05rem;color:rgba(237,232,222,0.75);line-height:1.7;margin-bottom:20px;font-style:italic;">"Finally, legal commentary that speaks in clinical terms. The Consumer Protection Act series alone saved me from a very costly misunderstanding."</p>
+        <p class="light-serif" style="font-size:1.05rem;color:rgba(237,232,222,0.75);line-height:1.7;margin-bottom:20px;font-style:italic;">"A simple lack of care, an error of judgment or an accident is not proof of medical negligence."</p>
         <div style="display:flex;align-items:center;gap:12px;">
-          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100&q=80" alt="" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,168,76,0.25);" />
+          <img src="https://images.unsplash.com/photo-1583608563020-9772ff491a8c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,168,76,0.25);" />
           <div>
-            <div style="font-size:13px;font-weight:600;color:var(--cream);">Dr. Priya Mehta</div>
-            <div style="font-size:11px;color:var(--muted);">Cardiologist, Mumbai</div>
+            <div style="font-size:13px;font-weight:600;color:var(--cream);">Supreme Court of India</div>
+            <div style="font-size:11px;color:var(--muted);">Bombay Hospital & Medical Research Centre v. Asha Jai.swal & Ors.
+              Civil Appeal Nos. 1658 & 2322 of 2010 | 30 Nov 2021</div>
           </div>
         </div>
       </div>
       <div class="testi-card" style="border-radius:20px;padding:28px;border-color:rgba(201,168,76,0.18);">
         <div style="display:flex;gap:3px;margin-bottom:16px;color:var(--gold);font-size:14px;">★★★★★</div>
-        <p class="light-serif" style="font-size:1.05rem;color:rgba(237,232,222,0.75);line-height:1.7;margin-bottom:20px;font-style:italic;">"The weekly digest is the first email I open every Friday. Concise, relevant, and it's changed how I approach documentation entirely."</p>
+        <p class="light-serif" style="font-size:1.05rem;color:rgba(237,232,222,0.75);line-height:1.7;margin-bottom:20px;font-style:italic;">"The medical professionals are entitled to get protection so long
+          as they perform their duties with reasonable skill and competence
+          and in the interest of the patients. The interest and welfare of the
+          patients have to be paramount for the medical professionals."</p>
         <div style="display:flex;align-items:center;gap:12px;">
-          <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=100&q=80" alt="" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid rgba(111,168,130,0.3);" />
+          <img src="https://images.unsplash.com/photo-1583608563020-9772ff491a8c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid rgba(111,168,130,0.3);" />
           <div>
-            <div style="font-size:13px;font-weight:600;color:var(--cream);">Dr. Rajesh Anand</div>
-            <div style="font-size:11px;color:var(--muted);">Orthopaedic Surgeon, Delhi</div>
+            <div style="font-size:13px;font-weight:600;color:var(--cream);">Supreme Court of India</div>
+            <div style="font-size:11px;color:var(--muted);">Kusum Sharma and Others v. Batra Hospital and Medical Research Centre</div>
           </div>
         </div>
       </div>
       <div class="testi-card" style="border-radius:20px;padding:28px;">
-        <div style="display:flex;gap:3px;margin-bottom:16px;color:var(--gold);font-size:14px;">★★★★★</div>
-        <p class="light-serif" style="font-size:1.05rem;color:rgba(237,232,222,0.75);line-height:1.7;margin-bottom:20px;font-style:italic;">"Used the expert consultation credit before a complex surgery. The medico-legal advice gave my team genuine peace of mind. Worth every rupee."</p>
+        <div style="display:flex;gap:3px;margin-bottom:16px;color:var(--gold);font-size:14px;">★★★★☆</div>
+        <p class="light-serif" style="font-size:1.05rem;color:rgba(237,232,222,0.75);line-height:1.7;margin-bottom:20px;font-style:italic;">"The safety and well-being of medical professionals at their workplaces is an issue of high national priority."</p>
         <div style="display:flex;align-items:center;gap:12px;">
-          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&q=80" alt="" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,168,76,0.25);" />
+          <img src="https://images.unsplash.com/photo-1583608563020-9772ff491a8c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,168,76,0.25);" />
           <div>
-            <div style="font-size:13px;font-weight:600;color:var(--cream);">Dr. Sunitha Rao</div>
-            <div style="font-size:11px;color:var(--muted);">Obstetrician, Bengaluru</div>
+            <div style="font-size:13px;font-weight:600;color:var(--cream);">Supreme Court of India</div>
+            <div style="font-size:11px;color:var(--muted);">Suo Motu W.P. (Crl.) No. 2 of 2024 | Order dated 20 August 2024</div>
           </div>
         </div>
       </div>
@@ -647,7 +775,9 @@
     <div style="display:flex;flex-direction:column;gap:12px;" class="reveal d2">
       <details style="background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;cursor:pointer;">
         <summary style="padding:20px 24px;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--cream);">Can I cancel anytime? <span style="color:var(--gold);font-size:20px;line-height:1;">+</span></summary>
-        <div style="padding:0 24px 20px;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--muted);line-height:1.7;">Yes. Cancel from your account settings at any time. Plans cancelled within 14 days receive a full refund — no questions asked.</div>
+        <div style="padding:0 24px 20px;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--muted);line-height:1.7;">Yes! You can cancel anytime directly from your account settings — no forms,
+          no calls, no hassle. Once cancelled, you'll continue to have access until the end of your current billing cycle.
+          Please note that payments already made are non-refundable, so we recommend exploring the platform fully before subscribing.</div>
       </details>
       <details style="background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;cursor:pointer;">
         <summary style="padding:20px 24px;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--cream);">Is this legal advice? <span style="color:var(--gold);font-size:20px;line-height:1;">+</span></summary>
@@ -659,11 +789,14 @@
       </details>
       <details style="background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;cursor:pointer;">
         <summary style="padding:20px 24px;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--cream);">Are articles updated regularly? <span style="color:var(--gold);font-size:20px;line-height:1;">+</span></summary>
-        <div style="padding:0 24px 20px;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--muted);line-height:1.7;">Yes — new articles are published every weekday. Breaking judgements and regulatory changes receive same-day coverage.</div>
+        <div style="padding:0 24px 20px;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--muted);line-height:1.7;">Yes — new articles are published regularly. Breaking judgements and regulatory changes receive early coverage.</div>
       </details>
       <details style="background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;cursor:pointer;">
         <summary style="padding:20px 24px;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--cream);">Do you offer institutional or hospital licences? <span style="color:var(--gold);font-size:20px;line-height:1;">+</span></summary>
-        <div style="padding:0 24px 20px;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--muted);line-height:1.7;">Yes. The Elite (1-year) plan includes group licensing for up to 5 users. For hospital-wide deployments, contact us for custom pricing.</div>
+        <div style="padding:0 24px 20px;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--muted);line-height:1.7;">Not at the moment — Lawcription currently offers individual subscriptions only.
+          However, we're actively exploring institutional and group licensing options for the future.
+          If you're interested in a hospital-wide or team deployment, feel free to reach out to us — we'd love to hear your requirements
+          and keep you updated as these options become available.</div>
       </details>
     </div>
   </section>
@@ -681,13 +814,13 @@
         Know your rights.<br />
         <span class="shimmer-text light-serif" style="font-style:italic;">Protect your practice.</span>
       </h2>
-      <p class="reveal d3" style="color:var(--muted);font-family:'Cormorant Garamond',serif;font-size:1.15rem;line-height:1.75;margin-bottom:36px;">Join 12,000+ doctors already reading Lawcription. Your first 14 days are completely risk-free.</p>
+      <p class="reveal d3" style="color:var(--muted);font-family:'Cormorant Garamond',serif;font-size:1.15rem;line-height:1.75;margin-bottom:36px;">Join 12,000+ doctors already reading Lawcription. Get instant access to trusted legal content built for medical professionals.</p>
       <div class="reveal d4" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-        <div class="btn-glow" style="border-radius:14px;">
+        <!-- <div class="btn-glow" style="border-radius:14px;">
           <button style="padding:16px 36px;border-radius:14px;background:linear-gradient(135deg,var(--green),var(--greenlit));border:none;cursor:pointer;font-family:'Playfair Display',serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--cream);position:relative;z-index:1;">
             Start Free Trial
           </button>
-        </div>
+        </div> -->
         <button class="btn-plain" style="padding:16px 36px;border-radius:14px;background:transparent;cursor:pointer;font-family:'Playfair Display',serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text);">
           View All Plans ↓
         </button>
@@ -704,17 +837,34 @@
 <script src="{{ asset('frontend/js/subscription.js') }}?v=3"></script>
 
 <script>
-  const isLoggedIn = {{ Auth::check() ? 'true' : 'false' }};
-  const loginUrl   = "{{ route('login') }}";
+  const isLoggedIn = {
+    {
+      Auth::check() ? 'true' : 'false'
+    }
+  };
+  const loginUrl = "{{ route('login') }}";
 </script>
 
 <script>
   /* ── Plan map (matches subscription.js planConfig) ── */
   var planConfig = {
-    plan1:    { plan: '1_month',  amount: 999  },
-    plan2:    { plan: '6_month',  amount: 5394 },
-    plan3:    { plan: '1_year',   amount: 8988 },
-    planTest: { plan: '7_day',    amount: 1    }, /* TEMP — remove after live autopay test */
+    plan1: {
+      plan: '1_month',
+      amount: 999
+    },
+    plan2: {
+      plan: '6_month',
+      amount: 5394
+    },
+    plan3: {
+      plan: '1_year',
+      amount: 8988
+    },
+    planTest: {
+      plan: '7_day',
+      amount: 1
+    },
+    /* TEMP — remove after live autopay test */
   };
 
   function checkLoginAndPay(plan, amount) {
@@ -727,16 +877,22 @@
         confirmButtonText: 'Sign In',
         cancelButtonText: 'Cancel',
         confirmButtonColor: '#8b5cf6',
-        customClass: { popup: 'rounded-3xl' }
+        customClass: {
+          popup: 'rounded-3xl'
+        }
       }).then(function(result) {
         if (result.isConfirmed) window.location.href = loginUrl;
       });
       return;
     }
 
-    var hasActivePlan = {{ $isActive ? 'true' : 'false' }};
-    var currentPlan   = "{{ $planLabel ?? '' }}";
-    var expiryDate    = "{{ ($sub ?? null) ? \Carbon\Carbon::parse($sub->expiry_date)->format('d M Y') : '' }}";
+    var hasActivePlan = {
+      {
+        $isActive ? 'true' : 'false'
+      }
+    };
+    var currentPlan = "{{ $planLabel ?? '' }}";
+    var expiryDate = "{{ ($sub ?? null) ? \Carbon\Carbon::parse($sub->expiry_date)->format('d M Y') : '' }}";
 
     if (hasActivePlan) {
       Swal.fire({
@@ -756,7 +912,9 @@
         cancelButtonText: 'OK',
         confirmButtonColor: '#f59e0b',
         cancelButtonColor: '#6b7280',
-        customClass: { popup: 'rounded-3xl' }
+        customClass: {
+          popup: 'rounded-3xl'
+        }
       }).then(function(result) {
         if (result.isConfirmed) openPlanModal();
       });
@@ -767,7 +925,11 @@
   }
 
   $(document).ready(function() {
-    $('#plan1Btn, #plan2Btn, #plan3Btn').css({ position:'relative', 'z-index':'99999', 'pointer-events':'auto' });
+    $('#plan1Btn, #plan2Btn, #plan3Btn').css({
+      position: 'relative',
+      'z-index': '99999',
+      'pointer-events': 'auto'
+    });
 
     $(document).on('click touchstart', '#plan1Btn', function(e) {
       e.preventDefault();
@@ -796,7 +958,9 @@
       allowOutsideClick: false,
       allowEscapeKey: false,
       showConfirmButton: false,
-      didOpen: function() { Swal.showLoading(); }
+      didOpen: function() {
+        Swal.showLoading();
+      }
     });
   }
 
@@ -807,7 +971,11 @@
       url: '/create-order',
       type: 'POST',
       dataType: 'json',
-      data: { _token: '{{ csrf_token() }}', plan: plan, amount: amount },
+      data: {
+        _token: '{{ csrf_token() }}',
+        plan: plan,
+        amount: amount
+      },
 
       success: function(res) {
         Swal.close();
@@ -818,17 +986,19 @@
         }
 
         var options = {
-          key:             res.key,
+          key: res.key,
           subscription_id: res.subscription_id,
-          name:            'Lawchiption',
-          description:     'Auto-renewing plan — ' + plan,
-          recurring:       1,
+          name: 'Lawchiption',
+          description: 'Auto-renewing plan — ' + plan,
+          recurring: 1,
           prefill: {
-            name:    '{{ Auth::check() ? Auth::user()->full_name ?? "" : "" }}',
-            email:   '{{ Auth::check() ? Auth::user()->email : "" }}',
+            name: '{{ Auth::check() ? Auth::user()->full_name ?? "" : "" }}',
+            email: '{{ Auth::check() ? Auth::user()->email : "" }}',
             contact: '{{ Auth::check() ? Auth::user()->mobile_number : "" }}',
           },
-          theme: { color: '#2d6b4a' },
+          theme: {
+            color: '#2d6b4a'
+          },
 
           handler: function(response) {
             showLoader();
@@ -838,21 +1008,23 @@
               type: 'POST',
               dataType: 'json',
               data: {
-                _token:                   '{{ csrf_token() }}',
-                plan:                     plan,
-                amount:                   amount,
-                razorpay_payment_id:      response.razorpay_payment_id,
+                _token: '{{ csrf_token() }}',
+                plan: plan,
+                amount: amount,
+                razorpay_payment_id: response.razorpay_payment_id,
                 razorpay_subscription_id: response.razorpay_subscription_id,
-                razorpay_signature:       response.razorpay_signature,
+                razorpay_signature: response.razorpay_signature,
               },
               success: function(data) {
                 if (data.success) {
                   Swal.fire({
                     title: 'Subscription Activated! 🎉',
-                    text:  'Auto-renewal is set up. You are all set!',
-                    icon:  'success',
+                    text: 'Auto-renewal is set up. You are all set!',
+                    icon: 'success',
                     confirmButtonColor: '#2d6b4a',
-                  }).then(function() { location.reload(); });
+                  }).then(function() {
+                    location.reload();
+                  });
                 } else {
                   Swal.fire('Error', data.message, 'error');
                 }

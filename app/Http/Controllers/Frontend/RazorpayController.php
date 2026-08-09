@@ -130,11 +130,7 @@ class RazorpayController extends Controller
     {
         // Verify signature
         $signature = $request->header('X-Razorpay-Signature');
-        $expected  = hash_hmac(
-            'sha256',
-            $request->getContent(),
-            env('RAZORPAY_WEBHOOK_SECRET')
-        );
+        $expected = hash_hmac('sha256', $request->getContent(), config('services.razorpay.webhook_secret'));
 
         if (!hash_equals($expected, $signature)) {
             return response('Invalid signature', 400);

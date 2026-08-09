@@ -2,8 +2,8 @@
 <html lang="en" class="no-js">
 
 @include('frontend.layout.header')
-
-<body id="top">
+ 
+<body id="top" class="@yield('bodyClass', '')">
 
     <!-- Preloader -->
     <div id="preloader">
