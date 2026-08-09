@@ -315,7 +315,7 @@ class RazorpayController extends Controller
                     'affected' => $affected,
                 ]);
 
-                return redirect('/subscription')->with('success', 'Subscription activated successfully! 🎉');
+                return redirect('/subscription')->with('success', 'Subscription activated! 🎉 Please log in again to access your premium content.');
             }
 
             // ── Emandate — pending until webhook fires after actual debit ──
