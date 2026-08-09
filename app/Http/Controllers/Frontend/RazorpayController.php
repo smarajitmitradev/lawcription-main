@@ -211,9 +211,14 @@ class RazorpayController extends Controller
                     ]);
         
                     if ($sub->user_id) {
-                        \App\Models\User::where('id', $sub->user_id)->update([
+                        $affected = \App\Models\User::where('id', $sub->user_id)->update([
                             'subscription_expiry' => $newExpiry,
                             'is_premium'          => 1,
+                        ]);
+                    
+                        Log::info('User update result', [        // ← add this
+                            'user_id'  => $sub->user_id,
+                            'affected' => $affected,             // 0 = user not found, 1 = updated
                         ]);
                     } else {
                         Log::warning('subscription.charged: original subscription row has no user_id', [
