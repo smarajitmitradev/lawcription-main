@@ -198,24 +198,25 @@ class RazorpayController extends Controller
             throw new \Exception('No payment_id in callback');
         }
 
-        // subscription_id not sent in emandate/netbanking redirect — fetch from API
-        $payment        = $this->getApi()->payment->fetch($paymentId);
-        $subscriptionId = $payment['invoice_id'] ?? null;
+        // Fetch payment from Razorpay API
+        $payment = $this->getApi()->payment->fetch($paymentId);
+        $orderId = $payment['order_id'] ?? null;
 
         Log::info('Fetched payment', [
-            'payment_id'      => $paymentId,
-            'subscription_id' => $subscriptionId,
-            'payment_data'    => $payment->toArray(),
+            'payment_id'   => $paymentId,
+            'order_id'     => $orderId,
+            'invoice_id'   => $payment['invoice_id'] ?? null,
+            'payment_data' => $payment->toArray(),
         ]);
 
-        if (!$subscriptionId) {
-            throw new \Exception('Could not resolve subscription_id from payment');
+        if (!$orderId) {
+            throw new \Exception('Could not resolve order_id from payment');
         }
 
-        // Correct HMAC for redirect/emandate callback
+        // Emandate/netbanking signature uses order_id not subscription_id
         $expectedSignature = hash_hmac(
             'sha256',
-            $paymentId . '|' . $subscriptionId,
+            $paymentId . '|' . $orderId,
             config('services.razorpay.secret')
         );
 
@@ -228,6 +229,24 @@ class RazorpayController extends Controller
             throw new \Exception('Invalid signature');
         }
 
+        // Get subscription_id via invoice
+        $invoiceId = $payment['invoice_id'] ?? null;
+        if (!$invoiceId) {
+            throw new \Exception('No invoice_id found in payment');
+        }
+
+        $invoice        = $this->getApi()->invoice->fetch($invoiceId);
+        $subscriptionId = $invoice['subscription_id'] ?? null;
+
+        Log::info('Fetched invoice', [
+            'invoice_id'      => $invoiceId,
+            'subscription_id' => $subscriptionId,
+        ]);
+
+        if (!$subscriptionId) {
+            throw new \Exception('Could not resolve subscription_id from invoice');
+        }
+
         $existing = Subscription::where('razorpay_payment_id', $paymentId)->first();
         if ($existing) {
             return redirect('/subscription')->with('success', 'Subscription already activated!');
@@ -236,6 +255,12 @@ class RazorpayController extends Controller
         $rzSub  = $this->getApi()->subscription->fetch($subscriptionId);
         $userId = $rzSub->notes['user_id'] ?? null;
         $plan   = $rzSub->notes['plan']    ?? null;
+
+        Log::info('Fetched subscription notes', [
+            'subscription_id' => $subscriptionId,
+            'user_id'         => $userId,
+            'plan'            => $plan,
+        ]);
 
         if (!$userId || !$plan) {
             throw new \Exception('Missing user_id or plan in subscription notes');
