@@ -837,11 +837,7 @@
 <script src="{{ asset('frontend/js/subscription.js') }}?v=3"></script>
 
 <script>
-  const isLoggedIn = {
-    {
-      Auth::check() ? 'true' : 'false'
-    }
-  };
+  const isLoggedIn = {{ Auth::check() ? 'true' : 'false' }};
   const loginUrl = "{{ route('login') }}";
 </script>
 
@@ -886,11 +882,7 @@
       return;
     }
 
-    var hasActivePlan = {
-      {
-        $isActive ? 'true' : 'false'
-      }
-    };
+    var hasActivePlan = {{ $isActive ? 'true' : 'false' }};
     var currentPlan = "{{ $planLabel ?? '' }}";
     var expiryDate = "{{ ($sub ?? null) ? \Carbon\Carbon::parse($sub->expiry_date)->format('d M Y') : '' }}";
 
@@ -931,21 +923,21 @@
       'pointer-events': 'auto'
     });
 
-    $(document).on('click touchstart', '#plan1Btn', function(e) {
+    $(document).on('click', '#plan1Btn', function(e) {
       e.preventDefault();
       checkLoginAndPay(planConfig.plan1.plan, planConfig.plan1.amount);
     });
-    $(document).on('click touchstart', '#plan2Btn', function(e) {
+    $(document).on('click', '#plan2Btn', function(e) {
       e.preventDefault();
       checkLoginAndPay(planConfig.plan2.plan, planConfig.plan2.amount);
     });
-    $(document).on('click touchstart', '#plan3Btn', function(e) {
+    $(document).on('click', '#plan3Btn', function(e) {
       e.preventDefault();
       checkLoginAndPay(planConfig.plan3.plan, planConfig.plan3.amount);
     });
 
     /* ── TEMP: 1-day autopay test — remove after live testing ── */
-    $(document).on('click touchstart', '#planTestBtn', function(e) {
+    $(document).on('click', '#planTestBtn', function(e) {
       e.preventDefault();
       checkLoginAndPay(planConfig.planTest.plan, planConfig.planTest.amount);
     });
@@ -964,7 +956,14 @@
     });
   }
 
+  var paymentInProgress = false;
+
   function payNow(plan, amount) {
+    if (paymentInProgress) return;
+    paymentInProgress = true;
+
+    $('#plan1Btn, #plan2Btn, #plan3Btn').prop('disabled', true).css('opacity', '0.6');
+
     showLoader();
 
     $.ajax({
@@ -976,19 +975,19 @@
         plan: plan,
         amount: amount
       },
-
       success: function(res) {
         Swal.close();
 
-        if (!res.subscription_id) {
-          Swal.fire('Error', 'Could not create subscription. Try again.', 'error');
+        if (!res.success || !res.subscription_id) {
+          resetPaymentState();
+          Swal.fire('Error', res.message || 'Could not create subscription. Try again.', 'error');
           return;
         }
 
         var options = {
           key: res.key,
           subscription_id: res.subscription_id,
-          name: 'Lawchiption',
+          name: 'Lawcription',
           description: 'Auto-renewing plan — ' + plan,
           recurring: 1,
           prefill: {
@@ -999,10 +998,8 @@
           theme: {
             color: '#2d6b4a'
           },
-
           handler: function(response) {
             showLoader();
-
             $.ajax({
               url: '/verify-payment',
               type: 'POST',
@@ -1016,6 +1013,7 @@
                 razorpay_signature: response.razorpay_signature,
               },
               success: function(data) {
+                resetPaymentState();
                 if (data.success) {
                   Swal.fire({
                     title: 'Subscription Activated! 🎉',
@@ -1030,13 +1028,14 @@
                 }
               },
               error: function() {
+                resetPaymentState();
                 Swal.fire('Error', 'Verification failed. Contact support.', 'error');
               }
             });
           },
-
           modal: {
             ondismiss: function() {
+              resetPaymentState();
               Swal.close();
               console.log('Checkout closed');
             }
@@ -1045,16 +1044,22 @@
 
         var rzp = new Razorpay(options);
         rzp.on('payment.failed', function(r) {
+          resetPaymentState();
           Swal.close();
           Swal.fire('Payment Failed', r.error.description, 'error');
         });
         rzp.open();
       },
-
       error: function() {
+        resetPaymentState();
         Swal.close();
         Swal.fire('Error', 'Could not reach server. Try again.', 'error');
       }
     });
+  }
+
+  function resetPaymentState() {
+    paymentInProgress = false;
+    $('#plan1Btn, #plan2Btn, #plan3Btn').prop('disabled', false).css('opacity', '1');
   }
 </script>

@@ -53,21 +53,42 @@ class RazorpayController extends Controller
             ], 422);
         }
 
-        $subscription = $this->getApi()->subscription->create([
-            'plan_id'     => $planId,
-            'total_count' => $this->getTotalCount($request->plan),
-            'quantity'    => 1,
-            'notes'       => [
+        try {
+            $subscription = $this->getApi()->subscription->create([
+                'plan_id'     => $planId,
+                'total_count' => $this->getTotalCount($request->plan),
+                'quantity'    => 1,
+                'notes'       => [
+                    'user_id' => auth()->id(),
+                    'plan'    => $request->plan,
+                ],
+            ]);
+
+            if (empty($subscription['id'])) {
+                Log::error('Razorpay subscription created without ID', ['plan' => $request->plan]);
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Could not initialize subscription. Please try again.'
+                ], 500);
+            }
+
+            return response()->json([
+                'success'         => true,
+                'subscription_id' => $subscription['id'],
+                'key'             => config('services.razorpay.key'),
+            ]);
+        } catch (\Throwable $e) {
+            Log::error('createOrder failed', [
                 'user_id' => auth()->id(),
                 'plan'    => $request->plan,
-            ],
-        ]);
+                'error'   => $e->getMessage(),
+            ]);
 
-        return response()->json([
-            'success'         => true,
-            'subscription_id' => $subscription['id'],
-            'key'             => config('services.razorpay.key'),
-        ]);
+            return response()->json([
+                'success' => false,
+                'message' => 'Could not create subscription. Please try again.'
+            ], 500);
+        }
     }
 
     public function verify(Request $request)
@@ -88,10 +109,28 @@ class RazorpayController extends Controller
                 ]);
             }
 
+            $userId = auth()->id();
+
+            if (!$userId) {
+                // Session lost after redirect (e.g. net banking) — fall back to
+                // the user_id we stored in the Razorpay subscription's notes at creation time
+                Log::warning('Session lost during payment verification — using notes fallback', [
+                    'razorpay_subscription_id' => $request->razorpay_subscription_id,
+                    'razorpay_payment_id'      => $request->razorpay_payment_id,
+                ]);
+
+                $rzSub  = $this->getApi()->subscription->fetch($request->razorpay_subscription_id);
+                $userId = $rzSub->notes['user_id'] ?? null;
+            }
+
+            if (!$userId) {
+                throw new \Exception('Could not resolve user for this payment — session lost and no fallback user_id in notes.');
+            }
+
             $expiry = $this->getExpiry($request->plan);
 
             Subscription::create([
-                'user_id'                  => auth()->id(),
+                'user_id'                  => $userId,
                 'plan_name'                => $request->plan,
                 'amount'                   => $request->amount,
                 'razorpay_subscription_id' => $request->razorpay_subscription_id,
@@ -102,14 +141,14 @@ class RazorpayController extends Controller
                 'status'                   => 'paid',
             ]);
 
-            auth()->user()->update([
+            \App\Models\User::where('id', $userId)->update([
                 'subscription_expiry' => $expiry,
                 'current_plan'        => $request->plan,
                 'is_premium'          => 1,
             ]);
 
             return response()->json(['success' => true]);
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
             Log::error('Payment verification failed', [
                 'user_id'         => auth()->id(),
                 'payment_id'      => $request->razorpay_payment_id,
