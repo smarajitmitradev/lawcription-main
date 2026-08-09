@@ -211,34 +211,43 @@ class RazorpayController extends Controller
                 'method'      => $method,
             ]);
 
-            // Skip signature check for emandate/NACH
-            if ($method !== 'emandate') {
-                if (!$orderId) {
-                    throw new \Exception('Could not resolve order_id from payment');
+            // ── Signature verification ──
+            if ($method === 'emandate') {
+                // NACH/emandate — skip signature check
+                // Razorpay uses different signing for mandate callbacks
+                Log::info('Emandate method — signature check skipped', [
+                    'payment_id' => $paymentId,
+                    'method'     => $method,
+                ]);
+            } else {
+                // UPI / card — signature is payment_id|subscription_id
+                $subscriptionIdForSig = $request->razorpay_subscription_id ?? null;
+
+                // If not in request, fetch from invoice
+                if (!$subscriptionIdForSig) {
+                    $invoiceId            = $payment['invoice_id'] ?? null;
+                    $inv                  = $this->getApi()->invoice->fetch($invoiceId);
+                    $subscriptionIdForSig = $inv['subscription_id'] ?? null;
                 }
 
                 $expectedSignature = hash_hmac(
                     'sha256',
-                    $paymentId . '|' . $orderId,
+                    $paymentId . '|' . $subscriptionIdForSig,
                     config('services.razorpay.secret')
                 );
 
                 Log::info('Signature check', [
                     'expected' => $expectedSignature,
                     'received' => $signature,
+                    'method'   => $method,
                 ]);
 
                 if (!hash_equals($expectedSignature, $signature)) {
                     throw new \Exception('Invalid signature');
                 }
-            } else {
-                Log::info('Emandate method — signature check skipped', [
-                    'payment_id' => $paymentId,
-                    'method'     => $method,
-                ]);
             }
 
-            // Get subscription_id via invoice
+            // ── Get subscription_id via invoice ──
             $invoiceId = $payment['invoice_id'] ?? null;
             if (!$invoiceId) {
                 throw new \Exception('No invoice_id found in payment');
@@ -256,12 +265,13 @@ class RazorpayController extends Controller
                 throw new \Exception('Could not resolve subscription_id from invoice');
             }
 
-            // Prevent duplicate processing
+            // ── Prevent duplicate processing ──
             $existing = Subscription::where('razorpay_payment_id', $paymentId)->first();
             if ($existing) {
-                return redirect('/subscription')->with('info', 'Mandate already registered. Access will be activated once payment is processed.');
+                return redirect('/subscription')->with('success', 'Subscription already activated!');
             }
 
+            // ── Fetch user and plan from subscription notes ──
             $rzSub  = $this->getApi()->subscription->fetch($subscriptionId);
             $userId = $rzSub->notes['user_id'] ?? null;
             $plan   = $rzSub->notes['plan']    ?? null;
@@ -276,10 +286,10 @@ class RazorpayController extends Controller
                 throw new \Exception('Missing user_id or plan in subscription notes');
             }
 
-            $expiry = $this->getExpiry($plan);
+            $expiry      = $this->getExpiry($plan);
+            $isEmandate  = ($method === 'emandate');
 
-            // Save as pending — is_premium NOT set yet
-            // Access will be granted when subscription.charged webhook fires (actual debit)
+            // ── Create subscription row ──
             Subscription::create([
                 'user_id'                  => $userId,
                 'plan_name'                => $plan,
@@ -289,16 +299,32 @@ class RazorpayController extends Controller
                 'razorpay_signature'       => $signature,
                 'start_date'               => Carbon::now(),
                 'expiry_date'              => $expiry,
-                'status'                   => 'pending', // ← mandate registered, not debited yet
+                'status'                   => $isEmandate ? 'pending' : 'paid',
             ]);
 
+            // ── UPI / Card — give access immediately ──
+            if (!$isEmandate) {
+                $affected = \App\Models\User::where('id', $userId)->update([
+                    'subscription_expiry' => $expiry,
+                    'current_plan'        => $plan,
+                    'is_premium'          => 1,
+                ]);
+
+                Log::info('UPI/card callback user update', [
+                    'user_id'  => $userId,
+                    'affected' => $affected,
+                ]);
+
+                return redirect('/subscription')->with('success', 'Subscription activated successfully! 🎉');
+            }
+
+            // ── Emandate — pending until webhook fires after actual debit ──
             Log::info('Net banking mandate registered — pending debit', [
                 'user_id'         => $userId,
                 'plan'            => $plan,
                 'subscription_id' => $subscriptionId,
             ]);
 
-            // No is_premium update here — webhook will handle it after actual debit
             return redirect('/subscription')->with(
                 'info',
                 'Your mandate has been registered successfully. Premium access will be activated within 1-3 working days once your bank processes the payment.'
@@ -315,7 +341,7 @@ class RazorpayController extends Controller
             );
         }
     }
-    
+
 
 
     public function webhook(Request $request)
