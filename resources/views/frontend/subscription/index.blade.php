@@ -1000,6 +1000,7 @@
           Swal.fire('Error', res.message || 'Could not create subscription. Try again.', 'error');
           return;
         }
+        
 
         var options = {
           key: res.key,
