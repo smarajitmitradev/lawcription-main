@@ -1007,8 +1007,8 @@
           name: 'Lawcription',
           description: 'Auto-renewing plan — ' + plan,
           recurring: 1,
-          callback_url:    '/payment/callback',  // ← add
-          redirect:        true,                 // ← add
+          callback_url: '{{ url("/payment/callback") }}',  // ← add
+          redirect:true,                 // ← add
           prefill: {
             name: '{{ Auth::check() ? Auth::user()->full_name ?? "" : "" }}',
             email: '{{ Auth::check() ? Auth::user()->email : "" }}',
