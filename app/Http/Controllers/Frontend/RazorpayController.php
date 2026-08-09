@@ -160,10 +160,15 @@ class RazorpayController extends Controller
                 'status'                   => 'paid',
             ]);
 
-            \App\Models\User::where('id', $userId)->update([
+            $affected = \App\Models\User::where('id', $userId)->update([
                 'subscription_expiry' => $expiry,
                 'current_plan'        => $request->plan,
                 'is_premium'          => 1,
+            ]);
+            
+            Log::info('User update result', [
+                'user_id'  => $userId,
+                'affected' => $affected,
             ]);
 
             return response()->json(['success' => true]);
@@ -230,10 +235,15 @@ class RazorpayController extends Controller
                 'status'                   => 'paid',
             ]);
 
-            \App\Models\User::where('id', $userId)->update([
+            $affected = \App\Models\User::where('id', $userId)->update([
                 'subscription_expiry' => $expiry,
                 'current_plan'        => $plan,
                 'is_premium'          => 1,
+            ]);
+            
+            Log::info('User update result', [
+                'user_id'  => $userId,
+                'affected' => $affected,
             ]);
 
             return redirect('/subscription')->with('success', 'Subscription activated successfully! 🎉');
