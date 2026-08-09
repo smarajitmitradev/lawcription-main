@@ -167,6 +167,7 @@ class RazorpayController extends Controller
 
     public function webhook(Request $request)
     {
+        Log::info('Razorpay Webhook Hit', ['event' => $request->input('event')]);
         // Verify signature
         $signature = $request->header('X-Razorpay-Signature');
         $expected = hash_hmac('sha256', $request->getContent(), config('services.razorpay.webhook_secret'));
