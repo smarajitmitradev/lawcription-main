@@ -8,6 +8,23 @@
 
 @section('content')
 
+@if(session('success'))
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        Swal.fire('Success! 🎉', "{{ session('success') }}", 'success')
+            .then(function() { location.reload(); });
+    });
+</script>
+@endif
+
+@if(session('error'))
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        Swal.fire('Payment Error', "{{ session('error') }}", 'error');
+    });
+</script>
+@endif
+
 <div class="subscription-html">
 
   {{-- ══════════════════════════════════════════
@@ -990,6 +1007,8 @@
           name: 'Lawcription',
           description: 'Auto-renewing plan — ' + plan,
           recurring: 1,
+          callback_url:    '/payment/callback',  // ← add
+          redirect:        true,                 // ← add
           prefill: {
             name: '{{ Auth::check() ? Auth::user()->full_name ?? "" : "" }}',
             email: '{{ Auth::check() ? Auth::user()->email : "" }}',

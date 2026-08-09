@@ -94,37 +94,56 @@ class RazorpayController extends Controller
     public function verify(Request $request)
     {
         try {
+            $paymentId      = $request->razorpay_payment_id;
+            $subscriptionId = $request->razorpay_subscription_id;
+            $signature      = $request->razorpay_signature;
+
+            // ── Fallback: net banking / redirect flows lose subscription_id ──
+            if (!$subscriptionId && $paymentId) {
+                Log::warning('razorpay_subscription_id missing — fetching from payment', [
+                    'payment_id' => $paymentId,
+                ]);
+
+                $payment        = $this->getApi()->payment->fetch($paymentId);
+                $subscriptionId = $payment->invoice_id ?? null; // Razorpay stores sub_id here
+
+                // Second fallback — check our own DB
+                if (!$subscriptionId) {
+                    $existing = Subscription::where('razorpay_payment_id', $paymentId)->first();
+                    $subscriptionId = $existing->razorpay_subscription_id ?? null;
+                }
+            }
+
+            if (!$subscriptionId) {
+                throw new \Exception('Could not resolve subscription_id for payment: ' . $paymentId);
+            }
+
             $this->getApi()->utility->verifyPaymentSignature([
-                'razorpay_subscription_id' => $request->razorpay_subscription_id,
-                'razorpay_payment_id'      => $request->razorpay_payment_id,
-                'razorpay_signature'       => $request->razorpay_signature,
+                'razorpay_subscription_id' => $subscriptionId,
+                'razorpay_payment_id'      => $paymentId,
+                'razorpay_signature'       => $signature,
             ]);
 
             // Prevent duplicate processing
-            $existing = Subscription::where('razorpay_payment_id', $request->razorpay_payment_id)->first();
+            $existing = Subscription::where('razorpay_payment_id', $paymentId)->first();
             if ($existing) {
-                return response()->json([
-                    'success' => true,
-                    'message' => 'Already activated'
-                ]);
+                return response()->json(['success' => true, 'message' => 'Already activated']);
             }
 
             $userId = auth()->id();
 
             if (!$userId) {
-                // Session lost after redirect (e.g. net banking) — fall back to
-                // the user_id we stored in the Razorpay subscription's notes at creation time
                 Log::warning('Session lost during payment verification — using notes fallback', [
-                    'razorpay_subscription_id' => $request->razorpay_subscription_id,
-                    'razorpay_payment_id'      => $request->razorpay_payment_id,
+                    'razorpay_subscription_id' => $subscriptionId,
+                    'razorpay_payment_id'      => $paymentId,
                 ]);
 
-                $rzSub  = $this->getApi()->subscription->fetch($request->razorpay_subscription_id);
+                $rzSub  = $this->getApi()->subscription->fetch($subscriptionId);
                 $userId = $rzSub->notes['user_id'] ?? null;
             }
 
             if (!$userId) {
-                throw new \Exception('Could not resolve user for this payment — session lost and no fallback user_id in notes.');
+                throw new \Exception('Could not resolve user for this payment.');
             }
 
             $expiry = $this->getExpiry($request->plan);
@@ -133,9 +152,9 @@ class RazorpayController extends Controller
                 'user_id'                  => $userId,
                 'plan_name'                => $request->plan,
                 'amount'                   => $request->amount,
-                'razorpay_subscription_id' => $request->razorpay_subscription_id,
-                'razorpay_payment_id'      => $request->razorpay_payment_id,
-                'razorpay_signature'       => $request->razorpay_signature,
+                'razorpay_subscription_id' => $subscriptionId,
+                'razorpay_payment_id'      => $paymentId,
+                'razorpay_signature'       => $signature,
                 'start_date'               => Carbon::now(),
                 'expiry_date'              => $expiry,
                 'status'                   => 'paid',
@@ -158,10 +177,73 @@ class RazorpayController extends Controller
                 'error'           => $e->getMessage(),
             ]);
 
-            return response()->json([
-                'success' => false,
-                'message' => $e->getMessage()
+            return response()->json(['success' => false, 'message' => $e->getMessage()]);
+        }
+    }
+
+    public function callback(Request $request)
+    {
+        try {
+            $paymentId      = $request->razorpay_payment_id;
+            $subscriptionId = $request->razorpay_subscription_id;
+            $signature      = $request->razorpay_signature;
+
+            if (!$subscriptionId && $paymentId) {
+                $payment        = $this->getApi()->payment->fetch($paymentId);
+                $subscriptionId = $payment->invoice_id ?? null;
+            }
+
+            if (!$subscriptionId) {
+                throw new \Exception('Could not resolve subscription_id');
+            }
+
+            $this->getApi()->utility->verifyPaymentSignature([
+                'razorpay_subscription_id' => $subscriptionId,
+                'razorpay_payment_id'      => $paymentId,
+                'razorpay_signature'       => $signature,
             ]);
+
+            $existing = Subscription::where('razorpay_payment_id', $paymentId)->first();
+            if ($existing) {
+                return redirect('/subscription')->with('success', 'Subscription already activated!');
+            }
+
+            $rzSub  = $this->getApi()->subscription->fetch($subscriptionId);
+            $userId = $rzSub->notes['user_id'] ?? null;
+            $plan   = $rzSub->notes['plan']    ?? null;
+
+            if (!$userId || !$plan) {
+                throw new \Exception('Missing user_id or plan in subscription notes');
+            }
+
+            $expiry = $this->getExpiry($plan);
+
+            Subscription::create([
+                'user_id'                  => $userId,
+                'plan_name'                => $plan,
+                'amount'                   => 0,
+                'razorpay_subscription_id' => $subscriptionId,
+                'razorpay_payment_id'      => $paymentId,
+                'razorpay_signature'       => $signature,
+                'start_date'               => Carbon::now(),
+                'expiry_date'              => $expiry,
+                'status'                   => 'paid',
+            ]);
+
+            \App\Models\User::where('id', $userId)->update([
+                'subscription_expiry' => $expiry,
+                'current_plan'        => $plan,
+                'is_premium'          => 1,
+            ]);
+
+            return redirect('/subscription')->with('success', 'Subscription activated successfully! 🎉');
+        } catch (\Throwable $e) {
+            Log::error('Net banking callback failed', [
+                'payment_id' => $request->razorpay_payment_id ?? null,
+                'error'      => $e->getMessage(),
+            ]);
+
+            return redirect('/subscription')->with('error', 'Payment verification failed. Contact support with ID: ' . ($request->razorpay_payment_id ?? 'N/A'));
         }
     }
 
@@ -188,17 +270,17 @@ class RazorpayController extends Controller
         if ($event === 'subscription.charged') {
             $sub = Subscription::where('razorpay_subscription_id', $subId)
                 ->latest()->first();
-        
+
             if ($sub) {
                 $paymentId = $request->input('payload.payment.entity.id');
                 $exists    = Subscription::where('razorpay_payment_id', $paymentId)->first();
-        
+
                 if (!$exists) {
                     $newExpiry = $this->getExpiry(
                         $sub->plan_name,
                         Carbon::parse($sub->expiry_date)
                     );
-        
+
                     Subscription::create([
                         'user_id'                  => $sub->user_id,
                         'plan_name'                => $sub->plan_name,
@@ -209,13 +291,13 @@ class RazorpayController extends Controller
                         'expiry_date'              => $newExpiry,
                         'status'                   => 'paid',
                     ]);
-        
+
                     if ($sub->user_id) {
                         $affected = \App\Models\User::where('id', $sub->user_id)->update([
                             'subscription_expiry' => $newExpiry,
                             'is_premium'          => 1,
                         ]);
-                    
+
                         Log::info('User update result', [        // ← add this
                             'user_id'  => $sub->user_id,
                             'affected' => $affected,             // 0 = user not found, 1 = updated
