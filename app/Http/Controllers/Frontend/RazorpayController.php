@@ -242,6 +242,7 @@ Log::info('Signature combinations', [
     'combinations' => $combinations,
 ]);
 
+
 // TEMP — skip signature check, find which one matches from log
 // if (!hash_equals($expectedSignature, $signature)) {
 //     throw new \Exception('Invalid signature');
