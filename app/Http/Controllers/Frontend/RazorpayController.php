@@ -303,6 +303,7 @@ class RazorpayController extends Controller
 
         return redirect('/subscription')->with('error', 'Payment verification failed. Contact support with ID: ' . ($request->razorpay_payment_id ?? 'N/A'));
     }
+    
 }
 
     public function webhook(Request $request)
