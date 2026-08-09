@@ -188,17 +188,17 @@ class RazorpayController extends Controller
         if ($event === 'subscription.charged') {
             $sub = Subscription::where('razorpay_subscription_id', $subId)
                 ->latest()->first();
-
+        
             if ($sub) {
                 $paymentId = $request->input('payload.payment.entity.id');
                 $exists    = Subscription::where('razorpay_payment_id', $paymentId)->first();
-
+        
                 if (!$exists) {
                     $newExpiry = $this->getExpiry(
                         $sub->plan_name,
                         Carbon::parse($sub->expiry_date)
                     );
-
+        
                     Subscription::create([
                         'user_id'                  => $sub->user_id,
                         'plan_name'                => $sub->plan_name,
@@ -209,11 +209,18 @@ class RazorpayController extends Controller
                         'expiry_date'              => $newExpiry,
                         'status'                   => 'paid',
                     ]);
-
-                    $sub->user->update([
-                        'subscription_expiry' => $newExpiry,
-                        'is_premium'          => 1,
-                    ]);
+        
+                    if ($sub->user_id) {
+                        \App\Models\User::where('id', $sub->user_id)->update([
+                            'subscription_expiry' => $newExpiry,
+                            'is_premium'          => 1,
+                        ]);
+                    } else {
+                        Log::warning('subscription.charged: original subscription row has no user_id', [
+                            'subscription_id' => $sub->id,
+                            'razorpay_subscription_id' => $subId,
+                        ]);
+                    }
                 }
             }
         }
