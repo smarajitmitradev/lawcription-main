@@ -203,17 +203,18 @@ class RazorpayController extends Controller
         $orderId = $payment['order_id'] ?? null;
 
         Log::info('Fetched payment', [
-            'payment_id'   => $paymentId,
-            'order_id'     => $orderId,
-            'invoice_id'   => $payment['invoice_id'] ?? null,
-            'payment_data' => $payment->toArray(),
+            'payment_id'  => $paymentId,
+            'order_id'    => $orderId,
+            'invoice_id'  => $payment['invoice_id'] ?? null,
+            'amount'      => $payment['amount'] ?? 0,
+            'payment_data'=> $payment->toArray(),
         ]);
 
         if (!$orderId) {
             throw new \Exception('Could not resolve order_id from payment');
         }
 
-        // Emandate/netbanking signature uses order_id not subscription_id
+        // Correct HMAC for emandate/NACH callback
         $expectedSignature = hash_hmac(
             'sha256',
             $paymentId . '|' . $orderId,
@@ -225,32 +226,9 @@ class RazorpayController extends Controller
             'received' => $signature,
         ]);
 
-        // Try all possible HMAC combinations to find which one matches
-$secret = config('services.razorpay.secret');
-
-$combinations = [
-    'payment|order'   => hash_hmac('sha256', $paymentId . '|' . $orderId, $secret),
-    'order|payment'   => hash_hmac('sha256', $orderId . '|' . $paymentId, $secret),
-    'payment|invoice' => hash_hmac('sha256', $paymentId . '|' . ($payment['invoice_id'] ?? ''), $secret),
-    'invoice|payment' => hash_hmac('sha256', ($payment['invoice_id'] ?? '') . '|' . $paymentId, $secret),
-    'payment_only'    => hash_hmac('sha256', $paymentId, $secret),
-    'order_only'      => hash_hmac('sha256', $orderId, $secret),
-];
-
-Log::info('Signature combinations', [
-    'received'     => $signature,
-    'combinations' => $combinations,
-]);
-
-
-// TEMP — skip signature check, find which one matches from log
-// if (!hash_equals($expectedSignature, $signature)) {
-//     throw new \Exception('Invalid signature');
-// }
-
-        // if (!hash_equals($expectedSignature, $signature)) {
-        //     throw new \Exception('Invalid signature');
-        // }
+        if (!hash_equals($expectedSignature, $signature)) {
+            throw new \Exception('Invalid signature');
+        }
 
         // Get subscription_id via invoice
         $invoiceId = $payment['invoice_id'] ?? null;
@@ -270,6 +248,7 @@ Log::info('Signature combinations', [
             throw new \Exception('Could not resolve subscription_id from invoice');
         }
 
+        // Prevent duplicate processing
         $existing = Subscription::where('razorpay_payment_id', $paymentId)->first();
         if ($existing) {
             return redirect('/subscription')->with('success', 'Subscription already activated!');
@@ -294,7 +273,7 @@ Log::info('Signature combinations', [
         Subscription::create([
             'user_id'                  => $userId,
             'plan_name'                => $plan,
-            'amount'                   => 0,
+            'amount'                   => ($payment['amount'] ?? 0) / 100, // paise to rupees
             'razorpay_subscription_id' => $subscriptionId,
             'razorpay_payment_id'      => $paymentId,
             'razorpay_signature'       => $signature,
