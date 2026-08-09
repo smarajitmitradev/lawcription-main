@@ -80,7 +80,8 @@ Route::middleware('throttle:5,1')->group(function () {
 
 // webhook
 
-Route::post('/payment/callback', [RazorpayController::class, 'callback']);
+// routes/web.php
+Route::get('/payment/callback', [RazorpayController::class, 'callback']);
 Route::post('/razorpay/webhook', [RazorpayController::class, 'webhook'])->name('razorpay.webhook');
 
 Route::get('/about', [UserPageController::class, 'about'])->name('user.about');

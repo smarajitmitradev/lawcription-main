@@ -165,7 +165,7 @@ class RazorpayController extends Controller
                 'current_plan'        => $request->plan,
                 'is_premium'          => 1,
             ]);
-            
+
             Log::info('User update result', [
                 'user_id'  => $userId,
                 'affected' => $affected,
@@ -193,20 +193,16 @@ class RazorpayController extends Controller
             $subscriptionId = $request->razorpay_subscription_id;
             $signature      = $request->razorpay_signature;
 
-            if (!$subscriptionId && $paymentId) {
-                $payment        = $this->getApi()->payment->fetch($paymentId);
-                $subscriptionId = $payment->invoice_id ?? null;
-            }
+            // Manual signature verification for redirect flow
+            $expectedSignature = hash_hmac(
+                'sha256',
+                $paymentId . '|' . $subscriptionId,
+                config('services.razorpay.secret')
+            );
 
-            if (!$subscriptionId) {
-                throw new \Exception('Could not resolve subscription_id');
+            if (!hash_equals($expectedSignature, $signature)) {
+                throw new \Exception('Invalid signature');
             }
-
-            $this->getApi()->utility->verifyPaymentSignature([
-                'razorpay_subscription_id' => $subscriptionId,
-                'razorpay_payment_id'      => $paymentId,
-                'razorpay_signature'       => $signature,
-            ]);
 
             $existing = Subscription::where('razorpay_payment_id', $paymentId)->first();
             if ($existing) {
@@ -240,8 +236,8 @@ class RazorpayController extends Controller
                 'current_plan'        => $plan,
                 'is_premium'          => 1,
             ]);
-            
-            Log::info('User update result', [
+
+            Log::info('Net banking callback user update', [
                 'user_id'  => $userId,
                 'affected' => $affected,
             ]);
