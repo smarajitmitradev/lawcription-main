@@ -189,6 +189,13 @@ class RazorpayController extends Controller
     public function callback(Request $request)
     {
         try {
+            Log::info('Callback received', [
+                'all'             => $request->all(),
+                'payment_id'      => $request->razorpay_payment_id,
+                'subscription_id' => $request->razorpay_subscription_id,
+                'signature'       => $request->razorpay_signature,
+            ]);
+            
             $paymentId      = $request->razorpay_payment_id;
             $subscriptionId = $request->razorpay_subscription_id;
             $signature      = $request->razorpay_signature;
