@@ -324,6 +324,7 @@ class RazorpayController extends Controller
                 'plan'            => $plan,
                 'subscription_id' => $subscriptionId,
             ]);
+            
 
             return redirect('/subscription')->with(
                 'info',
