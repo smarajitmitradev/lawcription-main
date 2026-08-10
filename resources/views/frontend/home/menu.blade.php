@@ -201,22 +201,22 @@
     { icon:'📰', title:'News', tagline:'Daily verified medicolegal, regulatory, and healthcare policy updates.',
       body:'A single, verified feed so you stop hunting across gazette notices, WhatsApp forwards and council circulars. Every item is checked against the primary source before it reaches you.',
       topics:['NMC circulars','State council notices','Policy amendments','Ministry orders'],
-      img:'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=1000&q=80' },
+      img:'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=1000&q=80' },
 
     { icon:'🩺', title:'Safe Practice', tagline:'Practical guidance reducing medico-legal risks in everyday clinical practice.',
       body:'Small, repeatable habits — how a note is written, how a referral is worded, what a file should contain — are what actually hold up later. This section turns those habits into checklists.',
       topics:['Documentation standards','Referral protocols','Record retention','Pre-procedure checklists'],
-      img:'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=1000&q=80' },
+      img:'{{ asset("frontend/images/menu/2.png") }}' },
 
     { icon:'🚨', title:'Healthcare Violence', tagline:'Legal protection, reporting procedures, and safety during workplace violence incidents.',
       body:'What to do in the first ten minutes after an incident matters legally, not just physically. Covers the protections available to you and the exact reporting trail to follow.',
       topics:['Hospital protection acts','FIR filing steps','Security protocols','Post-incident documentation'],
-      img:'https://images.unsplash.com/photo-1504813184591-01572f98c85f?w=1000&q=80' },
+      img:'{{ asset("frontend/images/menu/3.png") }}' },
 
     { icon:'⚖️', title:'Rights', tagline:'Understand legal rights and responsibilities of both patients, doctors and other healthcare professionals.',
       body:'Rights only protect you when you know their edges. Plain-language breakdowns of what patients can demand, what you can refuse, and where professional autonomy is actually protected in law.',
       topics:['Patient rights charter',"Doctor's duty of care",'Right to refuse treatment','Professional autonomy'],
-      img:'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1000&q=80' },
+      img:'{{ asset("frontend/images/menu/12.png") }}' },
 
     { icon:'📋', title:'Medical Negligence', tagline:'Learn negligence principles, documentation, defenses, and important judicial precedents.',
       body:'From the Bolam standard to what an Indian court actually expects as proof of care, this section builds your understanding of negligence from first principles up to real case outcomes.',
@@ -236,22 +236,22 @@
     { icon:'💻', title:'Telemedicine', tagline:'Follow telemedicine guidelines, consent requirements, and prescription regulations confidently.',
       body:'Remote consultation has its own consent, documentation and prescribing rules — different enough from in-person practice that assuming they are the same is the most common mistake.',
       topics:['Telemedicine Practice Guidelines','e-Prescriptions','Informed e-consent','Cross-state practice'],
-      img:'https://images.unsplash.com/photo-1516549655169-df83a0774514?w=1000&q=80' },
+      img:'{{ asset("frontend/images/menu/6.png") }}' },
 
     { icon:'🦷', title:'Allied Health', tagline:'Dental, Nursing & Allied Laws — legal updates for dentists, nurses, and allied healthcare professionals across India.',
       body:'Coverage built specifically for the parts of the profession that general medico-legal content usually skips — dental, nursing and paramedical scope-of-practice law.',
       topics:['Dental Council rules','Nursing Council Act','Paramedical regulation','Scope-of-practice limits'],
-      img:'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1000&q=80' },
+      img:'{{ asset("frontend/images/menu/10.png") }}' },
 
     { icon:'🏛️', title:'Court Process', tagline:'Learn FIRs, notices, evidence, court procedures, and legal documentation essentials.',
       body:'Most doctors\' first brush with court is stressful largely because the process is unfamiliar. Step-by-step walkthroughs of what a notice means and what happens after it.',
       topics:['Responding to an FIR','Summons & notices','Evidence & cross-exam','Courtroom conduct'],
-      img:'https://images.unsplash.com/photo-1589578527966-fdac0f44566c?w=1000&q=80' },
+      img:'{{ asset("frontend/images/menu/8.png") }}' },
 
     { icon:'⚠️', title:'High-Risk Laws', tagline:'Important laws commonly creating legal risks during routine medical practice.',
       body:'A short list of Acts responsible for a disproportionate share of medico-legal trouble — worth knowing cold rather than looking up after the fact.',
       topics:['PCPNDT Act','MTP Act','Transplantation of Human Organs Act','Drugs & Cosmetics Act'],
-      img:'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=1000&q=80' },
+      img:'{{ asset("frontend/images/menu/9.png") }}' },
 
     { icon:'🧰', title:'Ready-Made Tools', tagline:'Access NMC-compliant certificates, consent forms, templates, and essential medico-legal documents.',
       body:'Pre-formatted documents you can download and customise the same day — built to NMC format so you are not drafting from scratch under time pressure.',
@@ -266,12 +266,12 @@
     { icon:'📚', title:'Acts & Regulations', tagline:'Browse important healthcare laws, rules, notifications, and official regulations of both Central and State Government.',
       body:'The full shelf — Central Acts down to state-specific rules and gazette notifications — kept current as amendments are notified.',
       topics:['Central Acts','State-specific rules','Gazette notifications','Amendment tracker'],
-      img:'https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=1000&q=80' },
+      img:'{{ asset("frontend/images/menu/1.png") }}' },
 
     { icon:'🧭', title:'Daily Laws', tagline:'Daily essential laws every citizen should know for informed, lawful living.',
       body:'Beyond the clinic — the everyday legal knowledge that makes you a better-informed citizen, from consumer basics to property and cyber law.',
       topics:['Consumer rights basics','RTI essentials','Property & tenancy','Cyber law for citizens'],
-      img:'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=1000&q=80' }
+      img:'{{ asset("frontend/images/menu/13.png") }}' }
   ];
 
   var railList = document.getElementById('railList');
