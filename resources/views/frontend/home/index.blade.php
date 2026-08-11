@@ -331,7 +331,7 @@
 
             <div class="order-1 md:order-2 relative">
                 <figure class="intro-pic-primary rounded-3xl overflow-hidden border" style="border-color:var(--border2);box-shadow:0 40px 100px rgba(0,0,0,0.55);">
-                    <img src="{{ asset('frontend/images/intro-pic-primary.jpg') }}" srcset="{{ asset('frontend/images/intro-pic-primary.jpg') }} 1x,
+                    <img src="{{ asset('frontend/images/menu/4.gif') }}" srcset="{{ asset('frontend/images/menu/4.gif') }} 1x,
                {{ asset('frontend/images/intro-pic-primary@2x.jpg') }} 2x" alt="" class="w-full h-[320px] md:h-[420px] object-cover block" style="filter:brightness(0.75) sepia(0.15);">
                 </figure>
 
@@ -367,9 +367,22 @@
                     </h2>
                 </div>
 
-                <figure class="about-pic-primary rounded-3xl overflow-hidden border" style="border-color:var(--border);box-shadow:0 30px 80px rgba(0,0,0,0.5);">
-                    <img src="{{ asset('frontend/images/about-pic-primary.jpg') }}" srcset="{{ asset('frontend/images/about-pic-primary.jpg') }} 1x,
+                <!-- <figure class="about-pic-primary rounded-3xl overflow-hidden border" style="border-color:var(--border);box-shadow:0 30px 80px rgba(0,0,0,0.5);">
+                    <img src="{{ asset('frontend/images/menu/11.png') }}" srcset="{{ asset('frontend/images/menu/11.png') }} 1x,
                {{ asset('frontend/images/about-pic-primary@2x.jpg') }} 2x" alt="" class="w-full h-[280px] md:h-[360px] object-cover block" style="filter:brightness(0.8) sepia(0.12);">
+                </figure> -->
+
+                <figure class="about-pic-primary rounded-3xl overflow-hidden border" style="border-color:var(--border);box-shadow:0 30px 80px rgba(0,0,0,0.5);">
+                    <video
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        class="w-full h-[280px] md:h-[360px] object-cover block"
+                        style="filter:brightness(0.8) sepia(0.12);"
+                    >
+                        <source src="{{ asset('frontend/images/menu/11.mp4') }}" type="video/mp4">
+                    </video>
                 </figure>
             </div>
 

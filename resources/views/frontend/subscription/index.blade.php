@@ -499,15 +499,21 @@
             <p style="font-size:12px;color:var(--muted);">Billed monthly</p>
           </div>
           <div style="height:1px;background:var(--border);margin-bottom:28px;"></div>
-          <ul style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px;">
+          <ul style="display:flex;flex-direction:column;gap:14px;">
             <li class="check-item">
               <div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Full article access</span>
             </li>
             <li class="check-item">
-              <div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Weekly legal digest</span>
+              <div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Daily legal updates</span>
             </li>
             <li class="check-item">
-              <div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Case search (50 searches/mo)</span>
+              <div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Ready-to-use tools</span>
+            </li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Case laws &amp; search</span>
+            </li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Articles, videos &amp; PDFs</span>
             </li>
             <li class="check-item">
               <div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Email support</span>
@@ -543,21 +549,27 @@
             <p style="font-size:12px;color:var(--muted);">₹5,394 billed half-yearly</p>
           </div>
           <div style="height:1px;background:rgba(201,168,76,0.18);margin-bottom:28px;"></div>
-          <ul style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px;">
+          <ul style="display:flex;flex-direction:column;gap:14px;">
             <li class="check-item">
               <div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Unlimited article access</span>
             </li>
             <li class="check-item">
-              <div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Weekly + special bulletins</span>
+              <div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Daily legal updates</span>
             </li>
             <li class="check-item">
-              <div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Unlimited case search</span>
+              <div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Ready-to-use tools</span>
             </li>
             <li class="check-item">
-              <div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">3 CME modules/month</span>
+              <div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Unlimited case laws &amp; search</span>
+            </li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Articles, videos &amp; PDFs</span>
             </li>
             <li class="check-item">
               <div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Priority support</span>
+            </li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">3 CME modules/month</span>
             </li>
             <li class="check-item" style="opacity:0.35;">
               <div class="check-dot" style="background:rgba(255,255,255,0.03);color:#555;font-size:11px;">—</div><span style="font-size:14px;">Expert consultation credits</span>
@@ -588,7 +600,7 @@
             <p style="font-size:12px;color:var(--muted);">₹8,988 billed annually</p>
           </div>
           <div style="height:1px;background:var(--border);margin-bottom:28px;"></div>
-          <ul style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px;">
+          <ul style="display:flex;flex-direction:column;gap:14px;">
             <li class="check-item">
               <div class="check-dot" style="background:rgba(111,168,130,0.1);color:var(--greenlit);">✓</div><span style="font-size:14px;">Everything in Professional</span>
             </li>
@@ -606,6 +618,12 @@
             </li>
             <li class="check-item">
               <div class="check-dot" style="background:rgba(111,168,130,0.1);color:var(--greenlit);">✓</div><span style="font-size:14px;">Institution group licences</span>
+            </li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(111,168,130,0.1);color:var(--greenlit);">✓</div><span style="font-size:14px;">Future updates included</span>
+            </li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(111,168,130,0.1);color:var(--greenlit);">✓</div><span style="font-size:14px;">Priority support</span>
             </li>
           </ul>
           <button id="plan3Btn" class="btn-plain serif" style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;color:var(--greenlit);border-color:rgba(111,168,130,0.2);width:100%;padding:16px;border-radius:14px;background:transparent;">
@@ -650,7 +668,7 @@
         </div>
       </div>
       <div style="border-radius:24px;overflow:hidden;border:1px solid var(--border);position:relative;">
-        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&q=80" alt="GP" style="width:100%;height:200px;object-fit:cover;display:block;filter:brightness(0.55) sepia(0.25);" />
+        <img src="{{ asset('frontend/images/menu/5.png') }}" alt="GP" style="width:100%;height:200px;object-fit:cover;display:block;filter:brightness(0.55) sepia(0.25);" />
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,9,8,0.95) 30%,transparent);"></div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:22px;">
           <span class="tag" style="background:rgba(111,168,130,0.1);color:var(--greenlit);font-size:10px;margin-bottom:8px;">GP &amp; PRIMARY CARE</span>
@@ -658,7 +676,7 @@
         </div>
       </div>
       <div style="border-radius:24px;overflow:hidden;border:1px solid var(--border);position:relative;">
-        <img src="https://images.unsplash.com/photo-1504813184591-01572f98c85f?w=600&q=80" alt="Hospital" style="width:100%;height:200px;object-fit:cover;display:block;filter:brightness(0.55) sepia(0.25);" />
+        <img src="{{ asset('frontend/images/menu/14.png') }}" alt="Hospital" style="width:100%;height:200px;object-fit:cover;display:block;filter:brightness(0.55) sepia(0.25);" />
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,9,8,0.95) 30%,transparent);"></div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:22px;">
           <span class="tag" style="background:rgba(201,168,76,0.1);color:var(--gold2);font-size:10px;margin-bottom:8px;">HOSPITAL ADMINISTRATORS</span>
@@ -755,45 +773,87 @@
       <h2 class="serif" style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;letter-spacing:-1px;">Trusted by 12,000+ physicians.</h2>
     </div>
     <div class="trusted-place reveal d2">
+
       <div class="testi-card" style="border-radius:20px;padding:28px;">
-        <div style="display:flex;gap:3px;margin-bottom:16px;color:var(--gold);font-size:14px;">★★★★★</div>
+        {{-- Icon: Scales of Justice --}}
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
+          <div style="width:36px;height:36px;border-radius:10px;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.25);display:flex;align-items:center;justify-content:center;font-size:18px;">⚖️</div>
+          <div style="height:1px;flex:1;background:linear-gradient(to right,rgba(201,168,76,0.3),transparent);"></div>
+          <span style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-family:'DM Sans',sans-serif;">Landmark Ruling</span>
+        </div>
         <p class="light-serif" style="font-size:1.05rem;color:rgba(237,232,222,0.75);line-height:1.7;margin-bottom:20px;font-style:italic;">"A simple lack of care, an error of judgment or an accident is not proof of medical negligence."</p>
         <div style="display:flex;align-items:center;gap:12px;">
-          <img src="https://images.unsplash.com/photo-1583608563020-9772ff491a8c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,168,76,0.25);" />
+          <div style="width:40px;height:40px;border-radius:50%;background:rgba(201,168,76,0.08);border:2px solid rgba(201,168,76,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="2,10 12,3 22,10"/>
+              <rect x="3" y="10" width="18" height="11"/>
+              <line x1="7" y1="10" x2="7" y2="21"/>
+              <line x1="12" y1="10" x2="12" y2="21"/>
+              <line x1="17" y1="10" x2="17" y2="21"/>
+              <line x1="1" y1="21" x2="23" y2="21"/>
+            </svg>
+          </div>
           <div>
             <div style="font-size:13px;font-weight:600;color:var(--cream);">Supreme Court of India</div>
-            <div style="font-size:11px;color:var(--muted);">Bombay Hospital & Medical Research Centre v. Asha Jai.swal & Ors.
-              Civil Appeal Nos. 1658 & 2322 of 2010 | 30 Nov 2021</div>
+            <div style="font-size:11px;color:var(--muted);">Bombay Hospital &amp; Medical Research Centre v. Asha Jaiswal &amp; Ors. | Civil Appeal Nos. 1658 &amp; 2322 of 2010 | 30 Nov 2021</div>
           </div>
         </div>
       </div>
+
       <div class="testi-card" style="border-radius:20px;padding:28px;border-color:rgba(201,168,76,0.18);">
-        <div style="display:flex;gap:3px;margin-bottom:16px;color:var(--gold);font-size:14px;">★★★★★</div>
-        <p class="light-serif" style="font-size:1.05rem;color:rgba(237,232,222,0.75);line-height:1.7;margin-bottom:20px;font-style:italic;">"The medical professionals are entitled to get protection so long
-          as they perform their duties with reasonable skill and competence
-          and in the interest of the patients. The interest and welfare of the
-          patients have to be paramount for the medical professionals."</p>
+        {{-- Icon: Gavel --}}
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
+          <div style="width:36px;height:36px;border-radius:10px;background:rgba(61,107,79,0.12);border:1px solid rgba(61,107,79,0.3);display:flex;align-items:center;justify-content:center;font-size:18px;">🔨</div>
+          <div style="height:1px;flex:1;background:linear-gradient(to right,rgba(61,107,79,0.4),transparent);"></div>
+          <span style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--greenlit);font-family:'DM Sans',sans-serif;">Judicial Precedent</span>
+        </div>
+        <p class="light-serif" style="font-size:1.05rem;color:rgba(237,232,222,0.75);line-height:1.7;margin-bottom:20px;font-style:italic;">"The medical professionals are entitled to get protection so long as they perform their duties with reasonable skill and competence and in the interest of the patients."</p>
         <div style="display:flex;align-items:center;gap:12px;">
-          <img src="https://images.unsplash.com/photo-1583608563020-9772ff491a8c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid rgba(111,168,130,0.3);" />
+          <div style="width:40px;height:40px;border-radius:50%;background:rgba(61,107,79,0.08);border:2px solid rgba(61,107,79,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6fa882" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="2,10 12,3 22,10"/>
+              <rect x="3" y="10" width="18" height="11"/>
+              <line x1="7" y1="10" x2="7" y2="21"/>
+              <line x1="12" y1="10" x2="12" y2="21"/>
+              <line x1="17" y1="10" x2="17" y2="21"/>
+              <line x1="1" y1="21" x2="23" y2="21"/>
+            </svg>
+          </div>
           <div>
             <div style="font-size:13px;font-weight:600;color:var(--cream);">Supreme Court of India</div>
             <div style="font-size:11px;color:var(--muted);">Kusum Sharma and Others v. Batra Hospital and Medical Research Centre</div>
           </div>
         </div>
       </div>
+
       <div class="testi-card" style="border-radius:20px;padding:28px;">
-        <div style="display:flex;gap:3px;margin-bottom:16px;color:var(--gold);font-size:14px;">★★★★☆</div>
+        {{-- Icon: Shield --}}
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
+          <div style="width:36px;height:36px;border-radius:10px;background:rgba(111,168,130,0.1);border:1px solid rgba(111,168,130,0.25);display:flex;align-items:center;justify-content:center;font-size:18px;">⚡</div>
+          <div style="height:1px;flex:1;background:linear-gradient(to right,rgba(111,168,130,0.3),transparent);"></div>
+          <span style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--greenlit);font-family:'DM Sans',sans-serif;">Constitutional Order</span>
+        </div>
         <p class="light-serif" style="font-size:1.05rem;color:rgba(237,232,222,0.75);line-height:1.7;margin-bottom:20px;font-style:italic;">"The safety and well-being of medical professionals at their workplaces is an issue of high national priority."</p>
         <div style="display:flex;align-items:center;gap:12px;">
-          <img src="https://images.unsplash.com/photo-1583608563020-9772ff491a8c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,168,76,0.25);" />
+          <div style="width:40px;height:40px;border-radius:50%;background:rgba(111,168,130,0.08);border:2px solid rgba(111,168,130,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6fa882" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="2,10 12,3 22,10"/>
+              <rect x="3" y="10" width="18" height="11"/>
+              <line x1="7" y1="10" x2="7" y2="21"/>
+              <line x1="12" y1="10" x2="12" y2="21"/>
+              <line x1="17" y1="10" x2="17" y2="21"/>
+              <line x1="1" y1="21" x2="23" y2="21"/>
+            </svg>
+          </div>
           <div>
             <div style="font-size:13px;font-weight:600;color:var(--cream);">Supreme Court of India</div>
             <div style="font-size:11px;color:var(--muted);">Suo Motu W.P. (Crl.) No. 2 of 2024 | Order dated 20 August 2024</div>
           </div>
         </div>
       </div>
+
     </div>
-  </section>
+</section>
 
   {{-- ══════════════════════════════════════════
      FAQ
