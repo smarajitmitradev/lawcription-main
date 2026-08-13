@@ -331,13 +331,16 @@
 
             <div class="order-1 md:order-2 relative">
                 <figure class="intro-pic-primary rounded-3xl overflow-hidden border" style="border-color:var(--border2);box-shadow:0 40px 100px rgba(0,0,0,0.55);">
-                    <img src="{{ asset('frontend/images/menu/4.gif') }}" srcset="{{ asset('frontend/images/menu/4.gif') }} 1x,
-               {{ asset('frontend/images/intro-pic-primary@2x.jpg') }} 2x" alt="" class="w-full h-[320px] md:h-[420px] object-cover block" style="filter:brightness(0.75) sepia(0.15);">
+                    <img src="{{ asset('frontend/images/menu/4.gif') }}"
+                        alt=""
+                        class="w-full h-[320px] md:h-[420px] object-cover block"
+                        style="filter:brightness(0.75) sepia(0.15);">
                 </figure>
 
                 <figure class="intro-block-content__pic absolute -bottom-8 -left-6 md:-left-10 w-32 md:w-44 rounded-2xl overflow-hidden border-2" style="border-color:var(--surface); box-shadow:0 24px 60px rgba(0,0,0,0.6);">
-                    <img src="https://images.unsplash.com/photo-1551601651-09492b5468b6?q=80&w=613&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" srcset="https://images.unsplash.com/photo-1551601651-09492b5468b6?q=80&w=613&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1x,
-               {{ asset('frontend/images/intro-pic-secondary@2x.jpg') }} 2x" alt="" class="w-full h-32 md:h-44 object-cover block">
+                    <img src="https://images.unsplash.com/photo-1551601651-09492b5468b6?q=80&w=613&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt=""
+                        class="w-full h-32 md:h-44 object-cover block">
                 </figure>
             </div>
 
