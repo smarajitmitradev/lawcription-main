@@ -407,6 +407,11 @@ class RazorpayController extends Controller
                         ]);
                     }
                 }
+            } else {
+                Log::warning('subscription.charged received but no matching local subscription found', [
+                    'razorpay_subscription_id' => $subId,
+                    'payment_id' => $request->input('payload.payment.entity.id'),
+                ]);
             }
         }
 
