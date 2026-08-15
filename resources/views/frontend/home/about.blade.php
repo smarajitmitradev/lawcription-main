@@ -437,7 +437,7 @@
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16 reveal d1">
                 <span class="about-tag mb-4 inline-flex" style="background:rgba(201,168,76,0.08);color:var(--about-gold);border:1px solid rgba(201,168,76,0.15);">The People Behind It</span>
-                <h2 class="about-serif mb-3" style="font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700;letter-spacing:-1px;color:var(--about-cream);">Our editorial team.</h2>
+                <h2 class="about-serif mb-3" style="font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700;letter-spacing:-1px;color:var(--about-cream);">Behind Lawcription.</h2>
                 <p class="about-serif" style="color:var(--about-muted);font-size:1.1rem;max-width:480px;margin:0 auto;">Doctors, advocates, and journalists — united by one purpose.</p>
             </div>
 

@@ -201,7 +201,7 @@
     { icon:'📰', title:'News', tagline:'Daily verified medicolegal, regulatory, and healthcare policy updates.',
       body:'A single, verified feed so you stop hunting across gazette notices, WhatsApp forwards and council circulars. Every item is checked against the primary source before it reaches you.',
       topics:['NMC circulars','State council notices','Policy amendments','Ministry orders'],
-      img:'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=1000&q=80' },
+      img:'{{ asset("frontend/images/menu/19.png") }}' },
 
     { icon:'🩺', title:'Safe Practice', tagline:'Practical guidance reducing medico-legal risks in everyday clinical practice.',
       body:'Small, repeatable habits — how a note is written, how a referral is worded, what a file should contain — are what actually hold up later. This section turns those habits into checklists.',
