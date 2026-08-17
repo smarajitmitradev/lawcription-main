@@ -4748,7 +4748,7 @@ td:last-child {
 .s-footer__social svg {
     height: var(--vspace-0_75);
     width: var(--vspace-0_75);
-}
+}.library-html 
 
 .s-footer__social svg path,
 .s-footer__social svg circle {
