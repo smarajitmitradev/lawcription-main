@@ -443,27 +443,43 @@
 
             <div class="grid md:grid-cols-3 gap-6 reveal d2">
                 <div class="team-card">
-                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&q=80" alt="Dr. Arjun Sharma" style="width:100%;height:220px;object-fit:cover;display:block;filter:brightness(0.65) sepia(0.2);" />
+                    <img src="{{ asset('frontend/images/menu/21.png') }}" alt="Dr. Arjun Sharma" style="width:100%;height:220px;object-fit:cover;display:block;filter:brightness(0.65) sepia(0.2);" />
                     <div style="padding:22px 24px;">
                         <div style="font-size:10px;color:var(--about-gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:7px;">Founder & Editor-in-Chief</div>
-                        <h3 class="about-serif mb-3" style="font-size:1.15rem;font-weight:700;color:var(--about-cream);">Dr. Arjun Sharma</h3>
-                        <p style="font-size:13px;color:var(--about-muted);line-height:1.7;">MBBS, LLB. Former senior resident at AIIMS Delhi turned medico-legal consultant. 14 years navigating the intersection of clinical medicine and Indian law.</p>
+                        <h3 class="about-serif mb-3" style="font-size:1.15rem;font-weight:700;color:var(--about-cream);">Dedicated Doctors & Lawyers</h3>
+                        <p style="font-size:13px;color:var(--about-muted);line-height:1.7;">Where the fragile pulse of humanity meets the unyielding sanctuary of justice, a profound convergence is born.
+                                         Lawcription harmonizes the stethoscope and the scales of law, uniting visionary doctors with dedicated lawyers to serve a shared calling. It stands as a pillar of dignity for the healer—where the lawyer's counsel restores confident purpose to those who bear the weight of saving lives—and a covenant of integrity for the patient, ensuring that vulnerability is met with compassion, truth, and absolute fairness.
+                                                "Where medicine breathes life into the spirit, the law upholds the honor of care. Together, they dissolve doubt into trust and transform uncertainty into strength."
+       
+No longer divided by separate paths, doctors and lawyers now stand in unison: an enduring shield safeguarding humanity’s most vital bond.</p>
                     </div>
                 </div>
                 <div class="team-card">
-                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500&q=80" alt="Adv. Priya Nair" style="width:100%;height:220px;object-fit:cover;display:block;filter:brightness(0.65) sepia(0.2);" />
+                    <img src="{{ asset('frontend/images/menu/22.png') }}" alt="Adv. Priya Nair" style="width:100%;height:220px;object-fit:cover;display:block;filter:brightness(0.65) sepia(0.2);" />
                     <div style="padding:22px 24px;">
-                        <div style="font-size:10px;color:var(--about-greenlit);letter-spacing:2px;text-transform:uppercase;margin-bottom:7px;">Legal Director</div>
-                        <h3 class="about-serif mb-3" style="font-size:1.15rem;font-weight:700;color:var(--about-cream);">Adv. Priya Nair</h3>
-                        <p style="font-size:13px;color:var(--about-muted);line-height:1.7;">Senior advocate specialising in medical negligence. Appeared before the Supreme Court in landmark healthcare judgements.</p>
+                        <div style="font-size:10px;color:var(--about-greenlit);letter-spacing:2px;text-transform:uppercase;margin-bottom:7px;">Experienced Software Team</div>
+                        <h3 class="about-serif mb-3" style="font-size:1.15rem;font-weight:700;color:var(--about-cream);">Innovative Engineers</h3>
+                        <p style="font-size:13px;color:var(--about-muted);line-height:1.7;">Great ideas begin with a vision, but it takes extraordinary minds to give that vision life.
+
+Behind Lawcription is a team of talented software engineers—the digital architects and technological pillars who transform ideas into an intelligent, seamless experience.
+
+Every line of code carries their precision. Every feature reflects their ingenuity. Every improvement bears their commitment to excellence.
+
+Working quietly behind the screen, they build the technology that allows Lawcription to inform, connect, and evolve.
+
+They are not merely building software—they are giving a vision its digital life.</p>
                     </div>
                 </div>
                 <div class="team-card">
-                    <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=500&q=80" alt="Dr. Rohan Verma" style="width:100%;height:220px;object-fit:cover;display:block;filter:brightness(0.65) sepia(0.2);" />
+                    <img src="{{ asset('frontend/images/menu/23.png') }}" alt="Dr. Rohan Verma" style="width:100%;height:220px;object-fit:cover;display:block;filter:brightness(0.65) sepia(0.2);" />
                     <div style="padding:22px 24px;">
-                        <div style="font-size:10px;color:var(--about-gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:7px;">Head of CME Programs</div>
-                        <h3 class="about-serif mb-3" style="font-size:1.15rem;font-weight:700;color:var(--about-cream);">Dr. Rohan Verma</h3>
-                        <p style="font-size:13px;color:var(--about-muted);line-height:1.7;">MD, Forensic Medicine. Designed India's first online CME curriculum on medico-legal documentation. Faculty at two national medical universities.</p>
+                        <div style="font-size:10px;color:var(--about-gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:7px;">Media Professional</div>
+                        <h3 class="about-serif mb-3" style="font-size:1.15rem;font-weight:700;color:var(--about-cream);">Committed Journalists</h3>
+                        <p style="font-size:13px;color:var(--about-muted);line-height:1.7;">Behind every trusted update is a commitment to truth.
+
+Our dedicated journalists transform complex developments into clear, timely, and meaningful information. Through careful research, verification, and responsible reporting, they help keep Lawcription accurate, relevant, and connected to the world as it changes.
+
+Their pursuit of facts strengthens our purpose; their dedication helps make Lawcription possible.</p>
                     </div>
                 </div>
             </div>

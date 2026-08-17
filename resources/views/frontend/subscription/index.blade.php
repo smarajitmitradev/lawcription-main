@@ -376,6 +376,12 @@
               .plan-card {
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
               }
+
+              /* modal style */
+              @keyframes wygPulse {
+                0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.35); }
+                50%      { box-shadow: 0 0 0 9px rgba(201,168,76,0); }
+              }
             </style>
 
             <div class="flex items-center justify-center gap-2 mt-4 flex-wrap" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:999px;padding:6px 8px;display:inline-flex;margin:16px auto 0;width:fit-content;">
@@ -478,6 +484,23 @@
         </div>
       </div>
       {{-- ══ END TEMP TEST CARD ══ --}}
+
+      {{-- ══ WHAT YOU GET — opens payment info modal ══ --}}
+      <div style="display:flex;justify-content:center;margin:36px 0;">
+        <button
+        id="whatYouGetInlineBtn"
+        type="button"
+        onclick="window.__openSubscribeModal && window.__openSubscribeModal(event)"
+        style="display:flex;align-items:center;gap:8px;padding:10px 24px;border-radius:999px;
+           background:rgba(201,168,76,0.1);border:1.5px solid rgba(201,168,76,0.35);
+           color:var(--gold);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;
+           letter-spacing:2px;text-transform:uppercase;cursor:pointer;
+           animation:wygPulse 2s ease-in-out infinite;"
+        >
+          ✦ How Payment Process Works ? Read Carefully Before Payment ✦
+        </button>
+      </div>
+
 
       {{-- ── 3 PLAN CARDS ── --}}
       <div class="pricing-cards">
@@ -1157,4 +1180,105 @@
     paymentInProgress = false;
     $('#plan1Btn, #plan2Btn, #plan3Btn').prop('disabled', false).css('opacity', '1');
   }
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+
+      // ── Config ──────────────────────────────────────────────
+      var TARGET_SELECTOR = '.pricing-cards'; // section to scroll to
+      var DURATION_MS      = 2500;             // total scroll time — raise this to go slower, lower to go faster
+      var START_DELAY_MS   = 400;              // wait a bit before starting, so the page settles first
+      var OFFSET_PX        = 0;                // extra offset from top if you have a fixed navbar, e.g. 80
+
+      // ── Easing (ease-in-out — starts slow, speeds up, ends slow) ──
+      function easeInOutQuad(t) {
+          return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+      }
+
+      function smoothScrollTo(targetY, duration) {
+          var startY = window.pageYOffset;
+          var distance = targetY - startY;
+          var startTime = null;
+
+          function step(currentTime) {
+              if (startTime === null) startTime = currentTime;
+              var elapsed = currentTime - startTime;
+              var progress = Math.min(elapsed / duration, 1);
+              var eased = easeInOutQuad(progress);
+
+              window.scrollTo(0, startY + distance * eased);
+
+              if (elapsed < duration) {
+                  window.requestAnimationFrame(step);
+              }
+          }
+
+          window.requestAnimationFrame(step);
+      }
+
+      var target = document.querySelector(TARGET_SELECTOR);
+      if (!target) return; // section not on this page, do nothing
+
+      setTimeout(function () {
+          var targetY = target.getBoundingClientRect().top + window.pageYOffset - OFFSET_PX;
+          smoothScrollTo(targetY, DURATION_MS);
+      }, START_DELAY_MS);
+
+  });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var btn    = document.getElementById('whatYouGetBtn');
+    var root   = document.getElementById('subscriptionModalRoot');
+    var loaded = false;
+    if (!btn || !root) return;
+
+    function bindCloseHandlers() {
+        var overlay  = document.getElementById('subscriptionModalOverlay');
+        var closeBtn = document.getElementById('subscriptionModalClose');
+
+        function closeModal() {
+            overlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (overlay) {
+            overlay.addEventListener('click', function (e) {
+                if (e.target === overlay) closeModal();
+            });
+        }
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && overlay && !overlay.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    }
+
+    function openModal() {
+        var overlay = document.getElementById('subscriptionModalOverlay');
+        if (loaded && overlay) {
+            overlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            return;
+        }
+
+        fetch("{{ route('subscription.how-it-works') }}", {
+            headers: { 'X-Requested-With': 'XMLHttpRequest' }
+        })
+        .then(function (res) { return res.text(); })
+        .then(function (html) {
+            root.innerHTML = html;
+            loaded = true;
+            document.body.style.overflow = 'hidden';
+            bindCloseHandlers();
+        })
+        .catch(function (err) {
+            console.error('Failed to load payment info modal:', err);
+        });
+    }
+
+    btn.addEventListener('click', openModal);
+});
 </script>

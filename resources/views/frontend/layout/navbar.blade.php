@@ -59,7 +59,8 @@
             <div class="header-contact !right-5 flex items-center gap-3">
 
                 <!-- Subscribe Button -->
-                <a href="{{route('subscription.index')}}" class="subscribe-btn">
+                <a href="{{route('subscription.index')}}" class="subscribe-btn subscribe-btn--blink" id="whatYouGetBtn"
+        onclick="return window.__openSubscribeModal ? window.__openSubscribeModal(event) : true;">
                     ✨ Subscribe
                 </a>
 
@@ -177,6 +178,8 @@
 
 </header>
 
+
+<div id="subscriptionModalRoot"></div>
 
 <!-- PROFILE MODAL -->
 <div id="profileModal" class="fixed inset-0 z-50" style="display:none; align-items:center; justify-content:center;
@@ -1550,7 +1553,77 @@
     });
 </script>
 
+<script>
+(function () {
+    var root   = document.getElementById('subscriptionModalRoot');
+    var loaded = false;
 
+    function bindCloseHandlers() {
+        var overlay  = document.getElementById('subscriptionModalOverlay');
+        var closeBtn = document.getElementById('subscriptionModalClose');
+
+        function closeModal() {
+            overlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (overlay) {
+            overlay.addEventListener('click', function (e) {
+                if (e.target === overlay) closeModal();
+            });
+        }
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && overlay && !overlay.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    }
+
+    window.__openSubscribeModal = function (event) {
+        if (event) event.preventDefault();
+
+        var overlay = document.getElementById('subscriptionModalOverlay');
+        if (loaded && overlay) {
+            overlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            return false;
+        }
+
+        fetch("{{ route('subscription.how-it-works') }}", {
+            headers: { 'X-Requested-With': 'XMLHttpRequest' }
+        })
+        .then(function (res) { return res.text(); })
+        .then(function (html) {
+            root.innerHTML = html;
+            loaded = true;
+            document.body.style.overflow = 'hidden';
+            bindCloseHandlers();
+        })
+        .catch(function (err) {
+            console.error('Failed to load subscribe modal:', err);
+            window.location.href = "{{ route('subscription.index') }}";
+        });
+
+        return false;
+    };
+
+    // Moved here — modal HTML is injected, so scripts inside it never run.
+    // This must live in a script tag that's part of the original page load.
+    window.handleViewPlansClick = function () {
+        var closeBtn = document.getElementById('subscriptionModalClose');
+        if (closeBtn) closeBtn.click();
+
+        var pricingSection = document.querySelector('.pricing-cards');
+
+        if (pricingSection) {
+            pricingSection.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            window.location.href = "{{ route('subscription.index') }}";
+        }
+    };
+})();
+</script>
 <!-- End -->
 
 <style>

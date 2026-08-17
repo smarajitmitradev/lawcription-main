@@ -30,13 +30,8 @@ class SubscriptionController extends Controller
         //     default   => ucfirst(str_replace('_', ' ', $planName ?: 'N/A')),
         // };
 
-        $planLabel = $planName == '1_month' ? '1 Month' :
-            ($planName == '3_month' ? '3 Months' :
-            ($planName == '6_month' ? '6 Months' :
-            ($planName == '1_year'  ? '1 Year'   :
-            ($planName == '2_year'  ? '2 Years'  :
-            ($planName == '3_year'  ? '3 Years'  :
-            ucfirst(str_replace('_', ' ', $planName ?: 'N/A')))))));
+        $planLabel = $planName == '1_month' ? '1 Month' : ($planName == '3_month' ? '3 Months' : ($planName == '6_month' ? '6 Months' : ($planName == '1_year'  ? '1 Year'   : ($planName == '2_year'  ? '2 Years'  : ($planName == '3_year'  ? '3 Years'  :
+                                ucfirst(str_replace('_', ' ', $planName ?: 'N/A')))))));
 
         return view('frontend.subscription.index', compact(
             'sub',
@@ -44,5 +39,10 @@ class SubscriptionController extends Controller
             'planLabel',
             'planName'
         ));
+    }
+
+    public function howItWorks()
+    {
+        return view('frontend.subscription.how-it-works-modal');
     }
 }

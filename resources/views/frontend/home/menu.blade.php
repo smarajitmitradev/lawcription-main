@@ -271,7 +271,7 @@
     { icon:'🧭', title:'Daily Laws', tagline:'Daily essential laws every citizen should know for informed, lawful living.',
       body:'Beyond the clinic — the everyday legal knowledge that makes you a better-informed citizen, from consumer basics to property and cyber law.',
       topics:['Consumer rights basics','RTI essentials','Property & tenancy','Cyber law for citizens'],
-      img:'{{ asset("frontend/images/menu/13.png") }}' }
+      img:'{{ asset("frontend/images/menu/25.png") }}' }
   ];
 
   var railList = document.getElementById('railList');

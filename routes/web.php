@@ -50,6 +50,8 @@ Route::get('/subscription', [SubscriptionController::class, 'index'])
 
         ->name('subscription.index');
 
+Route::get('/subscription/how-it-works', [SubscriptionController::class, 'howItWorks'])->name('subscription.how-it-works');
+
 
 
 Route::middleware('auth')->group(function () {
