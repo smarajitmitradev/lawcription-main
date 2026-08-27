@@ -365,13 +365,25 @@ class RazorpayController extends Controller
         ]);
 
         // ── Auto Renewal ──
+        // ── Auto Renewal ──
         if ($event === 'subscription.charged') {
             $sub = Subscription::where('razorpay_subscription_id', $subId)
                 ->latest()->first();
 
             if ($sub) {
-                $paymentId = $request->input('payload.payment.entity.id');
-                $exists    = Subscription::where('razorpay_payment_id', $paymentId)->first();
+                $paymentId     = $request->input('payload.payment.entity.id');
+                $chargedAmount = ($request->input('payload.payment.entity.amount') ?? 0) / 100;
+
+                // Skip zero-amount auth/registration transactions — not a real renewal
+                if ($chargedAmount <= 0) {
+                    Log::info('subscription.charged ignored — zero-amount auth transaction', [
+                        'subscription_id' => $subId,
+                        'payment_id'      => $paymentId,
+                    ]);
+                    return response('OK', 200);
+                }
+
+                $exists = Subscription::where('razorpay_payment_id', $paymentId)->first();
 
                 if (!$exists) {
                     $newExpiry = $this->getExpiry(
@@ -382,7 +394,7 @@ class RazorpayController extends Controller
                     Subscription::create([
                         'user_id'                  => $sub->user_id,
                         'plan_name'                => $sub->plan_name,
-                        'amount'                   => $sub->amount,
+                        'amount'                   => $chargedAmount,
                         'razorpay_subscription_id' => $subId,
                         'razorpay_payment_id'      => $paymentId,
                         'start_date'               => Carbon::now(),
@@ -393,16 +405,18 @@ class RazorpayController extends Controller
                     if ($sub->user_id) {
                         $affected = \App\Models\User::where('id', $sub->user_id)->update([
                             'subscription_expiry' => $newExpiry,
+                            'current_plan'        => $sub->plan_name,
                             'is_premium'          => 1,
                         ]);
 
-                        Log::info('User update result', [        // ← add this
+                        Log::info('User update result', [
                             'user_id'  => $sub->user_id,
-                            'affected' => $affected,             // 0 = user not found, 1 = updated
+                            'affected' => $affected,
+                            'current_plan'        => $sub->plan_name,
                         ]);
                     } else {
                         Log::warning('subscription.charged: original subscription row has no user_id', [
-                            'subscription_id' => $sub->id,
+                            'subscription_id'          => $sub->id,
                             'razorpay_subscription_id' => $subId,
                         ]);
                     }
@@ -410,7 +424,7 @@ class RazorpayController extends Controller
             } else {
                 Log::warning('subscription.charged received but no matching local subscription found', [
                     'razorpay_subscription_id' => $subId,
-                    'payment_id' => $request->input('payload.payment.entity.id'),
+                    'payment_id'                => $request->input('payload.payment.entity.id'),
                 ]);
             }
         }
