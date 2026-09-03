@@ -43,6 +43,7 @@
     /* ── Folder-tab rail ── */
     .library-html .rail-item{
       display:flex; align-items:center; gap:14px; width:100%; text-align:left;
+      justify-content:flex-start;
       padding:14px 16px; border-radius:14px; border:1px solid transparent;
       background:transparent; cursor:pointer; transition:all .25s ease; position:relative;
       color:var(--muted2);
@@ -150,7 +151,9 @@
 
       {{-- Desktop rail --}}
       <aside class="hidden md:block md:w-[300px] flex-shrink-0">
-        <div class="sticky top-8">
+        <div class="sticky top-8" style="border: 1px solid #f2ead814;
+    border-radius: 10px;
+    padding: 15px;">
           <div style="padding:20px 10px;border-bottom:1px solid var(--border);margin-bottom:10px;">
             <div style="font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">Table of Contents</div>
           </div>
