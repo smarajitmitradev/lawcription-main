@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="558" height="1246" viewBox="0 0 558 1246" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpmYjRiMzQ0Zi1kNzQ2LTRjOGUtOTUwYS1kNTYwMzdkYTg1ZTkAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaF1xzikuD1cQfSLD7Wm+R0oAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo3MTE2ODViZS1hYmE4LTRjMjEtODdjMy0zNDBlYWU2ZmQxNjVscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo8KbsaTjx2Tlsb665EXdv9AAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggb5G0Nw03NwkQcjfOnFbc7vpX1ssExt7E0bz+dsskPMSkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaG7h6//tj/AuYz7O2XyyAJ0AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCBtxCljFBblNh27f03J7ni43i2N3oMNUQGq9ojP0U3yL2RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBi/Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmZiNGIzNDRmLWQ3NDYtNGM4ZS05NTBhLWQ1NjAzN2RhODVlOS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjc3NDVlNTM1LTViYzUtNGY5NC04YzM5LTJjYjU5NmJkMDAwMHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBvkbQ3DTc3CRByN86cVtzu+lfWywTG3sTRvP52yyQ8xKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg5t6C6oMIaxWTOaRPGkLokshoZdyTDXs/OVJOyrTY6uqiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg3mcxQOWwt6aP/JQN8FN4SeOv27jx+/TX3xA6TUiRvj10Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQOWyy/WhVV3Gwhwe6clt7OvGS0kVFUffoK9bDaRYDmMpZUky8ZcWyKrmv+Tw0eGRTO17QA8oSUNzj3ZkaE82zss=</c2pa:manifest></metadata>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12202a"/>
+      <stop offset="55%" stop-color="#0d1b24"/>
+      <stop offset="100%" stop-color="#0a1319"/>
+    </linearGradient>
+
+    <linearGradient id="headerGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2c9d8f" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#2c9d8f" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1c2d38"/>
+      <stop offset="100%" stop-color="#152029"/>
+    </linearGradient>
+
+    <filter id="cardShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <filter id="iconShadow" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+
+    <clipPath id="frame2"><rect width="558" height="1246" rx="0"/></clipPath>
+
+    <!-- card icon template symbols -->
+    <symbol id="ic-negligence" viewBox="0 0 64 64">
+      <rect x="0" y="0" width="64" height="64" rx="16" fill="#3c4a56"/>
+      <circle cx="32" cy="24" r="4" fill="#e8e2d0"/>
+      <path d="M32 24 L18 40 M32 24 L46 40" stroke="#e8e2d0" stroke-width="3" fill="none"/>
+      <path d="M10 40 h16 M38 40 h16" stroke="#e8e2d0" stroke-width="3"/>
+      <path d="M12 40 a6 6 0 0 0 12 0 Z" fill="#e8e2d0"/>
+      <path d="M40 40 a6 6 0 0 0 12 0 Z" fill="#e8e2d0"/>
+      <rect x="20" y="50" width="24" height="4" rx="2" fill="#e8e2d0"/>
+    </symbol>
+
+    <symbol id="ic-rights" viewBox="0 0 64 64">
+      <rect x="0" y="0" width="64" height="64" rx="16" fill="#c9702f"/>
+      <rect x="27" y="10" width="10" height="26" rx="5" fill="#fff3e0"/>
+      <circle cx="24" cy="34" r="7" fill="#fff3e0"/>
+      <circle cx="40" cy="34" r="7" fill="#fff3e0"/>
+      <circle cx="32" cy="30" r="8" fill="#fff3e0"/>
+      <rect x="20" y="38" width="24" height="18" rx="8" fill="#fff3e0"/>
+    </symbol>
+
+    <symbol id="ic-consumer" viewBox="0 0 64 64">
+      <rect x="0" y="0" width="64" height="64" rx="16" fill="#3f8f6c"/>
+      <path d="M32 10 L48 16 V30 C48 42 41 50 32 54 C23 50 16 42 16 30 V16 Z" fill="#eafff2"/>
+      <path d="M24 32 L30 38 L42 24" stroke="#3f8f6c" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="ic-safe" viewBox="0 0 64 64">
+      <rect x="0" y="0" width="64" height="64" rx="16" fill="#2f7fc9"/>
+      <circle cx="24" cy="20" r="6" fill="#eaf4ff"/>
+      <path d="M24 26 v8 a10 10 0 0 0 20 0 v-6" stroke="#eaf4ff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <circle cx="46" cy="30" r="4" fill="#eaf4ff"/>
+      <path d="M16 46 c4 -8 12 -10 18 -6" stroke="#eaf4ff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="ic-highrisk" viewBox="0 0 64 64">
+      <rect x="0" y="0" width="64" height="64" rx="16" fill="#c9432f"/>
+      <path d="M32 12 c-6 8 2 10 -2 18 c-6 -2 -8 -8 -6 -12 c-6 6 -8 16 0 22 c8 6 20 2 20 -8 c0 -8 -6 -12 -12 -20 Z" fill="#ffe3ce"/>
+      <rect x="14" y="46" width="36" height="4" rx="2" fill="#ffe3ce"/>
+      <path d="M20 46 l6 -10 h12 l6 10" stroke="#ffe3ce" stroke-width="3" fill="none"/>
+    </symbol>
+
+    <symbol id="ic-news" viewBox="0 0 64 64">
+      <rect x="0" y="0" width="64" height="64" rx="16" fill="#f4f4f4"/>
+      <rect x="12" y="16" width="40" height="30" rx="3" fill="#ffffff" stroke="#333" stroke-width="2"/>
+      <rect x="17" y="22" width="14" height="10" fill="#c9432f"/>
+      <rect x="34" y="22" width="13" height="4" fill="#555"/>
+      <rect x="34" y="28" width="13" height="4" fill="#555"/>
+      <rect x="17" y="36" width="30" height="3" fill="#999"/>
+      <rect x="17" y="41" width="22" height="3" fill="#999"/>
+    </symbol>
+
+    <symbol id="ic-ad" viewBox="0 0 64 64">
+      <rect x="0" y="0" width="64" height="64" rx="16" fill="#e0b23c"/>
+      <path d="M14 26 v12 h8 l16 10 V16 L22 26 Z" fill="#ffffff"/>
+      <path d="M40 22 a12 12 0 0 1 0 20" stroke="#ffffff" stroke-width="3" fill="none"/>
+      <path d="M45 18 a18 18 0 0 1 0 28" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.7"/>
+    </symbol>
+
+    <symbol id="ic-tele" viewBox="0 0 64 64">
+      <rect x="0" y="0" width="64" height="64" rx="16" fill="#d1447e"/>
+      <rect x="10" y="20" width="34" height="22" rx="3" fill="#ffffff"/>
+      <path d="M8 46 h38 l-4 -4 H12 Z" fill="#ffffff"/>
+      <path d="M27 24 v14 M20 31 h14" stroke="#d1447e" stroke-width="3"/>
+      <rect x="46" y="26" width="10" height="18" rx="2" fill="#ffe3ee"/>
+    </symbol>
+
+    <symbol id="ic-allied" viewBox="0 0 64 64">
+      <rect x="0" y="0" width="64" height="64" rx="16" fill="#ffffff"/>
+      <path d="M18 40 C10 36 10 24 20 22 C22 14 34 14 36 22 C46 24 46 36 38 40 C38 48 20 48 18 40 Z" fill="#2f7fc9"/>
+      <rect x="26" y="20" width="12" height="4" fill="#ffffff"/>
+      <rect x="30" y="16" width="4" height="12" fill="#ffffff"/>
+      <path d="M46 34 c2 6 -2 12 -8 12 c-4 0 -6 -4 -4 -8 c1 -2 4 -2 5 0" fill="#4dae52"/>
+      <rect x="44" y="42" width="8" height="12" rx="2" fill="#e0954a"/>
+    </symbol>
+
+    <symbol id="ic-court" viewBox="0 0 64 64">
+      <rect x="0" y="0" width="64" height="64" rx="16" fill="#6b5a45"/>
+      <rect x="8" y="44" width="48" height="6" rx="2" fill="#f0e6d2"/>
+      <circle cx="20" cy="30" r="6" fill="#f0e6d2"/>
+      <rect x="14" y="36" width="12" height="10" rx="3" fill="#f0e6d2"/>
+      <circle cx="44" cy="30" r="6" fill="#c9c2b0"/>
+      <rect x="38" y="36" width="12" height="10" rx="3" fill="#c9c2b0"/>
+      <rect x="28" y="20" width="8" height="26" fill="#f0e6d2"/>
+    </symbol>
+
+    <symbol id="ic-templates" viewBox="0 0 64 64">
+      <rect x="0" y="0" width="64" height="64" rx="16" fill="#eeeeee"/>
+      <rect x="12" y="12" width="18" height="18" rx="3" fill="#9aa3ad"/>
+      <path d="M38 14 l12 12 -20 20 -12 -12 Z" fill="#c9432f"/>
+      <rect x="34" y="10" width="6" height="14" rx="2" fill="#5a6570" transform="rotate(45 37 17)"/>
+    </symbol>
+
+    <symbol id="ic-landmark" viewBox="0 0 64 64">
+      <rect x="0" y="0" width="64" height="64" rx="16" fill="#e0b23c"/>
+      <rect x="8" y="30" width="14" height="20" fill="#2f3f52"/>
+      <rect x="24" y="20" width="14" height="30" fill="#3d5068"/>
+      <rect x="40" y="34" width="14" height="16" fill="#2f3f52"/>
+      <circle cx="46" cy="20" r="10" fill="#ffffff"/>
+      <path d="M46 14 v6 l4 3" stroke="#e0b23c" stroke-width="2"/>
+      <circle cx="46" cy="20" r="3" fill="#e0b23c"/>
+    </symbol>
+
+    <symbol id="ic-bns" viewBox="0 0 64 64">
+      <rect x="0" y="0" width="64" height="64" rx="16" fill="#2f5f9c"/>
+      <rect x="14" y="12" width="36" height="40" rx="3" fill="#ffe082"/>
+      <rect x="14" y="12" width="8" height="40" fill="#1e3f6c"/>
+      <circle cx="34" cy="30" r="3" fill="#1e3f6c"/>
+      <path d="M34 30 L26 40 M34 30 L42 40" stroke="#1e3f6c" stroke-width="2"/>
+      <path d="M20 40 h12 M32 40 h12" stroke="#1e3f6c" stroke-width="2"/>
+    </symbol>
+
+    <symbol id="ic-fist2" viewBox="0 0 64 64">
+      <rect x="0" y="0" width="64" height="64" rx="16" fill="#ffffff"/>
+      <rect x="27" y="10" width="10" height="24" rx="5" fill="#2b2b2b"/>
+      <circle cx="24" cy="32" r="7" fill="#2b2b2b"/>
+      <circle cx="40" cy="32" r="7" fill="#2b2b2b"/>
+      <circle cx="32" cy="28" r="8" fill="#2b2b2b"/>
+      <rect x="20" y="36" width="24" height="16" rx="8" fill="#2b2b2b"/>
+      <path d="M46 14 l4 4 M50 14 l-4 4" stroke="#c9432f" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="ic-lawbook" viewBox="0 0 64 64">
+      <rect x="0" y="0" width="64" height="64" rx="16" fill="#ffffff"/>
+      <rect x="12" y="14" width="40" height="36" rx="3" fill="#2b2b2b"/>
+      <circle cx="32" cy="26" r="3" fill="#e8e2d0"/>
+      <path d="M32 26 L22 40 M32 26 L42 40" stroke="#e8e2d0" stroke-width="2.5"/>
+      <path d="M16 40 h12 M36 40 h12" stroke="#e8e2d0" stroke-width="2.5"/>
+      <rect x="24" y="44" width="16" height="3" fill="#e8e2d0"/>
+    </symbol>
+  </defs>
+
+  <g clip-path="url(#frame2)">
+    <!-- ===== BACKGROUND ===== -->
+    <rect width="558" height="1246" fill="url(#bgGrad)"/>
+    <rect width="558" height="220" fill="url(#headerGlow)"/>
+
+    <!-- ===== HEADER ===== -->
+    <g>
+      <rect x="24" y="30" width="24" height="3" rx="1.5" fill="#ffffff" opacity="0.85"/>
+      <rect x="24" y="38" width="24" height="3" rx="1.5" fill="#ffffff" opacity="0.85"/>
+      <rect x="24" y="46" width="24" height="3" rx="1.5" fill="#ffffff" opacity="0.85"/>
+    </g>
+    <text x="70" y="46" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">LawCription</text>
+    <text x="70" y="72" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#9fb3ba">Good afternoon, Dr. Smith 👋</text>
+
+    <g transform="translate(500,30)">
+      <circle cx="16" cy="16" r="16" fill="#1c2d38"/>
+      <path d="M16 8 a6 6 0 0 1 6 6 v4 l3 5 h-18 l3 -5 v-4 a6 6 0 0 1 6 -6 Z" fill="#e0b23c"/>
+      <circle cx="16" cy="26" r="2.5" fill="#e0b23c"/>
+      <circle cx="26" cy="8" r="8" fill="#c9432f"/>
+      <text x="26" y="12" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff">2</text>
+    </g>
+
+    <!-- Search bar -->
+    <rect x="24" y="102" width="510" height="46" rx="23" fill="#182732" stroke="#2c9d8f" stroke-width="1" opacity="0.9"/>
+    <circle cx="46" cy="125" r="6" fill="none" stroke="#7fa8ad" stroke-width="2"/>
+    <line x1="50" y1="129" x2="55" y2="134" stroke="#7fa8ad" stroke-width="2"/>
+    <text x="66" y="130" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#7fa8ad">Search modules, topics...</text>
+
+    <!-- Section title -->
+    <text x="24" y="196" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Browse <tspan fill="#4fc3d8">Modules</tspan></text>
+
+    <!-- ===== MODULE GRID ===== -->
+    <!-- Row 1 -->
+    <g transform="translate(24,220)">
+      <rect width="152" height="150" rx="18" fill="url(#cardBg)" filter="url(#cardShadow)"/>
+      <use href="#ic-negligence" x="16" y="16" width="70" height="70"/>
+      <circle cx="130" cy="26" r="14" fill="#1c2d38" stroke="#0a1319" stroke-width="2"/>
+      <text x="130" y="31" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">7</text>
+      <text x="16" y="132" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#ffffff">Negligence</text>
+    </g>
+    <g transform="translate(203,220)">
+      <rect width="152" height="150" rx="18" fill="url(#cardBg)" filter="url(#cardShadow)"/>
+      <use href="#ic-rights" x="16" y="16" width="70" height="70"/>
+      <circle cx="130" cy="26" r="14" fill="#1c2d38" stroke="#0a1319" stroke-width="2"/>
+      <text x="130" y="31" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">2</text>
+      <text x="16" y="132" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#ffffff">Rights</text>
+    </g>
+    <g transform="translate(382,220)">
+      <rect width="152" height="150" rx="18" fill="url(#cardBg)" filter="url(#cardShadow)"/>
+      <use href="#ic-consumer" x="16" y="16" width="70" height="70"/>
+      <circle cx="130" cy="26" r="14" fill="#1c2d38" stroke="#0a1319" stroke-width="2"/>
+      <text x="130" y="31" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">3</text>
+      <text x="16" y="132" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff">Consumer Pro...</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(24,388)">
+      <rect width="152" height="150" rx="18" fill="url(#cardBg)" filter="url(#cardShadow)"/>
+      <use href="#ic-safe" x="16" y="16" width="70" height="70"/>
+      <circle cx="130" cy="26" r="14" fill="#1c2d38" stroke="#0a1319" stroke-width="2"/>
+      <text x="130" y="31" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">1</text>
+      <text x="16" y="132" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#ffffff">Safe Practice</text>
+    </g>
+    <g transform="translate(203,388)">
+      <rect width="152" height="150" rx="18" fill="url(#cardBg)" filter="url(#cardShadow)"/>
+      <use href="#ic-highrisk" x="16" y="16" width="70" height="70"/>
+      <circle cx="130" cy="26" r="14" fill="#1c2d38" stroke="#0a1319" stroke-width="2"/>
+      <text x="130" y="31" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">2</text>
+      <text x="16" y="132" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff">High Risk Laws</text>
+    </g>
+    <g transform="translate(382,388)">
+      <rect width="152" height="150" rx="18" fill="url(#cardBg)" filter="url(#cardShadow)"/>
+      <use href="#ic-news" x="16" y="16" width="70" height="70"/>
+      <circle cx="130" cy="26" r="14" fill="#1c2d38" stroke="#0a1319" stroke-width="2"/>
+      <text x="130" y="31" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">6</text>
+      <text x="16" y="132" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#ffffff">Legal News</text>
+    </g>
+
+    <!-- Row 3 -->
+    <g transform="translate(24,556)">
+      <rect width="152" height="150" rx="18" fill="url(#cardBg)" filter="url(#cardShadow)"/>
+      <use href="#ic-ad" x="16" y="16" width="70" height="70"/>
+      <circle cx="130" cy="26" r="14" fill="#1c2d38" stroke="#0a1319" stroke-width="2"/>
+      <text x="130" y="31" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">4</text>
+      <text x="16" y="132" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff">Ad Guidelines</text>
+    </g>
+    <g transform="translate(203,556)">
+      <rect width="152" height="150" rx="18" fill="url(#cardBg)" filter="url(#cardShadow)"/>
+      <use href="#ic-tele" x="16" y="16" width="70" height="70"/>
+      <circle cx="130" cy="26" r="14" fill="#1c2d38" stroke="#0a1319" stroke-width="2"/>
+      <text x="130" y="31" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">4</text>
+      <text x="16" y="132" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff">Telemedicine</text>
+    </g>
+    <g transform="translate(382,556)">
+      <rect width="152" height="150" rx="18" fill="url(#cardBg)" filter="url(#cardShadow)"/>
+      <use href="#ic-allied" x="16" y="16" width="70" height="70"/>
+      <circle cx="130" cy="26" r="14" fill="#1c2d38" stroke="#0a1319" stroke-width="2"/>
+      <text x="130" y="31" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">3</text>
+      <text x="16" y="132" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff">Allied Health</text>
+    </g>
+
+    <!-- Row 4 -->
+    <g transform="translate(24,724)">
+      <rect width="152" height="150" rx="18" fill="url(#cardBg)" filter="url(#cardShadow)"/>
+      <use href="#ic-court" x="16" y="16" width="70" height="70"/>
+      <circle cx="130" cy="26" r="14" fill="#1c2d38" stroke="#0a1319" stroke-width="2"/>
+      <text x="130" y="31" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">2</text>
+      <text x="16" y="132" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff">Court Process</text>
+    </g>
+    <g transform="translate(203,724)">
+      <rect width="152" height="150" rx="18" fill="url(#cardBg)" filter="url(#cardShadow)"/>
+      <use href="#ic-templates" x="16" y="16" width="70" height="70"/>
+      <circle cx="130" cy="26" r="14" fill="#1c2d38" stroke="#0a1319" stroke-width="2"/>
+      <text x="130" y="31" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">3</text>
+      <text x="16" y="132" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Ready-Made T...</text>
+    </g>
+    <g transform="translate(382,724)">
+      <rect width="152" height="150" rx="18" fill="url(#cardBg)" filter="url(#cardShadow)"/>
+      <use href="#ic-landmark" x="16" y="16" width="70" height="70"/>
+      <circle cx="130" cy="26" r="14" fill="#1c2d38" stroke="#0a1319" stroke-width="2"/>
+      <text x="130" y="31" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">6</text>
+      <text x="16" y="132" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Landmark Cas...</text>
+    </g>
+
+    <!-- Row 5 (partial, cut off like original) -->
+    <g transform="translate(24,892)">
+      <rect width="152" height="150" rx="18" fill="url(#cardBg)" filter="url(#cardShadow)"/>
+      <use href="#ic-bns" x="16" y="16" width="70" height="70"/>
+      <circle cx="130" cy="26" r="14" fill="#1c2d38" stroke="#0a1319" stroke-width="2"/>
+      <text x="130" y="31" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">4</text>
+      <text x="16" y="132" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#ffffff">BNS</text>
+    </g>
+    <g transform="translate(203,892)">
+      <rect width="152" height="150" rx="18" fill="url(#cardBg)" filter="url(#cardShadow)"/>
+      <use href="#ic-fist2" x="16" y="16" width="70" height="70"/>
+      <circle cx="130" cy="26" r="14" fill="#1c2d38" stroke="#0a1319" stroke-width="2"/>
+      <text x="130" y="31" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">4</text>
+      <text x="16" y="132" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff">Malpractice</text>
+    </g>
+    <g transform="translate(382,892)">
+      <rect width="152" height="150" rx="18" fill="url(#cardBg)" filter="url(#cardShadow)"/>
+      <use href="#ic-lawbook" x="16" y="16" width="70" height="70"/>
+      <circle cx="130" cy="26" r="14" fill="#1c2d38" stroke="#0a1319" stroke-width="2"/>
+      <text x="130" y="31" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">1</text>
+      <text x="16" y="132" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#ffffff">Law Basics</text>
+    </g>
+
+    <!-- fade at bottom to imply scroll continues -->
+    <rect x="0" y="1080" width="558" height="166" fill="url(#fadeBottom)"/>
+    <linearGradient id="fadeBottom" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a1319" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a1319" stop-opacity="0.95"/>
+    </linearGradient>
+  </g>
+</svg>

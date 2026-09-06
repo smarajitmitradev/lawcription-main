@@ -456,6 +456,39 @@
                 </div>
             </div>
 
+            <div class="lc-stage-connector"><span class="lc-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0908" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m0 0l-6-6m6 6l6-6"/></svg></span></div>
+            
+            {{-- ============ STAGE 6 — RETURN TO APP ============ --}}
+            <div class="lc-stage p-5" style="--stage-accent:#6ad1a8; --stage-accent-glow:rgba(106,209,168,.5); --stage-border:rgba(106,209,168,.35); --stage-glow:rgba(106,209,168,.12);">
+                <div class="lc-stage-head mb-4">
+                    <span class="lc-stage-num">6</span>
+                    <div>
+                        <p class="lc-stage-title">Return to the App</p>
+                        <p class="lc-stage-sub">Wrap up on desktop, continue on mobile</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="lc-substep rounded-xl p-3">
+                        <div class="lc-shot-frame w-full h-44 rounded-lg overflow-hidden">
+                            <img onclick="var lb=document.getElementById('lcLightbox');var im=document.getElementById('lcLightboxImg');var cp=document.getElementById('lcLightboxCaption');im.src=this.src;im.alt=this.alt;cp.textContent=this.alt;lb.classList.add('is-open');document.body.style.overflow='hidden';lb.focus();" src="{{ asset('frontend/images/app1.svg') }}" alt="LawCription app icon on phone home screen" class="h-full w-full object-cover object-top">
+                            <span class="lc-zoom-hint"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16zM11 8v6M8 11h6"/></svg></span>
+                        </div>
+                        <p class="lc-mini-badge mt-2 uppercase">You're all set 📱</p>
+                        <p class="text-xs text-[#c9c4b4] mt-1">Once your payment is successful, please close this window and return to the Lawcription app on your phone to access your account and explore the features.</p>
+                    </div>
+                    <div class="lc-substep rounded-xl p-3">
+                        <div class="lc-shot-frame w-full h-44 rounded-lg overflow-hidden">
+                            <img onclick="var lb=document.getElementById('lcLightbox');var im=document.getElementById('lcLightboxImg');var cp=document.getElementById('lcLightboxCaption');im.src=this.src;im.alt=this.alt;cp.textContent=this.alt;lb.classList.add('is-open');document.body.style.overflow='hidden';lb.focus();" src="{{ asset('frontend/images/dashboard.svg') }}" alt="Lawcription dashboard with browse modules" class="h-full w-full object-cover object-top">
+                            <span class="lc-zoom-hint"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16zM11 8v6M8 11h6"/></svg></span>
+                        </div>
+                        <p class="lc-mini-badge mt-2 uppercase">🔥 Welcome to the family</p>
+                        <p class="text-xs text-[#c9c4b4] mt-1">Boom! You're officially in. Dive into Negligence, High Risk Laws, Telemedicine, and dozens of other modules — all unlocked and ready when you are.</p>
+                    </div>
+                </div>
+                
+            </div>
+
         </div>
 
         {{-- Payment methods --}}
@@ -550,7 +583,7 @@
                     <div class="lc-substep rounded-xl p-4" style="--stage-accent:#6fa882;">
                         <div class="flex items-center gap-2">
                             <span class="lc-tag lc-tag-success inline-block rounded-full px-2.5 py-1 font-bold uppercase">Instant</span>
-                            <p class="text-sm font-semibold text-[#f5f0e1]">UPI &amp; Debit Card</p>
+                            <p class="text-sm font-semibold text-[#f5f0e1]">UPI, Credit &amp; Debit Card</p>
                         </div>
                         <p class="text-xs text-[#9a9384] mt-2 leading-relaxed">
                             Both the debit and your portal unlock happen the moment you approve payment — UPI and
@@ -580,7 +613,7 @@
                 <p class="text-xs text-[#c9b98a] leading-relaxed">
                     <span class="font-semibold">Payment failed but amount deducted?</span>
                     If a transaction fails after your account was debited, the amount is automatically reversed
-                    and refunded to your original payment source within <span class="font-semibold">2–3 working days</span>
+                    and refunded to your original payment source within <span class="font-semibold">7–14 working days</span>
                     — no action needed on your part.
                 </p>
             </div>

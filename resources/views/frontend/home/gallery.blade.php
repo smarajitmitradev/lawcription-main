@@ -662,8 +662,8 @@
                     <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,15,20,.85),transparent 50%);"></div>
                     <span class="feat-badge" style="background:rgba(45,212,191,.18);color:var(--g-teal);border:1px solid rgba(45,212,191,.3);">Team</span>
                     <div style="position:absolute;bottom:22px;left:22px;right:22px;">
-                        <p class="g-serif" style="font-size:1.3rem;font-weight:700;color:#fff;margin:0 0 6px;">Our Founding Medical Team</p>
-                        <p style="font-size:13px;color:rgba(255,255,255,.6);margin:0;font-weight:300;">The doctors who started it all — New Delhi, 2021</p>
+                        <p class="g-serif" style="font-size:1.3rem;font-weight:700;color:#fff;margin:0 0 6px;">Our Founding Team</p>
+                        <p style="font-size:13px;color:rgba(255,255,255,.6);margin:0;font-weight:300;">Doctors , Lawyers, Engineers & Journalists</p>
                     </div>
                 </div>
 
@@ -674,7 +674,7 @@
                         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,15,20,.8),transparent 55%);"></div>
                         <span class="feat-badge" style="background:rgba(251,191,36,.15);color:var(--g-amber);border:1px solid rgba(251,191,36,.25);">Legal</span>
                         <div style="position:absolute;bottom:16px;left:16px;">
-                            <p style="font-size:13px;font-weight:600;color:#fff;margin:0;">Supreme Court Archives</p>
+                            <p style="font-size:13px;font-weight:600;color:#fff;margin:0;">Lawyers Nationwide</p>
                         </div>
                     </div>
                     <div class="feat-item" style="height:200px;" onclick="openLightbox(this)">
@@ -682,7 +682,7 @@
                         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,15,20,.8),transparent 55%);"></div>
                         <span class="feat-badge" style="background:rgba(167,139,250,.15);color:var(--g-violet);border:1px solid rgba(167,139,250,.25);">Medical</span>
                         <div style="position:absolute;bottom:16px;left:16px;">
-                            <p style="font-size:13px;font-weight:600;color:#fff;margin:0;">Clinical Excellence Award</p>
+                            <p style="font-size:13px;font-weight:600;color:#fff;margin:0;">Experienced Doctors</p>
                         </div>
                     </div>
                 </div>
@@ -692,17 +692,17 @@
                     <div class="feat-item" style="height:200px;" onclick="openLightbox(this)">
                         <img src="https://plus.unsplash.com/premium_photo-1698084059560-9a53de7b816b?q=80&w=811&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Office" style="height:100%;">
                         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,15,20,.8),transparent 55%);"></div>
-                        <span class="feat-badge" style="background:rgba(45,212,191,.15);color:var(--g-teal);border:1px solid rgba(45,212,191,.25);">Office</span>
+                        <span class="feat-badge" style="background:rgba(45,212,191,.15);color:var(--g-teal);border:1px solid rgba(45,212,191,.25);">Library</span>
                         <div style="position:absolute;bottom:16px;left:16px;">
-                            <p style="font-size:13px;font-weight:600;color:#fff;margin:0;">Mumbai HQ Studio</p>
+                            <p style="font-size:13px;font-weight:600;color:#fff;margin:0;">Repository of Knowledge</p>
                         </div>
                     </div>
                     <div class="feat-item" style="height:200px;" onclick="openLightbox(this)">
                         <img src="https://plus.unsplash.com/premium_photo-1694476607274-003dd175d073?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Event" style="height:100%;">
                         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,15,20,.8),transparent 55%);"></div>
-                        <span class="feat-badge" style="background:rgba(251,113,133,.15);color:var(--g-rose);border:1px solid rgba(251,113,133,.25);">Event</span>
+                        <span class="feat-badge" style="background:rgba(251,113,133,.15);color:var(--g-rose);border:1px solid rgba(251,113,133,.25);">Synergy</span>
                         <div style="position:absolute;bottom:16px;left:16px;">
-                            <p style="font-size:13px;font-weight:600;color:#fff;margin:0;">Annual MedLaw Summit 2023</p>
+                            <p style="font-size:13px;font-weight:600;color:#fff;margin:0;">greater Together Then Apart</p>
                         </div>
                     </div>
                 </div>
@@ -724,7 +724,7 @@
                 <div class="stat-tile t-rose">
                     <div style="font-size:11px;color:var(--g-muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">Events</div>
                     <div class="g-serif" style="font-size:2.5rem;font-weight:900;color:var(--g-rose);line-height:1;">48</div>
-                    <div style="font-size:12px;color:var(--g-muted);margin-top:6px;">Covered nationwide</div>
+                    <div style="font-size:12px;color:var(--g-muted);margin-top:6px;">Covered nation wide</div>
                 </div>
                 <div class="stat-tile t-amber">
                     <div style="font-size:11px;color:var(--g-muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">Locations</div>
@@ -756,7 +756,7 @@
                     <img src="https://images.unsplash.com/photo-1526930382372-67bf22c0fce2?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Team" style="height:320px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-teal);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Team</span>
-                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Dr. Arjun Sharma</p>
+                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Nothing is Overlooked</p>
                     </div>
                 </div>
 
@@ -764,7 +764,7 @@
                     <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=600&q=80" alt="Legal" style="height:220px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-amber);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Legal</span>
-                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Supreme Court Library</p>
+                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Innovation Lowers The Barrier Of Entry</p>
                     </div>
                 </div>
 
@@ -772,7 +772,7 @@
                     <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Event" style="height:280px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-violet);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Events</span>
-                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">MedLaw Summit 2023</p>
+                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Knowledge Multiplies When Shared</p>
                     </div>
                 </div>
 
@@ -780,7 +780,7 @@
                     <img src="https://images.unsplash.com/photo-1513224502586-d1e602410265?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Team" style="height:260px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-rose);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Team</span>
-                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Adv. Priya Nair</p>
+                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Crisis Demands Mastery, Not Guesswork</p>
                     </div>
                 </div>
 
@@ -788,7 +788,7 @@
                     <img src="https://plus.unsplash.com/premium_photo-1702598479744-f0fefa59d3a2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Office" style="height:200px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-teal);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Culture</span>
-                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Editorial Team Session</p>
+                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Technology Powers Perfection</p>
                     </div>
                 </div>
 
@@ -796,7 +796,7 @@
                     <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80" alt="Medical" style="height:300px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-amber);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Medical</span>
-                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Clinical Documentation</p>
+                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Smarter Hardware & Sharper Intelligence</p>
                     </div>
                 </div>
 
@@ -804,7 +804,7 @@
                     <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Team" style="height:240px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-violet);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Team</span>
-                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Dr. Rohan Verma</p>
+                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Legal Vigilance & Protects Practice</p>
                     </div>
                 </div>
 
@@ -812,7 +812,7 @@
                     <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80" alt="Event" style="height:220px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-rose);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Events</span>
-                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">CME Workshop Bengaluru</p>
+                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Make Your Voice Heard</p>
                     </div>
                 </div>
 
@@ -820,7 +820,7 @@
                     <img src="https://images.unsplash.com/photo-1524683745036-b46f52b8505a?q=80&w=415&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Office" style="height:260px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-teal);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Office</span>
-                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Research Studio</p>
+                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Keep Researching, Keep Advancing</p>
                     </div>
                 </div>
 
@@ -836,7 +836,7 @@
                     <img src="https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?w=600&q=80" alt="Event" style="height:290px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-violet);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Events</span>
-                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Healthcare Law Forum 2024</p>
+                        <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Full-Spectrum Network Architecture</p>
                     </div>
                 </div>
 
@@ -874,8 +874,8 @@
         <div class="max-w-6xl mx-auto">
             <div class="g-reveal gd1 flex items-center justify-between mb-8 flex-wrap gap-4">
                 <div class="flex items-center gap-4">
-                    <span class="g-tag" style="background:rgba(251,191,36,0.1);color:var(--g-amber);border:1px solid rgba(251,191,36,0.22);">Events</span>
-                    <h2 class="g-serif" style="font-size:1.8rem;font-weight:700;color:var(--g-cream);letter-spacing:-.5px;">Across India</h2>
+                    <span class="g-tag" style="background:rgba(251,191,36,0.1);color:var(--g-amber);border:1px solid rgba(251,191,36,0.22);">Insight</span>
+                    <h2 class="g-serif" style="font-size:1.8rem;font-weight:700;color:var(--g-cream);letter-spacing:-.5px;">Etched In Our Memory</h2>
                 </div>
                 <p style="font-size:13px;color:var(--g-muted);">← Scroll to explore →</p>
             </div>
@@ -886,10 +886,10 @@
                 ['https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80','Annual MedLaw Summit','New Delhi, 2023'],
                 ['https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=500&q=80','CME Workshop','Bengaluru, 2023'],
                 ['https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?w=500&q=80','Healthcare Law Forum','Mumbai, 2024'],
-                ['https://images.unsplash.com/photo-1777443726993-8f9c8e96e46e?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','Doctor Rights Seminar','Chennai, 2023'],
-                ['https://images.unsplash.com/photo-1544531585-9847b68c8c86?w=500&q=80','NMC Compliance Bootcamp','Pune, 2024'],
-                ['https://images.unsplash.com/photo-1737984954497-06d1615cc177?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','Medico-Legal Moot','Hyderabad, 2022'],
-                ['https://images.unsplash.com/photo-1512102438733-bfa4ed29aef7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','Legal Literacy Drive','Kolkata, 2023'],
+                ['https://images.unsplash.com/photo-1777443726993-8f9c8e96e46e?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','Tech Drives Our Core','Chennai, 2023'],
+                ['https://images.unsplash.com/photo-1544531585-9847b68c8c86?w=500&q=80','Committed To Shared Success','Pune, 2024'],
+                ['https://images.unsplash.com/photo-1737984954497-06d1615cc177?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','Small Actions , Vital Rescues','Hyderabad, 2022'],
+                ['https://images.unsplash.com/photo-1512102438733-bfa4ed29aef7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','Teamwork Resolves Crises','Kolkata, 2023'],
                 ];
                 @endphp
                 @foreach($eventImgs as $ev)
@@ -921,8 +921,8 @@
             <div class="bento-item" style="grid-row: span 2; position: relative; overflow: hidden; border-radius: 12px; cursor: pointer;">
                 <img src="https://images.unsplash.com/photo-1618939304347-e91b1f33d2ab?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Modern office building" style="width: 100%; height: 100%; object-fit: crop;">
                 <div class="bento-label" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
-                    <p style="font-size:16px;font-weight:600;color:#fff;margin:0 0 4px;">Mumbai Headquarters</p>
-                    <p style="font-size:13px;color:rgba(255,255,255,.7);margin:0;">Where ideas become articles</p>
+                    <p style="font-size:16px;font-weight:600;color:#fff;margin:0 0 4px;">The Heart</p>
+                    <p style="font-size:13px;color:rgba(255,255,255,.7);margin:0;">The heart: Every beat builds tomorrow</p>
                 </div>
             </div>
 
@@ -938,7 +938,7 @@
             <div class="bento-item" style="position: relative; overflow: hidden; border-radius: 12px; cursor: pointer;">
                 <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=600&h=400&auto=format&fit=crop" alt="Team high-fiving outdoors" style="width: 100%; height: 100%; object-fit: crop;">
                 <div class="bento-label" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
-                    <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Team Retreat 2023</p>
+                    <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Team Retreat</p>
                 </div>
             </div>
 
@@ -971,7 +971,7 @@
             <div class="bento-item" style="position: relative; overflow: hidden; border-radius: 12px; cursor: pointer;">
                 <img src="https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?q=80&w=600&h=400&auto=format&fit=crop" alt="Group of colleagues celebrating with confetti" style="width: 100%; height: 100%; object-fit: crop;">
                 <div class="bento-label" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
-                    <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Achievement Awards 2024</p>
+                    <p style="font-size:14px;font-weight:600;color:#fff;margin:0;">Achievement Awards</p>
                 </div>
             </div>
 
@@ -987,7 +987,7 @@
         <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;"></div>
 
         <div class="relative z-10 max-w-2xl mx-auto">
-            <div class="g-reveal gd1" style="font-size:3rem;margin-bottom:16px;">📸</div>
+            <div class="g-reveal gd1" style="font-size:3rem;margin-bottom:16px;">🏥</div>
             <h2 class="g-serif g-reveal gd2 mb-5" style="font-size:clamp(2rem,5vw,3.2rem);font-weight:900;letter-spacing:-2px;line-height:1.1;color:var(--g-cream);">
                 Be part of this story.<br />
                 <span class="g-shimmer" style="font-style:italic;font-weight:400;">Join 12,000+ doctors.</span>

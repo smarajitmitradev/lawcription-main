@@ -112,7 +112,7 @@
         Your Subscriber Library
       </span>
       <h1 class="serif" style="font-size:clamp(2.1rem,6vw,3.6rem);font-weight:700;line-height:1.1;letter-spacing:-1px;">
-        Fifteen sections.<br /><span class="shimmer light-serif italic" style="font-weight:300;">One legal case file.</span>
+        Fifteen+ sections.<br /><span class="shimmer light-serif italic" style="font-weight:300;">One legal case file.</span>
       </h1>
       <p class="light-serif mt-5 mx-auto" style="font-size:1.15rem;color:var(--muted2);line-height:1.8;max-width:520px;">
         Everything in your subscription, organised the way a medico-legal advisor would keep it — indexed, tabbed, and ready to open.

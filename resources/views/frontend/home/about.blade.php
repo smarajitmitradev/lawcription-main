@@ -244,7 +244,13 @@
             </h1>
 
             <p class="about-serif reveal d3 mb-12" style="font-size:1.2rem;color:var(--about-muted);line-height:1.85;max-width:560px;margin-left:auto;margin-right:auto;margin-bottom:3rem;">
-                Lawcription™ was born from a simple frustration — doctors facing legal complexities with no trusted, accessible resource to turn to. We built the platform we wished existed.
+            Lawcription™ brings medicine and law together with clarity, precision, and purpose — transforming complex medico-legal knowledge into trusted guidance for modern medical practice.
+
+Because protecting patients begins with knowledge.
+And protecting practice begins with understanding.<br/>
+
+LAWCRIPTION™ —
+Where Medicine Meets Law.
             </p>
 
             <!-- Stats row -->
@@ -445,13 +451,11 @@
                 <div class="team-card">
                     <img src="{{ asset('frontend/images/menu/21.png') }}" alt="Dr. Arjun Sharma" style="width:100%;height:220px;object-fit:cover;display:block;filter:brightness(0.65) sepia(0.2);" />
                     <div style="padding:22px 24px;">
-                        <div style="font-size:10px;color:var(--about-gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:7px;">Founder & Editor-in-Chief</div>
+                        <div style="font-size:10px;color:var(--about-gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:7px;">Founder’s Vision</div>
                         <h3 class="about-serif mb-3" style="font-size:1.15rem;font-weight:700;color:var(--about-cream);">Dedicated Doctors & Lawyers</h3>
-                        <p style="font-size:13px;color:var(--about-muted);line-height:1.7;">Where the fragile pulse of humanity meets the unyielding sanctuary of justice, a profound convergence is born.
-                                         Lawcription harmonizes the stethoscope and the scales of law, uniting visionary doctors with dedicated lawyers to serve a shared calling. It stands as a pillar of dignity for the healer—where the lawyer's counsel restores confident purpose to those who bear the weight of saving lives—and a covenant of integrity for the patient, ensuring that vulnerability is met with compassion, truth, and absolute fairness.
-                                                "Where medicine breathes life into the spirit, the law upholds the honor of care. Together, they dissolve doubt into trust and transform uncertainty into strength."
-       
-No longer divided by separate paths, doctors and lawyers now stand in unison: an enduring shield safeguarding humanity’s most vital bond.</p>
+                        <p style="font-size:13px;color:var(--about-muted);line-height:1.7;">Lawcription unites medicine and law with one purpose—protecting life, dignity, and justice.
+
+Doctors heal. Lawyers protect. Together, they create confidence for healthcare professionals, fairness for patients, and a stronger foundation of trust in healthcare.</p>
                     </div>
                 </div>
                 <div class="team-card">
@@ -459,15 +463,8 @@ No longer divided by separate paths, doctors and lawyers now stand in unison: an
                     <div style="padding:22px 24px;">
                         <div style="font-size:10px;color:var(--about-greenlit);letter-spacing:2px;text-transform:uppercase;margin-bottom:7px;">Experienced Software Team</div>
                         <h3 class="about-serif mb-3" style="font-size:1.15rem;font-weight:700;color:var(--about-cream);">Innovative Engineers</h3>
-                        <p style="font-size:13px;color:var(--about-muted);line-height:1.7;">Great ideas begin with a vision, but it takes extraordinary minds to give that vision life.
-
-Behind Lawcription is a team of talented software engineers—the digital architects and technological pillars who transform ideas into an intelligent, seamless experience.
-
-Every line of code carries their precision. Every feature reflects their ingenuity. Every improvement bears their commitment to excellence.
-
-Working quietly behind the screen, they build the technology that allows Lawcription to inform, connect, and evolve.
-
-They are not merely building software—they are giving a vision its digital life.</p>
+                        <p style="font-size:13px;color:var(--about-muted);line-height:1.7;">Behind Lawcription stands a team of visionary software engineers who transform ideas into intelligent technology.
+                         With precision, innovation, and dedication, they give our vision its digital life.</p>
                     </div>
                 </div>
                 <div class="team-card">
@@ -478,8 +475,7 @@ They are not merely building software—they are giving a vision its digital lif
                         <p style="font-size:13px;color:var(--about-muted);line-height:1.7;">Behind every trusted update is a commitment to truth.
 
 Our dedicated journalists transform complex developments into clear, timely, and meaningful information. Through careful research, verification, and responsible reporting, they help keep Lawcription accurate, relevant, and connected to the world as it changes.
-
-Their pursuit of facts strengthens our purpose; their dedication helps make Lawcription possible.</p>
+</p>
                     </div>
                 </div>
             </div>
