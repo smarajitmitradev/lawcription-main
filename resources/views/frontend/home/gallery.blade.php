@@ -752,7 +752,7 @@
 
             <div class="masonry g-reveal gd2" id="masonryGrid">
 
-                <div class="masonry-item c-teal" data-cat="team" onclick="openLightbox(this)" data-caption="Dr. Arjun Sharma — Founder">
+                <div class="masonry-item c-teal" data-cat="team" onclick="openLightbox(this)" data-caption="Nothing is Overlooked">
                     <img src="https://images.unsplash.com/photo-1526930382372-67bf22c0fce2?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Team" style="height:320px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-teal);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Team</span>
@@ -760,7 +760,7 @@
                     </div>
                 </div>
 
-                <div class="masonry-item c-amber" data-cat="legal" onclick="openLightbox(this)" data-caption="Supreme Court Library — New Delhi">
+                <div class="masonry-item c-amber" data-cat="legal" onclick="openLightbox(this)" data-caption="Innovation Lowers The Barrier Of Entry">
                     <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=600&q=80" alt="Legal" style="height:220px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-amber);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Legal</span>
@@ -768,7 +768,7 @@
                     </div>
                 </div>
 
-                <div class="masonry-item c-violet" data-cat="events" onclick="openLightbox(this)" data-caption="MedLaw Conference 2023">
+                <div class="masonry-item c-violet" data-cat="events" onclick="openLightbox(this)" data-caption="Knowledge Multiplies When Shared">
                     <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Event" style="height:280px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-violet);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Events</span>
@@ -776,7 +776,7 @@
                     </div>
                 </div>
 
-                <div class="masonry-item c-rose" data-cat="team" onclick="openLightbox(this)" data-caption="Adv. Priya Nair — Legal Director">
+                <div class="masonry-item c-rose" data-cat="team" onclick="openLightbox(this)" data-caption="Crisis Demands Mastery, Not Guesswork">
                     <img src="https://images.unsplash.com/photo-1513224502586-d1e602410265?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Team" style="height:260px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-rose);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Team</span>
@@ -784,7 +784,7 @@
                     </div>
                 </div>
 
-                <div class="masonry-item c-teal" data-cat="office" onclick="openLightbox(this)" data-caption="Editorial Team in session — Mumbai">
+                <div class="masonry-item c-teal" data-cat="office" onclick="openLightbox(this)" data-caption="Technology Powers Perfection">
                     <img src="https://plus.unsplash.com/premium_photo-1702598479744-f0fefa59d3a2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Office" style="height:200px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-teal);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Culture</span>
@@ -792,7 +792,7 @@
                     </div>
                 </div>
 
-                <div class="masonry-item c-amber" data-cat="legal" onclick="openLightbox(this)" data-caption="Medical documentation review">
+                <div class="masonry-item c-amber" data-cat="legal" onclick="openLightbox(this)" data-caption="Smarter Hardware & Sharper Intelligence">
                     <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80" alt="Medical" style="height:300px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-amber);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Medical</span>
@@ -800,7 +800,7 @@
                     </div>
                 </div>
 
-                <div class="masonry-item c-violet" data-cat="team" onclick="openLightbox(this)" data-caption="Dr. Rohan Verma — CME Director">
+                <div class="masonry-item c-violet" data-cat="team" onclick="openLightbox(this)" data-caption="Legal Vigilance & Protects Practice">
                     <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Team" style="height:240px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-violet);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Team</span>
@@ -808,7 +808,7 @@
                     </div>
                 </div>
 
-                <div class="masonry-item c-rose" data-cat="events" onclick="openLightbox(this)" data-caption="CME Workshop — Bengaluru 2023">
+                <div class="masonry-item c-rose" data-cat="events" onclick="openLightbox(this)" data-caption="Make Your Voice Heard">
                     <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80" alt="Event" style="height:220px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-rose);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Events</span>
@@ -816,7 +816,7 @@
                     </div>
                 </div>
 
-                <div class="masonry-item c-teal" data-cat="office" onclick="openLightbox(this)" data-caption="Research & Writing Studio">
+                <div class="masonry-item c-teal" data-cat="office" onclick="openLightbox(this)" data-caption="Keep Researching, Keep Advancing">
                     <img src="https://images.unsplash.com/photo-1524683745036-b46f52b8505a?q=80&w=415&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Office" style="height:260px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-teal);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Office</span>
@@ -832,7 +832,7 @@
                     </div>
                 </div>
 
-                <div class="masonry-item c-violet" data-cat="events" onclick="openLightbox(this)" data-caption="National Healthcare Law Forum 2024">
+                <div class="masonry-item c-violet" data-cat="events" onclick="openLightbox(this)" data-caption="Full-Spectrum Network Architecture">
                     <img src="https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?w=600&q=80" alt="Event" style="height:290px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-violet);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Events</span>
@@ -840,7 +840,7 @@
                     </div>
                 </div>
 
-                <div class="masonry-item c-rose" data-cat="office" onclick="openLightbox(this)" data-caption="Strategy meeting — leadership team">
+                <div class="masonry-item c-rose" data-cat="office" onclick="openLightbox(this)" data-caption="Leadership Strategy Meet">
                     <img src="https://plus.unsplash.com/premium_photo-1673958771993-f1c596da32f5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Office" style="height:230px;object-fit:cover;">
                     <div class="masonry-overlay">
                         <span style="font-size:10px;color:var(--g-rose);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:5px;">Culture</span>
