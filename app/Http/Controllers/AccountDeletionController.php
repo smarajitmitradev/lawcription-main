@@ -29,7 +29,7 @@ class AccountDeletionController extends Controller
             'delete_reason' => 'required|string|min:10|max:1000',
         ]);
 
-        $user = User::where('mobile', $request->mobile)->first();
+        $user = User::where('mobile_number', $request->mobile)->first();
 
         if (! $user) {
             return back()
