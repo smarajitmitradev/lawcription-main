@@ -883,13 +883,13 @@
             <div class="hscroll-track g-reveal gd2">
                 @php
                 $eventImgs = [
-                ['https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80','Annual MedLaw Summit','New Delhi, 2023'],
-                ['https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=500&q=80','CME Workshop','Bengaluru, 2023'],
-                ['https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?w=500&q=80','Healthcare Law Forum','Mumbai, 2024'],
-                ['https://images.unsplash.com/photo-1777443726993-8f9c8e96e46e?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','Tech Drives Our Core','Chennai, 2023'],
-                ['https://images.unsplash.com/photo-1544531585-9847b68c8c86?w=500&q=80','Committed To Shared Success','Pune, 2024'],
-                ['https://images.unsplash.com/photo-1737984954497-06d1615cc177?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','Small Actions , Vital Rescues','Hyderabad, 2022'],
-                ['https://images.unsplash.com/photo-1512102438733-bfa4ed29aef7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','Teamwork Resolves Crises','Kolkata, 2023'],
+                ['https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80','Knowledge multiplies when shared','Team Lawcription'],
+                ['https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=500&q=80','Make your voice heard','Team Lawcription'],
+                ['https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?w=500&q=80','Full-spectrum network architecture','Team Lawcription'],
+                ['https://images.unsplash.com/photo-1777443726993-8f9c8e96e46e?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','Tech Drives Our Core','Team Lawcription'],
+                ['https://images.unsplash.com/photo-1544531585-9847b68c8c86?w=500&q=80','Committed To Shared Success','Team Lawcription'],
+                ['https://images.unsplash.com/photo-1737984954497-06d1615cc177?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','Small Actions , Vital Rescues','Team Lawcription'],
+                ['https://images.unsplash.com/photo-1512102438733-bfa4ed29aef7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','Teamwork Resolves Crises','Team Lawcription'],
                 ];
                 @endphp
                 @foreach($eventImgs as $ev)

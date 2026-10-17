@@ -232,22 +232,23 @@
       <div class="lc-cols">
 
         <div class="lc-col">
-          <h6 class="lc-eyebrow" style="margin-bottom:14px;">Location</h6>
+          <h6 class="lc-eyebrow" style="margin-bottom:14px;">
+Content & Suggestions</h6>
           <p>
-            456 Elm Street, Los Angeles <br>
-            CA 90001
+          lawcription@gmail.com <br>
+          Questions & Topic
           </p>
         </div>
 
         <div class="lc-col">
-          <h6 class="lc-eyebrow" style="margin-bottom:14px;">Contacts</h6>
+          <h6 class="lc-eyebrow" style="margin-bottom:14px;">Subscription & Support</h6>
           <ul class="lc-hours">
             <li>
               <span class="lc-hours-day">lawcriptionofficial@gmail.com </span>
               <span class="lc-hours-time"></span>
             </li>
             <li>
-              <span class="lc-hours-day">(213) 555-123-3456</span>
+              <span class="lc-hours-day">Subscription, Payment & Access</span>
               <span class="lc-hours-time"></span>
             </li>
           </ul>
@@ -255,15 +256,15 @@
         </div>
 
         <div class="lc-col">
-          <h6 class="lc-eyebrow" style="margin-bottom:14px;">Opening Hours</h6>
+          <h6 class="lc-eyebrow" style="margin-bottom:14px;">Grievance Officer</h6>
           <ul class="lc-hours">
             <li>
-              <span class="lc-hours-day">Weekdays</span>
-              <span class="lc-hours-time">10:00am&nbsp;-&nbsp;9:00pm</span>
+              <span class="lc-hours-day">P. DEBNATH</span>
+              <span class="lc-hours-time">healthcription@gmail.com</span>
             </li>
             <li>
-              <span class="lc-hours-day">Weekends</span>
-              <span class="lc-hours-time">9:00am&nbsp;-&nbsp;10:00pm</span>
+              <span class="lc-hours-day"> Complaints & Grievances</span>
+              <span class="lc-hours-time">Formal Concerns</span>
             </li>
           </ul>
         </div>
