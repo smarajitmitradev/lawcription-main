@@ -584,6 +584,122 @@
       border-top:1px solid var(--border) !important; position:relative !important; overflow:hidden !important;
       display:block !important; width:100% !important;
     }
+
+
+    /* our team section  */
+    #our-team { scroll-margin-top: 90px; }
+ 
+ .tm-row {
+     display: flex;
+     gap: 14px;
+     height: 540px;
+ }
+
+ .tm-panel {
+     position: relative;
+     flex: 1;
+     min-width: 0;
+     border-radius: 18px;
+     overflow: hidden;
+     cursor: pointer;
+     border: 1px solid var(--about-border, rgba(255,255,255,0.08));
+     background: #111;
+     transition: flex .6s cubic-bezier(.22,.8,.26,1), border-color .4s;
+     outline: none;
+ }
+ .tm-panel.is-active { flex: 2.8; border-color: rgba(201,168,76,0.45); }
+
+ .tm-panel img {
+     position: absolute; inset: 0;
+     width: 100%; height: 100%;
+     object-fit: cover;
+     filter: brightness(.5) sepia(.2);
+     transform: scale(1.08);
+     transition: transform .9s ease, filter .6s ease;
+ }
+ .tm-panel.is-active img { transform: scale(1); filter: brightness(.62) sepia(.15); }
+
+ .tm-panel::after {
+     content: "";
+     position: absolute; inset: 0;
+     background: linear-gradient(to top, rgba(10,10,10,.96) 8%, rgba(10,10,10,.35) 55%, transparent 100%);
+ }
+
+ .tm-num {
+     position: absolute; top: 20px; left: 22px; z-index: 2;
+     font-size: 13px; font-weight: 600; letter-spacing: 3px;
+     color: var(--about-gold);
+ }
+
+ .tm-body {
+     position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
+     padding: 28px;
+ }
+ .tm-tag {
+     display: inline-block;
+     font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+     padding: 5px 12px; border-radius: 99px; margin-bottom: 12px;
+     background: rgba(201,168,76,0.1);
+     border: 1px solid rgba(201,168,76,0.3);
+     color: var(--about-gold);
+ }
+ .tm-tag.green {
+     background: rgba(74,222,128,0.08);
+     border-color: rgba(74,222,128,0.3);
+     color: var(--about-greenlit);
+ }
+ .tm-title {
+     font-size: 1.25rem; font-weight: 700; line-height: 1.25;
+     color: var(--about-cream); margin: 0;
+ }
+ .tm-text {
+     font-size: 13.5px; line-height: 1.75;
+     color: rgba(255,255,255,.72);
+     max-height: 0; opacity: 0; overflow: hidden;
+     margin: 0;
+     transition: max-height .6s ease, opacity .5s ease .1s, margin .4s;
+ }
+ .tm-panel.is-active .tm-text { max-height: 260px; opacity: 1; margin-top: 14px; }
+
+ .tm-line {
+     display: block; height: 2px; width: 0; margin-top: 18px;
+     background: linear-gradient(90deg, var(--about-gold), transparent);
+     transition: width .7s ease .15s;
+ }
+ .tm-panel.is-active .tm-line { width: 90px; }
+
+ /* Tablet / mobile: stack cards, show all text */
+ @media (max-width: 860px) {
+     .tm-row { flex-direction: column; height: auto; }
+     .tm-panel, .tm-panel.is-active { flex: none; min-height: 380px; }
+     .tm-panel img { filter: brightness(.55) sepia(.15); transform: none; }
+     .tm-text { max-height: none; opacity: 1; margin-top: 14px; }
+     .tm-line { width: 90px; }
+ }
+
+/* font of legal text size */
+
+#legal p, #legal li { letter-spacing: .1px; }
+
+/* Main paragraphs */
+#legal .g-reveal.gd2 p:first-child { font-size: 19px !important; line-height: 1.9 !important; }
+#legal .g-reveal.gd2 p:last-child  { font-size: 17px !important; line-height: 1.9 !important;
+                                     color: var(--g-cream) !important; opacity: .8; }
+
+/* Cards */
+#legal .lm-card h3 { font-size: 1.6rem !important; }
+#legal .lm-card p  { font-size: 16px !important; line-height: 1.8 !important;
+                     color: var(--g-cream) !important; opacity: .78; }
+#legal .lm-list li { font-size: 15px !important; padding: 12px 0 12px 24px !important; }
+#legal .lm-list li::before { top: 19px !important; }
+#legal .lm-num { font-size: 13px !important; }
+
+/* How we work */
+#legal .lm-step p { font-size: 15.5px !important; line-height: 1.8 !important;
+                    color: var(--g-cream) !important; opacity: .8; }
+
+/* Disclaimer */
+#legal > div > p:last-child { font-size: 13.5px !important; line-height: 1.8 !important; opacity: .75; }
 </style>
 
 <div class="gallery-wrap">
@@ -870,11 +986,11 @@
     <div class="g-divider"></div>
 
     {{-- ══ HORIZONTAL SCROLL — EVENTS ══ --}}
-    <section class="py-16 px-6">
+    <section class="py-16 px-6" id="events">
         <div class="max-w-6xl mx-auto">
             <div class="g-reveal gd1 flex items-center justify-between mb-8 flex-wrap gap-4">
                 <div class="flex items-center gap-4">
-                    <span class="g-tag" style="background:rgba(251,191,36,0.1);color:var(--g-amber);border:1px solid rgba(251,191,36,0.22);">Insight</span>
+                    <span class="g-tag" style="background:rgba(251,191,36,0.1);color:var(--g-amber);border:1px solid rgba(251,191,36,0.22);">Event</span>
                     <h2 class="g-serif" style="font-size:1.8rem;font-weight:700;color:var(--g-cream);letter-spacing:-.5px;">Etched In Our Memory</h2>
                 </div>
                 <p style="font-size:13px;color:var(--g-muted);">← Scroll to explore →</p>
@@ -908,7 +1024,7 @@
     <div class="g-divider"></div>
 
     {{-- ══ BENTO GRID ══ --}}
-    <section class="py-16 px-6" style="background-color: #111;">
+    <section class="py-16 px-6" id="life-at-lawcription" style="background-color: #111;">
     <div class="max-w-6xl mx-auto">
         <div class="g-reveal gd1 flex items-center gap-4 mb-10">
             <span class="g-tag" style="background:rgba(251,113,133,0.1);color:var(--g-rose);border:1px solid rgba(251,113,133,0.22); padding: 4px 12px; border-radius: 99px; font-weight: 500;">Culture</span>
@@ -978,6 +1094,170 @@
         </div>
     </div>
 </section>
+<section id="legal" class="py-20 px-6" style="scroll-margin-top:90px;position:relative;overflow:hidden;">
+
+    <style>
+        .lm-glow{position:absolute;top:-120px;right:-120px;width:420px;height:420px;border-radius:50%;
+                 background:radial-gradient(circle,rgba(251,191,36,.12),transparent 70%);pointer-events:none;}
+        .lm-card{background:var(--g-card);border:1px solid var(--g-border);border-radius:20px;padding:30px;
+                 position:relative;transition:.3s;}
+        .lm-card:hover{transform:translateY(-6px);border-color:rgba(251,191,36,.45);
+                       box-shadow:0 18px 40px rgba(0,0,0,.35);}
+        .lm-num{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--g-amber);margin-bottom:14px;display:block;}
+        .lm-list{list-style:none;padding:0;margin:18px 0 0;}
+        .lm-list li{font-size:13px;color:var(--g-cream);padding:9px 0 9px 22px;position:relative;
+                    border-top:1px solid var(--g-border);}
+        .lm-list li::before{content:"";position:absolute;left:0;top:16px;width:8px;height:8px;border-radius:50%;
+                            background:var(--g-amber);}
+        .lm-step{flex:1 1 220px;padding:22px;border-left:2px solid rgba(251,191,36,.35);}
+    </style>
+
+    <div class="lm-glow"></div>
+
+    <div class="max-w-6xl mx-auto" style="position:relative;">
+
+        {{-- Heading --}}
+        <div class="g-reveal gd1 mb-10" style="max-width:760px;">
+            <span class="g-tag" style="background:rgba(251,191,36,0.1);color:var(--g-amber);border:1px solid rgba(251,191,36,0.22);">Legal &amp; Medical</span>
+            <h2 class="g-serif" style="font-size:2.4rem;line-height:1.15;font-weight:700;color:var(--g-cream);letter-spacing:-.8px;margin:18px 0 0;">
+                Where <span style="color:var(--g-amber);">medicine</span> meets the <span style="color:var(--g-amber);">law</span>,<br>clarity begins.
+            </h2>
+        </div>
+
+        {{-- Long paragraph --}}
+        <div class="g-reveal gd2 mb-12" style="max-width:860px;">
+            <p style="font-size:16px;line-height:1.9;color:var(--g-cream);margin:0 0 18px;">
+                Some of life's hardest moments sit exactly where two worlds overlap: a medical report that a court must understand, a treatment decision with legal consequences, or a patient who simply wants to know their rights. At Lawcription, we work in that space every day. Our team brings together practising doctors, experienced lawyers, journalists and software engineers, so every piece of work is checked from more than one angle before it reaches you.
+            </p>
+            <p style="font-size:14.5px;line-height:1.9;color:var(--g-muted);margin:0;">
+                We believe that legal and medical information should be accurate, readable and respectful of the person reading it. That is why we turn complex terminology into plain language, organise records so nothing important is lost, and build tools that save time for professionals and families alike. Whether you are a clinician, an advocate, a hospital or an individual looking for direction, our goal is the same: to make a complicated process feel clear, calm and manageable.
+            </p>
+        </div>
+
+        {{-- Two main cards --}}
+        <div class="g-reveal gd3" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;">
+            <div class="lm-card">
+                <span class="lm-num">01 &nbsp;—&nbsp; LEGAL</span>
+                <h3 class="g-serif" style="font-size:1.35rem;font-weight:700;color:var(--g-cream);margin:0 0 10px;">Clear, careful legal support</h3>
+                <p style="font-size:13.5px;line-height:1.8;color:var(--g-muted);margin:0;">
+                    Our lawyers help translate legal language into steps you can act on, with documents prepared accurately and explained in words you can follow.
+                </p>
+                <ul class="lm-list">
+                    <li>Drafting and review of legal documents</li>
+                    <li>Notices, agreements and case paperwork</li>
+                    <li>Plain-language explanation of your rights</li>
+                </ul>
+            </div>
+
+            <div class="lm-card">
+                <span class="lm-num">02 &nbsp;—&nbsp; MEDICAL</span>
+                <h3 class="g-serif" style="font-size:1.35rem;font-weight:700;color:var(--g-cream);margin:0 0 10px;">Medical insight you can trust</h3>
+                <p style="font-size:13.5px;line-height:1.8;color:var(--g-muted);margin:0;">
+                    Our doctors read between the clinical lines, helping make records, prescriptions and reports understandable for everyone involved in a case.
+                </p>
+                <ul class="lm-list">
+                    <li>Review and summary of medical records</li>
+                    <li>Medico-legal opinions and documentation</li>
+                    <li>Health information written for real people</li>
+                </ul>
+            </div>
+
+            <div class="lm-card">
+                <span class="lm-num">03 &nbsp;—&nbsp; TOGETHER</span>
+                <h3 class="g-serif" style="font-size:1.35rem;font-weight:700;color:var(--g-cream);margin:0 0 10px;">One team, one clear answer</h3>
+                <p style="font-size:13.5px;line-height:1.8;color:var(--g-muted);margin:0;">
+                    Doctors, lawyers, writers and engineers work side by side, so accuracy, readability and technology come together in everything we deliver.
+                </p>
+                <ul class="lm-list">
+                    <li>Every document reviewed from two professions</li>
+                    <li>Clean digital records, easy to find and share</li>
+                    <li>Reliable support from first question to final file</li>
+                </ul>
+            </div>
+        </div>
+
+        {{-- How we work --}}
+        <div class="g-reveal gd4" style="margin-top:56px;">
+            <p class="g-serif" style="font-size:1.25rem;font-weight:700;color:var(--g-cream);margin:0 0 18px;">How we work</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                <div class="lm-step">
+                    <span class="lm-num">STEP 1</span>
+                    <p style="font-size:13px;line-height:1.7;color:var(--g-muted);margin:0;"><b style="color:var(--g-cream);">Listen.</b> We understand your situation and what you need before doing anything else.</p>
+                </div>
+                <div class="lm-step">
+                    <span class="lm-num">STEP 2</span>
+                    <p style="font-size:13px;line-height:1.7;color:var(--g-muted);margin:0;"><b style="color:var(--g-cream);">Review.</b> Our legal and medical experts examine the details together.</p>
+                </div>
+                <div class="lm-step">
+                    <span class="lm-num">STEP 3</span>
+                    <p style="font-size:13px;line-height:1.7;color:var(--g-muted);margin:0;"><b style="color:var(--g-cream);">Deliver.</b> You receive clear, organised and ready-to-use results.</p>
+                </div>
+            </div>
+        </div>
+
+        {{-- Note --}}
+        <p class="g-reveal gd4" style="font-size:11.5px;line-height:1.7;color:var(--g-muted);margin:40px 0 0;max-width:760px;border-top:1px solid var(--g-border);padding-top:18px;">
+            The information on this page is for general guidance and does not replace personal legal advice or a medical consultation. Please speak to a qualified professional about your specific situation.
+        </p>
+
+    </div>
+</section>
+
+    <div class="g-divider"></div>
+
+    <section id="our-team" class="py-24 px-6">
+                
+        <div class="max-w-6xl mx-auto">
+        <div class="g-reveal gd1 flex items-center gap-4 mb-10">
+            <span class="g-tag" style="background:rgba(251,113,133,0.1);color:var(--g-rose);border:1px solid rgba(251,113,133,0.22); padding: 4px 12px; border-radius: 99px; font-weight: 500;">Our Team</span>
+        </div>
+    
+            <div class="text-center mb-14 reveal d1">
+                <h2 class="about-serif mb-3" style="font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700;letter-spacing:-1px;color:var(--about-cream);">Behind Lawcription.</h2>
+                <p class="about-serif" style="color:var(--about-muted);font-size:1.1rem;max-width:480px;margin:0 auto;">Doctors, advocates, and journalists — united by one purpose.</p>
+            </div>
+    
+            <div class="tm-row reveal d2" id="tmRow">
+    
+                <!-- 01 Doctors & Lawyers -->
+                <div class="tm-panel is-active" tabindex="0">
+                    <img src="{{ asset('frontend/images/menu/21.png') }}" alt="Dedicated doctors and lawyers" />
+                    <span class="tm-num">01</span>
+                    <div class="tm-body">
+                        <span class="tm-tag">Founder’s Vision</span>
+                        <h3 class="tm-title about-serif">Dedicated Doctors &amp; Lawyers</h3>
+                        <p class="tm-text">Lawcription unites medicine and law with one purpose—protecting life, dignity, and justice. Doctors heal. Lawyers protect. Together, they create confidence for healthcare professionals, fairness for patients, and a stronger foundation of trust in healthcare.</p>
+                        <span class="tm-line"></span>
+                    </div>
+                </div>
+    
+                <!-- 02 Engineers -->
+                <div class="tm-panel" tabindex="0">
+                    <img src="{{ asset('frontend/images/menu/22.png') }}" alt="Innovative software engineers" />
+                    <span class="tm-num">02</span>
+                    <div class="tm-body">
+                        <span class="tm-tag green">Experienced Software Team</span>
+                        <h3 class="tm-title about-serif">Innovative Engineers</h3>
+                        <p class="tm-text">Behind Lawcription stands a team of visionary software engineers who transform ideas into intelligent technology. With precision, innovation, and dedication, they give our vision its digital life.</p>
+                        <span class="tm-line"></span>
+                    </div>
+                </div>
+    
+                <!-- 03 Journalists -->
+                <div class="tm-panel" tabindex="0">
+                    <img src="{{ asset('frontend/images/menu/23.png') }}" alt="Committed journalists" />
+                    <span class="tm-num">03</span>
+                    <div class="tm-body">
+                        <span class="tm-tag">Media Professional</span>
+                        <h3 class="tm-title about-serif">Committed Journalists</h3>
+                        <p class="tm-text">Behind every trusted update is a commitment to truth. Our dedicated journalists transform complex developments into clear, timely, and meaningful information. Through careful research, verification, and responsible reporting, they keep Lawcription accurate, relevant, and connected to the world as it changes.</p>
+                        <span class="tm-line"></span>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
 
     <div class="g-divider"></div>
 
@@ -1096,6 +1376,65 @@ Join Risk-Free — Access Starts Instantly. No credit card required.
             });
         });
     });
+</script>
+
+<script>
+document.querySelector('.g-filter-btn[data-cat="office"]').addEventListener('click', function () {
+  var target = document.getElementById('life-at-lawcription');
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+});
+</script>
+
+<script>
+    // Expanding team panels (hover on desktop, tap/focus on touch + keyboard)
+    (function () {
+        var panels = document.querySelectorAll('#tmRow .tm-panel');
+        function activate(p) {
+            panels.forEach(function (x) { x.classList.remove('is-active'); });
+            p.classList.add('is-active');
+        }
+        panels.forEach(function (p) {
+            p.addEventListener('mouseenter', function () { activate(p); });
+            p.addEventListener('focus', function () { activate(p); });
+            p.addEventListener('click', function () { activate(p); });
+        });
+    })();
+ 
+    // "Our Team" button -> smooth scroll to this section
+    (function () {
+        var btn = document.querySelector('.g-filter-btn[data-cat="team"]');
+        if (!btn) return;
+        btn.addEventListener('click', function () {
+            var target = document.getElementById('our-team');
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    })();
+</script>
+
+<script>
+document.querySelector('.g-filter-btn[data-cat="events"]')?.addEventListener('click', function () {
+    document.getElementById('events')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+</script>
+<script>
+const sectionMap = {
+    events: 'events',
+    legal: 'legal'
+};
+
+document.querySelectorAll('.g-filter-btn').forEach(btn => {
+    const target = sectionMap[btn.dataset.cat];
+    if (!target) return;
+
+    btn.addEventListener('click', () => {
+        document.getElementById(target)?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+});
 </script>
 
 @endsection
