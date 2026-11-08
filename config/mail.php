@@ -96,6 +96,9 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
+
+    'support_address' => env('SUPPORT_MAIL_ADDRESS', 'support@lawcription.in'),
+
     /*
     |--------------------------------------------------------------------------
     | Markdown Mail Settings

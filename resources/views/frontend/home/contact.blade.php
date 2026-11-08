@@ -269,58 +269,51 @@
                 <!-- RIGHT -->
                 <div class="p-10 lg:p-16 bg-white/[0.02]">
 
-                    <form action="javascript:void(0);" method="POST" class="space-y-6">
-                        @csrf
+                <form id="contactForm" action="{{ route('contact.store') }}" method="POST" class="space-y-6" novalidate>
+                    @csrf
 
-                        <div class="grid md:grid-cols-2 gap-6">
+                    {{-- Honeypot (hidden from humans) --}}
+                    <div style="position:absolute; left:-9999px; top:-9999px;" aria-hidden="true">
+                        <input type="text" name="hp_field_x" tabindex="-1" autocomplete="off">
+                    </div>
 
-                            <div>
-                                <label class="block text-sm mb-2 text-gray-300">
-                                    Full Name
-                                </label>
-
-                                <input type="text" name="name" style="border:1px solid #555; height:50px" class="  w-full h-14 px-5 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 focus:outline-none transition">
-                            </div>
-
-                            <div>
-                                <label class="block text-sm mb-2 text-gray-300">
-                                    Phone
-                                </label>
-
-                                <input type="text" name="phone" style="border:1px solid #555; height:50px" class="w-full h-14 px-5 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 focus:outline-none transition">
-                            </div>
-
-                        </div>
-
+                    <div class="grid md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-sm mb-2 text-gray-300">
-                                Email Address
-                            </label>
-
-                            <input type="email" name="email" style="border:1px solid #555; height:50px" class="w-full h-14 px-5 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 focus:outline-none transition">
+                            <label class="block text-sm mb-2 text-gray-300">Full Name</label>
+                            <input type="text" name="name" style="border:1px solid #555; height:50px" class="w-full h-14 px-5 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 focus:outline-none transition">
+                            <small class="text-rose-400 text-xs error-text" data-error="name"></small>
                         </div>
-
                         <div>
-                            <label class="block text-sm mb-2 text-gray-300">
-                                Subject
-                            </label>
-
-                            <input type="text" name="subject" style="border:1px solid #555; height:50px" class="w-full h-14 px-5 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 focus:outline-none transition">
+                            <label class="block text-sm mb-2 text-gray-300">Phone</label>
+                            <input type="text" name="phone" style="border:1px solid #555; height:50px" class="w-full h-14 px-5 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 focus:outline-none transition">
+                            <small class="text-rose-400 text-xs error-text" data-error="phone"></small>
                         </div>
+                    </div>
 
-                        <div>
-                            <label class="block text-sm mb-2 text-gray-300">
-                                Message
-                            </label>
+                    <div>
+                        <label class="block text-sm mb-2 text-gray-300">Email Address</label>
+                        <input type="email" name="email" style="border:1px solid #555; height:50px" class="w-full h-14 px-5 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 focus:outline-none transition">
+                        <small class="text-rose-400 text-xs error-text" data-error="email"></small>
+                    </div>
 
-                            <textarea rows="6" name="message" style="border:1px solid #555; min-height:150px" class="w-full p-5 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 focus:outline-none transition"></textarea>
-                        </div>
+                    <div>
+                        <label class="block text-sm mb-2 text-gray-300">Subject</label>
+                        <input type="text" name="subject" style="border:1px solid #555; height:50px" class="w-full h-14 px-5 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 focus:outline-none transition">
+                        <small class="text-rose-400 text-xs error-text" data-error="subject"></small>
+                    </div>
 
-                        <button type="submit" class="w-full h-14 rounded-2xl font-semibold text-black bg-gradient-to-r from-cyan-400 to-teal-400 hover:scale-[1.02] transition duration-300">
-                            Send Message →
-                        </button>
+                    <div>
+                        <label class="block text-sm mb-2 text-gray-300">Message</label>
+                        <textarea rows="6" name="message" style="border:1px solid #555; min-height:150px" class="w-full p-5 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 focus:outline-none transition"></textarea>
+                        <small class="text-rose-400 text-xs error-text" data-error="message"></small>
+                    </div>
 
-                    </form>
+                    <div id="formAlert" class="hidden text-sm rounded-xl px-4 py-3"></div>
+
+                    <button type="submit" id="submitBtn" class="w-full h-14 rounded-2xl font-semibold text-black bg-gradient-to-r from-cyan-400 to-teal-400 hover:scale-[1.02] transition duration-300">
+                        Send Message →
+                    </button>
+                </form>
 
                 </div>
 
@@ -348,5 +341,55 @@
     </section> -->
 
 </div>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const form   = this;
+    const btn    = document.getElementById('submitBtn');
+    const alertB = document.getElementById('formAlert');
+
+    // reset state
+    form.querySelectorAll('.error-text').forEach(el => el.textContent = '');
+    alertB.className = 'hidden';
+    btn.disabled = true;
+    const oldText = btn.textContent;
+    btn.textContent = 'Sending...';
+
+    try {
+        const res = await fetch(form.action, {
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': form.querySelector('input[name=_token]').value,
+                'Accept': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: new FormData(form)
+        });
+
+        const data = await res.json();
+
+        if (res.status === 422) {
+            Object.entries(data.errors).forEach(([field, msgs]) => {
+                const el = form.querySelector(`[data-error="${field}"]`);
+                if (el) el.textContent = msgs[0];
+            });
+        } else if (res.ok && data.success) {
+            form.reset();
+            alertB.className = 'text-sm rounded-xl px-4 py-3 bg-emerald-500/10 text-emerald-400 border border-emerald-400/20';
+            alertB.textContent = data.message;
+        } else {
+            throw new Error(data.message || 'Something went wrong');
+        }
+    } catch (err) {
+        alertB.className = 'text-sm rounded-xl px-4 py-3 bg-rose-500/10 text-rose-400 border border-rose-400/20';
+        alertB.textContent = 'Could not send your message. Please try again or email us directly.';
+    } finally {
+        btn.disabled = false;
+        btn.textContent = oldText;
+    }
+});
+</script>
 
 @endsection

@@ -8,6 +8,7 @@ use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Auth\ProfileController;
 use App\Http\Controllers\Frontend\UserPageController;
 use App\Http\Controllers\AccountDeletionController;
+use App\Http\Controllers\Frontend\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -91,3 +92,7 @@ Route::get('/terms', [UserPageController::class, 'terms'])->name('user.terms');
 
 
 Route::get('/privacy', [UserPageController::class, 'privacy'])->name('user.privacy');
+
+Route::post('/contact', [ContactController::class, 'store'])
+    ->middleware('throttle:5,1')   // 5 submissions per minute per IP
+    ->name('contact.store');
