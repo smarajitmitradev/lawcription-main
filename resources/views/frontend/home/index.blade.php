@@ -321,10 +321,10 @@
                     </p>
 
                     <ul class="intro-block-content__social mt-8 flex gap-3 list-none p-0">
-                        <li><a href="#" class="social-ico"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="#" class="social-ico"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href="#" class="social-ico"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                        <li><a href="#" class="social-ico"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/" class="social-ico"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/?hl=en" class="social-ico"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/home?originalSubdomain=in" class="social-ico"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href="https://x.com/?lang=en" class="social-ico"><i class="fa-brands fa-twitter"></i></a></li>
                     </ul>
                 </div>
             </div>

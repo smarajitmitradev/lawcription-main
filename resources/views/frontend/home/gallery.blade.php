@@ -818,7 +818,7 @@
                         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,15,20,.8),transparent 55%);"></div>
                         <span class="feat-badge" style="background:rgba(251,113,133,.15);color:var(--g-rose);border:1px solid rgba(251,113,133,.25);">Synergy</span>
                         <div style="position:absolute;bottom:16px;left:16px;">
-                            <p style="font-size:13px;font-weight:600;color:#fff;margin:0;">greater Together Then Apart</p>
+                            <p style="font-size:13px;font-weight:600;color:#fff;margin:0;">Greater Together Then Apart</p>
                         </div>
                     </div>
                 </div>
