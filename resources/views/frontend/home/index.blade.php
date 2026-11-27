@@ -330,7 +330,7 @@
             </div>
 
             <div class="order-1 md:order-2 relative">
-                <figure class="intro-pic-primary rounded-3xl overflow-hidden border" style="border-color:var(--border2);box-shadow:0 40px 100px rgba(0,0,0,0.55);">
+                <figure class="intro-pic-primary rounded-3xl overflow-hidden border" style="width:80% ;height:400px;border-color:var(--border2);box-shadow:0 40px 100px rgba(0,0,0,0.55);">
                     <img src="{{ asset('frontend/images/menu/4.gif') }}"
                         alt=""
                         class="w-full h-[320px] md:h-[420px] object-cover block"

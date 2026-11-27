@@ -449,7 +449,7 @@ Where Medicine Meets Law.
 
             <div class="grid md:grid-cols-3 gap-6 reveal d2">
                 <div class="team-card">
-                    <img src="{{ asset('frontend/images/menu/21.png') }}" alt="Dr. Arjun Sharma" style="width:100%;height:220px;object-fit:cover;display:block;filter:brightness(0.65) sepia(0.2);" />
+                    <img src="{{ asset('frontend/images/menu/21.png') }}" alt="Dr. Arjun Sharma" style="width:100%;height:220px;object-fit:cover;display:block;filter:brightness(0.65) sepia(0.2); object-position: top;" />
                     <div style="padding:22px 24px;">
                         <div style="font-size:10px;color:var(--about-gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:7px;">Founder’s Vision</div>
                         <h3 class="about-serif mb-3" style="font-size:1.15rem;font-weight:700;color:var(--about-cream);">Dedicated Doctors & Lawyers</h3>
@@ -459,7 +459,7 @@ Doctors heal. Lawyers protect. Together, they create confidence for healthcare p
                     </div>
                 </div>
                 <div class="team-card">
-                    <img src="{{ asset('frontend/images/menu/22.png') }}" alt="Adv. Priya Nair" style="width:100%;height:220px;object-fit:cover;display:block;filter:brightness(0.65) sepia(0.2);" />
+                    <img src="{{ asset('frontend/images/menu/22.png') }}" alt="Adv. Priya Nair" style="width:100%;height:220px;object-fit:cover;display:block;filter:brightness(0.65) sepia(0.2); object-position: top;" />
                     <div style="padding:22px 24px;">
                         <div style="font-size:10px;color:var(--about-greenlit);letter-spacing:2px;text-transform:uppercase;margin-bottom:7px;">Experienced Software Team</div>
                         <h3 class="about-serif mb-3" style="font-size:1.15rem;font-weight:700;color:var(--about-cream);">Innovative Engineers</h3>
@@ -468,7 +468,7 @@ Doctors heal. Lawyers protect. Together, they create confidence for healthcare p
                     </div>
                 </div>
                 <div class="team-card">
-                    <img src="{{ asset('frontend/images/menu/23.png') }}" alt="Dr. Rohan Verma" style="width:100%;height:220px;object-fit:cover;display:block;filter:brightness(0.65) sepia(0.2);" />
+                    <img src="{{ asset('frontend/images/menu/23.png') }}" alt="Dr. Rohan Verma" style="width:100%;height:220px;object-fit:cover;display:block;filter:brightness(0.65) sepia(0.2); object-position: top;" />
                     <div style="padding:22px 24px;">
                         <div style="font-size:10px;color:var(--about-gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:7px;">Media Professional</div>
                         <h3 class="about-serif mb-3" style="font-size:1.15rem;font-weight:700;color:var(--about-cream);">Committed Journalists</h3>

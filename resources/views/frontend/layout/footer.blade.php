@@ -19,8 +19,8 @@
     .lc-footer .lc-serif{ font-family:'Playfair Display',serif !important; }
     .lc-footer .lc-lightserif{ font-family:'Cormorant Garamond',serif !important; }
     .lc-footer .lc-eyebrow{
-      font-size:11px !important; letter-spacing:2.5px !important; text-transform:uppercase !important;
-      color:var(--gold) !important; font-weight:700 !important; display:block !important;
+      font-size:10px !important; letter-spacing:0.5px !important; text-transform:uppercase !important;
+      color:var(--gold) !important; font-weight:900 !important; display:block !important;
     }
     .lc-footer a{ color:inherit !important; text-decoration:none !important; }
 
