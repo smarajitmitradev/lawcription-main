@@ -256,7 +256,7 @@
             <p id="b1" style="font-size:12px;color:var(--muted);">Billed monthly</p>
           </div>
           <div style="height:1px;background:var(--border);margin-bottom:28px;"></div>
-          <ul style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px;">
+          <ul style="display:flex;flex-direction:column;gap:14px;margin:15px;margin-bottom:32px;">
             <li class="check-item">
               <div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Full article access</span>
             </li>
@@ -269,12 +269,18 @@
             <li class="check-item">
               <div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Email support</span>
             </li>
-            <li class="check-item" style="opacity:0.3;">
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">CME modules</span>
+            </li>
+            <li class="check-item">
+              <div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Expert consultation credits</span>
+            </li>
+            <!-- <li class="check-item" style="opacity:0.3;">
               <div class="check-dot" style="background:rgba(255,255,255,0.03);color:#555;font-size:11px;">—</div><span style="font-size:14px;">CME modules</span>
-            </li>
-            <li class="check-item" style="opacity:0.3;">
+            </li> -->
+            <!-- <li class="check-item" style="opacity:0.3;">
               <div class="check-dot" style="background:rgba(255,255,255,0.03);color:#555;font-size:11px;">—</div><span style="font-size:14px;">Expert consultation credits</span>
-            </li>
+            </li> -->
           </ul>
           <button id="plan1Btn" class="btn-plain w-full py-4 rounded-2xl serif" style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;color:var(--text);width:100%;padding:16px;border-radius:14px;background:transparent;">
             Start Reading →
@@ -300,7 +306,7 @@
             <p id="b2" style="font-size:12px;color:var(--muted);">₹1,197 billed quarterly</p>
           </div>
           <div style="height:1px;background:rgba(201,168,76,0.18);margin-bottom:28px;"></div>
-          <ul style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px;">
+          <ul style="display:flex;flex-direction:column;gap:14px; margin-bottom:15px;">
             <li class="check-item">
               <div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Unlimited article access</span>
             </li>
@@ -316,8 +322,8 @@
             <li class="check-item">
               <div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Priority support</span>
             </li>
-            <li class="check-item" style="opacity:0.35;">
-              <div class="check-dot" style="background:rgba(255,255,255,0.03);color:#555;font-size:11px;">—</div><span style="font-size:14px;">Expert consultation credits</span>
+           <li class="check-item">
+              <div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Expert consultation credits</span>
             </li>
           </ul>
           <div class="btn-glow" style="border-radius:16px;">
@@ -345,7 +351,7 @@
             <p id="b3" style="font-size:12px;color:var(--muted);">₹2,094 billed half-yearly</p>
           </div>
           <div style="height:1px;background:var(--border);margin-bottom:28px;"></div>
-          <ul style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px;">
+          <ul style="display:flex;flex-direction:column;gap:14px;margin-bottom:15px;">
             <li class="check-item">
               <div class="check-dot" style="background:rgba(111,168,130,0.1);color:var(--greenlit);">✓</div><span style="font-size:14px;">Everything in Professional</span>
             </li>

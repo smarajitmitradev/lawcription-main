@@ -522,7 +522,7 @@
             <p style="font-size:12px;color:var(--muted);">Billed monthly</p>
           </div>
           <div style="height:1px;background:var(--border);margin-bottom:28px;"></div>
-          <ul style="display:flex;flex-direction:column;gap:14px;">
+          <ul style="display:flex;flex-direction:column;gap:14px;margin-bottom:15px;">
             <li class="check-item">
               <div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Full article access</span>
             </li>
@@ -542,11 +542,12 @@
               <div class="check-dot" style="background:rgba(255,255,255,0.05);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Email support</span>
             </li>
             <li class="check-item" >
-              <div class="check-dot" style="background:rgba(255,255,255,0.03);color:#555;font-size:11px;">✓</div><span style="font-size:14px;">Everyday Law</span>
+              <div class="check-dot" style="background:rgba(255,255,255,0.03);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">CME modules</span>
             </li>
             <li class="check-item" >
-              <div class="check-dot" style="background:rgba(255,255,255,0.03);color:#555;font-size:11px;">✓</div><span style="font-size:14px;">Knowledge of Telemed</span>
+              <div class="check-dot" style="background:rgba(255,255,255,0.03);color:#aaa;font-size:11px;">✓</div><span style="font-size:14px;">Expert consultation credits</span>
             </li>
+            
           </ul>
           <button id="plan1Btn" class="btn-plain w-full py-4 rounded-2xl serif" style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;color:var(--text);width:100%;padding:16px;border-radius:14px;background:transparent;">
             Start Reading →
@@ -572,7 +573,7 @@
             <p style="font-size:12px;color:var(--muted);">₹5,394 billed half-yearly</p>
           </div>
           <div style="height:1px;background:rgba(201,168,76,0.18);margin-bottom:28px;"></div>
-          <ul style="display:flex;flex-direction:column;gap:14px;">
+          <ul style="display:flex;flex-direction:column;gap:14px; margin-bottom:15px;">
             <li class="check-item">
               <div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Unlimited article access</span>
             </li>
@@ -595,8 +596,11 @@
               <div class="check-dot" style="background:rgba(201,168,76,0.12);color:var(--gold);">✓</div><span style="font-size:14px;">Everyday Law</span>
             </li>
             <li class="check-item">
-              <div class="check-dot" style="background:rgba(255,255,255,0.03);color:#555;font-size:11px;">✓</div><span style="font-size:14px;">Telemed Knowledge</span>
+              <div class="check-dot" style="background:rgba(255,255,255,0.03);color:var(--gold);font-size:11px;">✓</div><span style="font-size:14px;">Expert consultation credits</span>
             </li>
+            <!-- <li class="check-item" style="opacity:0.35;">
+              <div class="check-dot" style="background:rgba(255,255,255,0.03);color:#555;font-size:11px;">—</div><span style="font-size:14px;">Expert consultation credits</span>
+            </li> -->
           </ul>
           <div class="btn-glow" style="border-radius:16px;">
             <button id="plan2Btn" style="width:100%;padding:16px;border-radius:16px;background:linear-gradient(135deg,var(--green),var(--green2));border:none;cursor:pointer;font-family:'Playfair Display',serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--cream);position:relative;z-index:1;">
@@ -623,7 +627,7 @@
             <p style="font-size:12px;color:var(--muted);">₹8,988 billed annually</p>
           </div>
           <div style="height:1px;background:var(--border);margin-bottom:28px;"></div>
-          <ul style="display:flex;flex-direction:column;gap:14px;">
+          <ul style="display:flex;flex-direction:column;gap:14px; margin-bottom:15px;">
             <li class="check-item">
               <div class="check-dot" style="background:rgba(111,168,130,0.1);color:var(--greenlit);">✓</div><span style="font-size:14px;">Everything in Professional</span>
             </li>
